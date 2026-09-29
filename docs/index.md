@@ -18,6 +18,16 @@ Este projeto organiza os estudos de **Catequese Tradicional** em uma estrutura s
 !!! tip "Método de estudo"
     Leia o resumo, tente explicar com suas próprias palavras, responda o questionário sem consultar a aula e só depois revise os pontos que errou.
 
+## Acesso rápido
+
+<div class="study-card" markdown>
+
+**📝 Notion:** [Abrir caderno de estudos no Notion](https://app.notion.com/p/3da3fd17d4d4804b8f1fd881fe445019)  
+**🌐 Site:** [Abrir Catequese Tradicional](https://mandresoeiro.github.io/catequese-tradicional/)  
+**💻 GitHub:** [Abrir repositório do projeto](https://github.com/mandresoeiro/catequese-tradicional)
+
+</div>
+
 ## Conteúdo disponível
 
 - [Aula 01 — Origem do Catecismo e fontes da Revelação](aulas/aula-01.md)
