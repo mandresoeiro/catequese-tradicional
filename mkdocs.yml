@@ -41,9 +41,11 @@ nav:
   - Aulas:
       - Visão geral: aulas/index.md
       - Aula 01 — Origem do Catecismo e fontes da Revelação: aulas/aula-01.md
+      - Aula 02 — Magistério da Igreja, Sagrada Escritura e o Credo: aulas/aula-02.md
   - Dicionário Geral: dicionario.md
   - Questionários:
       - Aula 01: questionarios/aula-01.md
+      - Aula 02: questionarios/aula-02.md
   - Sobre o projeto: sobre.md
   - Notion: https://app.notion.com/p/3da3fd17d4d4804b8f1fd881fe445019
 
