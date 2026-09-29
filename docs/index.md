@@ -31,6 +31,7 @@ Este projeto organiza os estudos de **Catequese Tradicional** em uma estrutura s
 ## Conteúdo disponível
 
 - [Aula 01 — Origem do Catecismo e fontes da Revelação](aulas/aula-01.md)
+- [Aula 02 — Magistério da Igreja, Sagrada Escritura e o Credo](aulas/aula-02.md)
 - [Dicionário Geral](dicionario.md)
 - [Questionário da Aula 01](questionarios/aula-01.md)
 
