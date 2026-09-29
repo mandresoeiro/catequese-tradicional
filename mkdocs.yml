@@ -1,0 +1,70 @@
+site_name: Catequese Tradicional
+site_description: Estudos organizados do Catecismo de São Pio X — Centro Dom Bosco
+site_author: Marcio Soeiro
+site_url: https://mandresoeiro.github.io/catequese-tradicional/
+
+repo_name: mandresoeiro/catequese-tradicional
+repo_url: https://github.com/mandresoeiro/catequese-tradicional
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Usar modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Usar modo claro
+  icon:
+    logo: material/book-cross
+
+nav:
+  - Início: index.md
+  - Aulas:
+      - Visão geral: aulas/index.md
+      - Aula 01 — Origem do Catecismo e fontes da Revelação: aulas/aula-01.md
+  - Dicionário Geral: dicionario.md
+  - Questionários:
+      - Aula 01: questionarios/aula-01.md
+  - Sobre o projeto: sobre.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mandresoeiro
