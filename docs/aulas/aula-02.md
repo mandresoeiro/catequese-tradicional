@@ -78,6 +78,12 @@ A ideia central é que **ultrapassar a razão não significa violar a razão**. 
 
 ### Bloco 8 — A Trindade como exemplo de verdade revelada (42:02–49:08)
 
+![Infográfico — Santíssima Trindade](../assets/images/santissima-trindade.svg){ .infografico }
+
+!!! info "Como ler o esquema"
+    Pai, Filho e Espírito Santo são distintos entre si, mas professados como **um só Deus em três Pessoas**. O desenho é apenas uma ajuda didática; ele não pretende esgotar o mistério da Santíssima Trindade.
+
+
 Para tornar o tema mais acessível, o professor usa a formação de uma imagem mental — como a ideia de uma xícara — e depois propõe uma analogia para falar da relação entre Pai, Filho e Espírito Santo.
 
 A intenção declarada é mostrar que a razão pode servir de apoio para pensar uma realidade revelada, sem pretender explicá-la completamente.
