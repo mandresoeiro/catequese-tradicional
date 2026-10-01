@@ -115,3 +115,66 @@ Na Aula 02, fé entendida como adesão às verdades reveladas, e não apenas com
 
 **Vulgata**  
 Tradução latina da Bíblia associada a São Jerônimo e destacada pelo professor na Aula 02 como referência tradicional.
+
+
+## Novos verbetes — Aula 03
+
+**Atributos absolutos**  
+Na terminologia da Aula 03, características apresentadas como próprias de Deus: simplicidade, imutabilidade, imensidade, eternidade, onipotência e onisciência.
+
+**Atributos relativos**  
+Na terminologia da Aula 03, atributos divinos dos quais a criatura participa de modo limitado, como liberdade, bondade, justiça, veracidade, fidelidade e providência.
+
+**Bondade**  
+Perfeição atribuída infinitamente a Deus e participada de modo limitado pelas criaturas.
+
+**Causa primeira**  
+Deus como origem e fundamento da ordem criada, segundo a explicação da aula.
+
+**Causas segundas**  
+Ações e processos das criaturas dentro da ordem criada.
+
+**Fidelidade**  
+Atributo pelo qual Deus cumpre aquilo que promete.
+
+**Imagem e semelhança**  
+Expressão ligada, na Aula 03, à participação humana em capacidades e atributos que remetem ao Criador.
+
+**Imensidade**  
+Impossibilidade de medir ou limitar Deus.
+
+**Imortalidade**  
+Existência criada que não termina pela morte; distinguida de eternidade na Aula 03.
+
+**Imutabilidade**  
+Atributo segundo o qual Deus não muda.
+
+**Justiça**  
+Definida na Aula 03 como “dar a cada um o que é seu”.
+
+**Liberdade**  
+Na Aula 03, capacidade de escolher o bem.
+
+**Milagre**  
+Na exposição da Aula 03, intervenção divina na ordem das causas segundas.
+
+**Onipotência**  
+Poder divino sobre toda a obra criada, sem contradição com a própria natureza divina.
+
+**Onisciência**  
+Conhecimento divino de todas as coisas.
+
+**Providência**  
+Governo e conservação da obra criada.
+
+**Simplicidade divina**  
+Ausência de partes em Deus.
+
+**Temor de Deus**  
+Reverência e submissão ao Criador, distinguida de simples medo.
+
+**União hipostática**  
+União das naturezas divina e humana em Jesus Cristo, apresentada introdutoriamente na Aula 03.
+
+**Veracidade**  
+Relação com a verdade; Deus é apresentado como incapaz de enganar ou enganar-se.
