@@ -19,3 +19,4 @@ As aulas são organizadas para estudo progressivo. Cada capítulo mantém a mesm
 - [Aula 01 — Origem do Catecismo e fontes da Revelação](aula-01.md)
 - [Aula 02 — Magistério da Igreja, Sagrada Escritura e o Credo](aula-02.md)
 - [Aula 03 — Creio em Deus Pai: os atributos de Deus](aula-03.md)
+- [Aula 04 — Criador do céu: os anjos](aula-04.md)
