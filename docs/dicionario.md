@@ -178,3 +178,66 @@ União das naturezas divina e humana em Jesus Cristo, apresentada introdutoriame
 
 **Veracidade**  
 Relação com a verdade; Deus é apresentado como incapaz de enganar ou enganar-se.
+
+
+## Novos verbetes — Aula 04
+
+**Anjo**  
+Criatura espiritual, pessoal, inteligente e livre, segundo a exposição da Aula 04.
+
+**Natureza angélica**  
+Modo de ser próprio dos anjos, distinto da natureza humana.
+
+**Puro espírito**  
+Ser sem corpo material por natureza.
+
+**Graça santificante**  
+Participação sobrenatural na vida de Deus; aparece na Aula 04 ao tratar da confirmação dos anjos bons.
+
+**Prova dos anjos**  
+Escolha inicial que, na exposição, precede a confirmação dos anjos bons e a queda dos rebeldes.
+
+**Lúcifer**  
+Nome tradicional aplicado ao anjo apresentado como líder da rebelião.
+
+**Demônio**  
+Anjo caído que se opõe à ordem divina.
+
+**São Miguel Arcanjo**  
+Figura apresentada como defensor da ordem divina contra os anjos rebeldes.
+
+**Anjo da guarda**  
+Anjo associado à proteção e auxílio de uma pessoa.
+
+**Coros angélicos**  
+Organização tradicional em nove ordens ou coros.
+
+**Serafins, Querubins e Tronos**  
+Coros da ordem superior na hierarquia tradicional.
+
+**Dominações, Potestades e Virtudes**  
+Coros da ordem intermediária.
+
+**Principados, Arcanjos e Anjos**  
+Coros da ordem inferior.
+
+**Tentação**  
+Influência ou sugestão para o mal sem destruição da liberdade humana.
+
+**Infestação**  
+Termo usado na aula para uma fase inicial de fenômenos atribuídos à ação demoníaca.
+
+**Obsessão**  
+Termo usado para uma ação mais intensa, ainda sem domínio completo do corpo.
+
+**Possessão**  
+Condição extraordinária apresentada como domínio do corpo por ação demoníaca, sem identificação automática com culpa moral da pessoa.
+
+**Exorcismo**  
+Oração e rito da Igreja para enfrentar casos reconhecidos de possessão.
+
+**Sacramental**  
+Sinal sagrado instituído pela Igreja; a água benta é citada como exemplo.
+
+**Estado de graça**  
+Condição espiritual apresentada como defesa fundamental na vida cristã.
