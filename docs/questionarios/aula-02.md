@@ -1,6 +1,6 @@
-# 🧾 Questionário — Aula 02
+# 🧾 Questionário — Aula #002
 
-**Magistério da Igreja, Sagrada Escritura e o Credo**
+**Fontes da Revelação**
 
 !!! warning "Sem gabarito nesta etapa"
     Responda sem consultar a aula. Marque apenas uma alternativa em cada questão.
@@ -112,7 +112,7 @@
 
 ## ✅ Controle de revisão
 
-- [ ] Respondi às 15 questões sem consultar a Aula 02.
+- [ ] Respondi às 15 questões sem consultar a Aula #002.
 - [ ] Marquei apenas uma alternativa por questão.
 - [ ] Consigo explicar Magistério, Credo e Mistério com minhas próprias palavras.
 - [ ] Depois da correção, vou revisar apenas os pontos em que tive dúvida.
