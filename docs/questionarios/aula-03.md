@@ -1,6 +1,6 @@
-# 🧾 Questionário — Aula 03
+# 🧾 Questionário — Aula #003
 
-**Creio em Deus Pai: os atributos de Deus**
+**Creio em Deus Pai**
 
 !!! warning "Sem gabarito nesta etapa"
     Responda sem consultar a aula. Marque apenas uma alternativa em cada questão.
@@ -112,7 +112,7 @@
 
 ## ✅ Controle de revisão
 
-- [ ] Respondi às 15 questões sem consultar a Aula 03.
+- [ ] Respondi às 15 questões sem consultar a Aula #003.
 - [ ] Marquei apenas uma alternativa por questão.
 - [ ] Consigo listar os atributos absolutos.
 - [ ] Consigo listar os atributos relativos.
