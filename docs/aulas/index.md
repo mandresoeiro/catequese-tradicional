@@ -14,10 +14,11 @@ As aulas são organizadas para estudo progressivo. Cada capítulo mantém a mesm
 8. Pontos para aprofundar
 9. Resumo para treino em vídeo
 
-## Publicadas
+## Sequência oficial
 
-- [Aula 01 — Origem do Catecismo e fontes da Revelação](aula-01.md)
-- [Aula 02 — Magistério da Igreja, Sagrada Escritura e o Credo](aula-02.md)
-- [Aula 03 — Creio em Deus Pai: os atributos de Deus](aula-03.md)
-- [Aula 04 — Criador do céu: os anjos](aula-04.md)
-- [Aula 05 — Criador da terra: criação, homem e pecado original](aula-05.md)
+- [Trailer Oficial — não numerado](trailer.md)
+- [Aula #001 — Religião Natural e Religião Sobrenatural](aula-01.md)
+- [Aula #002 — Fontes da Revelação](aula-02.md)
+- [Aula #003 — Creio em Deus Pai](aula-03.md)
+- [Aula #004 — Criador do Céu e dos Anjos](aula-04.md)
+- [Aula #005 — Criador da Terra e dos Homens](aula-05.md)
