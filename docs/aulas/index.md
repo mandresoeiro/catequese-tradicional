@@ -20,3 +20,4 @@ As aulas são organizadas para estudo progressivo. Cada capítulo mantém a mesm
 - [Aula 02 — Magistério da Igreja, Sagrada Escritura e o Credo](aula-02.md)
 - [Aula 03 — Creio em Deus Pai: os atributos de Deus](aula-03.md)
 - [Aula 04 — Criador do céu: os anjos](aula-04.md)
+- [Aula 05 — Criador da terra: criação, homem e pecado original](aula-05.md)
