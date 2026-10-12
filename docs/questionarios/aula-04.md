@@ -1,6 +1,6 @@
-# 🧾 Questionário — Aula 04
+# 🧾 Questionário — Aula #004
 
-**Criador do céu: os anjos**
+**Criador do Céu e dos Anjos**
 
 !!! warning "Sem gabarito nesta etapa"
     Responda sem consultar a aula. Marque apenas uma alternativa em cada questão.
@@ -112,7 +112,7 @@
 
 ## ✅ Controle de revisão
 
-- [ ] Respondi às 15 questões sem consultar a Aula 04.
+- [ ] Respondi às 15 questões sem consultar a Aula #004.
 - [ ] Consigo explicar o que é natureza angélica.
 - [ ] Consigo citar os três anjos nomeados.
 - [ ] Consigo listar os nove coros.
