@@ -101,6 +101,14 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
   </div>
 
   <div class="course-card" markdown>
+    <span class="number">#007</span>
+    ### 🌹 Concebido do Espírito Santo, nasceu de Maria Virgem
+    Prólogo de São João, Caná, Paixão, Calvário e distinção entre latria, hiperdulia e dulia.
+    
+    [Abrir aula →](aulas/aula-07.md)
+  </div>
+
+  <div class="course-card" markdown>
     <span class="number">EXTRA</span>
     ### 🎬 Trailer Oficial
     Apresentação da série. Não entra na numeração das aulas.
@@ -133,6 +141,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 - 🧾 [Questionário #004](questionarios/aula-04.md)
 - 🧾 [Questionário #005](questionarios/aula-05.md)
 - 🧾 [Questionário #006](questionarios/aula-06.md)
+- 🧾 [Questionário #007](questionarios/aula-07.md)
 
 ---
 
