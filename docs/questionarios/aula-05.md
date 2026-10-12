@@ -1,6 +1,6 @@
-# 🧾 Questionário — Aula 05
+# 🧾 Questionário — Aula #005
 
-**Criador da terra: criação, homem e pecado original**
+**Criador da Terra e dos Homens**
 
 !!! warning "Sem gabarito nesta etapa"
     Responda sem consultar a aula. Marque apenas uma alternativa em cada questão.
@@ -112,7 +112,7 @@
 
 ## ✅ Controle de revisão
 
-- [ ] Respondi às 15 questões sem consultar a Aula 05.
+- [ ] Respondi às 15 questões sem consultar a Aula #005.
 - [ ] Sei explicar dons naturais, preternaturais e sobrenatural.
 - [ ] Consigo explicar o pecado original em minhas palavras.
 - [ ] Consigo citar as três grandes concupiscências/desordens.
