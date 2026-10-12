@@ -2,6 +2,8 @@
 
 Site de estudos da **Catequese Tradicional**, organizado com **MkDocs + Material for MkDocs**.
 
+A numeração segue a playlist oficial do Centro Dom Bosco: o **Trailer Oficial não entra na contagem**; as aulas começam em **#001**.
+
 O projeto reúne progressivamente:
 
 - aulas organizadas para estudo;
@@ -14,6 +16,15 @@ O projeto reúne progressivamente:
 - roteiros curtos para treino em vídeo.
 
 O objetivo editorial é transformar o material, ao final do percurso, em uma base estruturada para um **livro de estudo**.
+
+## 🔢 Numeração oficial
+
+- Trailer Oficial — não numerado
+- #001 — Religião Natural e Religião Sobrenatural
+- #002 — Fontes da Revelação
+- #003 — Creio em Deus Pai
+- #004 — Criador do Céu e dos Anjos
+- #005 — Criador da Terra e dos Homens
 
 ## 🌐 Site
 
