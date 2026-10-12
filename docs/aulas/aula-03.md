@@ -1,4 +1,4 @@
-# Aula 03 — Creio em Deus Pai: os atributos de Deus
+# Aula #003 — Creio em Deus Pai
 
 **Professor:** Marco Antônio  
 **Referência central:** Catecismo de São Pio X  
@@ -249,7 +249,7 @@ Esta ficha organiza **o conteúdo da aula** e preserva o enquadramento do profes
 - a formulação sobre a união hipostática e as diferenças entre católicos e protestantes, que aparece como comentário introdutório e será retomada mais adiante;
 - a distinção entre **imagem** e **semelhança** é apresentada com cautela pelo próprio professor, que sugere examinar o hebraico original.
 
-> **Fonte primária:** transcrição da Aula 03 enviada nesta conversa. O material foi organizado por temas, não reproduzido palavra por palavra.
+> **Fonte primária:** transcrição da Aula #003 enviada nesta conversa. O material foi organizado por temas, não reproduzido palavra por palavra.
 
 ## 9. 🎥 Resumo para treino em vídeo
 
@@ -265,4 +265,4 @@ O ponto principal para mim é que podemos conhecer verdadeiramente algo sobre De
 
 **Palavras-chave:** Credo · Pai · Atributos · Justiça · Providência
 
-➡️ [Responder ao questionário objetivo da Aula 03](../questionarios/aula-03.md)
+➡️ [Responder ao questionário objetivo da Aula #003](../questionarios/aula-03.md)
