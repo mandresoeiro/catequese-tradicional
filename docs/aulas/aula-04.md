@@ -1,4 +1,4 @@
-# Aula 04 — Criador do céu: os anjos
+# Aula #004 — Criador do Céu e dos Anjos
 
 **Professor:** Marco Antônio  
 **Referência central:** Catecismo de São Pio X  
@@ -261,7 +261,7 @@ Esta ficha organiza **o que foi apresentado na aula**. Alguns pontos merecem ver
 - os relatos particulares de possessão, exorcismo, corpos incorruptos e outros episódios narrados oralmente;
 - a associação entre determinados movimentos culturais, políticos ou religiosos e ação demoníaca deve ser entendida como avaliação do professor, não automaticamente como definição magisterial.
 
-> **Fonte primária:** transcrição da Aula 04 enviada nesta conversa. O material foi organizado por temas, não reproduzido palavra por palavra.
+> **Fonte primária:** transcrição da Aula #004 enviada nesta conversa. O material foi organizado por temas, não reproduzido palavra por palavra.
 
 ## 9. 🎥 Resumo para treino em vídeo
 
@@ -277,4 +277,4 @@ No fim, a aula lembra que a melhor defesa espiritual não é viver com medo, mas
 
 **Palavras-chave:** Anjos · Prova · São Miguel · Coros · Graça
 
-➡️ [Responder ao questionário objetivo da Aula 04](../questionarios/aula-04.md)
+➡️ [Responder ao questionário objetivo da Aula #004](../questionarios/aula-04.md)
