@@ -28,6 +28,18 @@ Este projeto organiza os estudos de **Catequese Tradicional** em uma estrutura s
 
 </div>
 
+## 🆕 Aulas mais recentes
+
+<div class="study-card" markdown>
+
+- [Aula 03 — Creio em Deus Pai: os atributos de Deus](aulas/aula-03.md)
+- [Aula 04 — Criador do céu: os anjos](aulas/aula-04.md)
+- [Aula 05 — Criador da terra: criação, homem e pecado original](aulas/aula-05.md)
+
+**Atualizado em 12/10/2026.**
+
+</div>
+
 ## Conteúdo disponível
 
 - [Aula 01 — Origem do Catecismo e fontes da Revelação](aulas/aula-01.md)
