@@ -46,6 +46,12 @@ Cada estudo mantém o mesmo padrão para reduzir a carga mental e facilitar a re
   </div>
 
   <div class="course-card" markdown>
+    <span class="number">#006</span>
+    ### ✨ Encarnação do Verbo
+    [Abrir aula →](aula-06.md)
+  </div>
+
+  <div class="course-card" markdown>
     <span class="number">TRAILER</span>
     ### 🎬 Trailer Oficial
     Não numerado.
