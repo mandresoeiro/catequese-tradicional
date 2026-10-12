@@ -1,4 +1,4 @@
-# Aula 05 — Criador da terra: criação, homem e pecado original
+# Aula #005 — Criador da Terra e dos Homens
 
 **Professor:** Marco Antônio  
 **Referência central:** Catecismo de São Pio X  
@@ -301,7 +301,7 @@ Esta ficha preserva o enquadramento do professor. Alguns pontos merecem verifica
 - as afirmações sobre Limbo e crianças não batizadas não devem ser tratadas como definição dogmática sem estudo específico;
 - os comentários sobre Lutero, Calvino e concupiscência pertencem à avaliação do professor e devem ser estudados separadamente.
 
-> **Fonte primária:** transcrição da Aula 05 enviada nesta conversa. O material foi organizado por temas, não reproduzido palavra por palavra.
+> **Fonte primária:** transcrição da Aula #005 enviada nesta conversa. O material foi organizado por temas, não reproduzido palavra por palavra.
 
 ## 9. 🎥 Resumo para treino em vídeo
 
@@ -317,4 +317,4 @@ Essa desordem aparece nas nossas paixões e concupiscências. Mesmo assim, Deus 
 
 **Palavras-chave:** Criação · Dons · Prova · Pecado · Redenção
 
-➡️ [Responder ao questionário objetivo da Aula 05](../questionarios/aula-05.md)
+➡️ [Responder ao questionário objetivo da Aula #005](../questionarios/aula-05.md)
