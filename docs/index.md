@@ -32,27 +32,31 @@ Este projeto organiza os estudos de **Catequese Tradicional** em uma estrutura s
 
 <div class="study-card" markdown>
 
-- [Aula 03 — Creio em Deus Pai: os atributos de Deus](aulas/aula-03.md)
-- [Aula 04 — Criador do céu: os anjos](aulas/aula-04.md)
-- [Aula 05 — Criador da terra: criação, homem e pecado original](aulas/aula-05.md)
+- [Aula #003 — Creio em Deus Pai](aulas/aula-03.md)
+- [Aula #004 — Criador do Céu e dos Anjos](aulas/aula-04.md)
+- [Aula #005 — Criador da Terra e dos Homens](aulas/aula-05.md)
 
 **Atualizado em 12/10/2026.**
 
 </div>
 
+!!! note "Numeração oficial"
+    O **Trailer Oficial não entra na contagem**. A sequência das aulas começa em **#001**.
+
 ## Conteúdo disponível
 
-- [Aula 01 — Origem do Catecismo e fontes da Revelação](aulas/aula-01.md)
-- [Aula 02 — Magistério da Igreja, Sagrada Escritura e o Credo](aulas/aula-02.md)
-- [Aula 03 — Creio em Deus Pai: os atributos de Deus](aulas/aula-03.md)
-- [Aula 04 — Criador do céu: os anjos](aulas/aula-04.md)
-- [Aula 05 — Criador da terra: criação, homem e pecado original](aulas/aula-05.md)
+- [Trailer Oficial — não numerado](aulas/trailer.md)
+- [Aula #001 — Religião Natural e Religião Sobrenatural](aulas/aula-01.md)
+- [Aula #002 — Fontes da Revelação](aulas/aula-02.md)
+- [Aula #003 — Creio em Deus Pai](aulas/aula-03.md)
+- [Aula #004 — Criador do Céu e dos Anjos](aulas/aula-04.md)
+- [Aula #005 — Criador da Terra e dos Homens](aulas/aula-05.md)
 - [Dicionário Geral](dicionario.md)
-- [Questionário da Aula 01](questionarios/aula-01.md)
-- [Questionário da Aula 02](questionarios/aula-02.md)
-- [Questionário da Aula 03](questionarios/aula-03.md)
-- [Questionário da Aula 04](questionarios/aula-04.md)
-- [Questionário da Aula 05](questionarios/aula-05.md)
+- [Questionário da Aula #001](questionarios/aula-01.md)
+- [Questionário da Aula #002](questionarios/aula-02.md)
+- [Questionário da Aula #003](questionarios/aula-03.md)
+- [Questionário da Aula #004](questionarios/aula-04.md)
+- [Questionário da Aula #005](questionarios/aula-05.md)
 
 ---
 
