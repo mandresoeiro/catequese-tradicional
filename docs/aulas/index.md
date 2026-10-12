@@ -1,24 +1,55 @@
 # 📖 Aulas
 
-As aulas são organizadas para estudo progressivo. Cada capítulo mantém a mesma estrutura para facilitar a revisão.
+<p class="section-intro">A sequência segue a numeração oficial da playlist. O Trailer Oficial é apresentado à parte e não entra na contagem.</p>
 
-## Estrutura padrão
+<div class="study-card" markdown>
 
-1. Resumo essencial
-2. Estudo por blocos
-3. Mapa mental
-4. Pontos para memorizar
-5. Dicionário da aula
-6. Perguntas e respostas para revisão
-7. Revisão ativa e anotações
-8. Pontos para aprofundar
-9. Resumo para treino em vídeo
+<span class="badge">ESTRUTURA DE CADA AULA</span>
+
+Cada estudo mantém o mesmo padrão para reduzir a carga mental e facilitar a revisão:
+
+**Resumo essencial → blocos de estudo → mapa mental → memorização → dicionário → perguntas e respostas → revisão ativa → aprofundamento → treino em vídeo.**
+
+</div>
 
 ## Sequência oficial
 
-- [Trailer Oficial — não numerado](trailer.md)
-- [Aula #001 — Religião Natural e Religião Sobrenatural](aula-01.md)
-- [Aula #002 — Fontes da Revelação](aula-02.md)
-- [Aula #003 — Creio em Deus Pai](aula-03.md)
-- [Aula #004 — Criador do Céu e dos Anjos](aula-04.md)
-- [Aula #005 — Criador da Terra e dos Homens](aula-05.md)
+<div class="course-grid">
+  <div class="course-card" markdown>
+    <span class="number">#001</span>
+    ### 🌿 Religião Natural e Religião Sobrenatural
+    [Abrir aula →](aula-01.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#002</span>
+    ### 📜 Fontes da Revelação
+    [Abrir aula →](aula-02.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#003</span>
+    ### ✝️ Creio em Deus Pai
+    [Abrir aula →](aula-03.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#004</span>
+    ### 👼 Criador do Céu e dos Anjos
+    [Abrir aula →](aula-04.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#005</span>
+    ### 🌍 Criador da Terra e dos Homens
+    [Abrir aula →](aula-05.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">TRAILER</span>
+    ### 🎬 Trailer Oficial
+    Não numerado.
+    
+    [Abrir trailer →](trailer.md)
+  </div>
+</div>
