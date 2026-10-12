@@ -1,4 +1,4 @@
-# 🧾 Questionário — Aula 01
+# 🧾 Questionário — Aula #001
 
 **Sem gabarito nesta página.** Marque uma alternativa por questão e, depois, confira suas respostas com sua revisão pessoal.
 
@@ -109,7 +109,7 @@
 
 ## Controle de revisão
 
-- [ ] Respondi às 15 questões sem consultar a Aula 01.
+- [ ] Respondi às 15 questões sem consultar a Aula #001.
 - [ ] Marquei apenas uma alternativa por questão.
 - [ ] Vou revisar somente as questões que errei.
 - [ ] Consigo explicar oralmente pelo menos cinco conceitos da aula.
