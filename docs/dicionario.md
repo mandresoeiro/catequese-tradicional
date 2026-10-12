@@ -295,3 +295,57 @@ Restauração prometida por Deus e realizada em Cristo.
 
 **Plenitude dos tempos**  
 Expressão usada na Aula #005 para o momento histórico preparado para a vinda do Redentor.
+
+
+## Novos verbetes — Aula #006
+
+**Encarnação do Verbo**  
+Assunção da natureza humana pelo Verbo, segunda Pessoa da Santíssima Trindade.
+
+**União hipostática**  
+União das naturezas divina e humana na única Pessoa de Jesus Cristo.
+
+**Natureza divina**  
+Aquilo que Cristo possui enquanto verdadeiro Deus.
+
+**Natureza humana**  
+Aquilo que Cristo possui enquanto verdadeiro homem.
+
+**Vontade divina**  
+Vontade correspondente à natureza divina de Cristo.
+
+**Vontade humana**  
+Vontade correspondente à natureza humana de Cristo.
+
+**Redentor**  
+Título aplicado a Cristo enquanto aquele que realiza a Redenção.
+
+**Sacerdote**  
+Cristo enquanto aquele que oferece o sacrifício.
+
+**Vítima**  
+Cristo enquanto aquele que é oferecido.
+
+**Profeta**  
+Cristo enquanto plenitude e cumprimento da Revelação.
+
+**Rei**  
+Cristo enquanto Senhor de um Reino universal.
+
+**Imaculada Conceição**  
+Preservação de Nossa Senhora da mancha do pecado original, apresentada na aula em vista dos méritos de Cristo.
+
+**Nova Eva**  
+Título usado para Nossa Senhora em contraste com Eva.
+
+**Pai putativo**  
+Expressão usada para São José enquanto aquele que exerce a função paterna junto a Jesus.
+
+**Igreja militante**  
+Igreja peregrina na terra.
+
+**Igreja padecente**  
+Almas em purificação.
+
+**Igreja triunfante**  
+Santos na glória.
