@@ -93,6 +93,14 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
   </div>
 
   <div class="course-card" markdown>
+    <span class="number">#006</span>
+    ### ✨ Encarnação do Verbo
+    Uma Pessoa divina, duas naturezas, duas vontades e a missão redentora de Cristo.
+    
+    [Abrir aula →](aulas/aula-06.md)
+  </div>
+
+  <div class="course-card" markdown>
     <span class="number">EXTRA</span>
     ### 🎬 Trailer Oficial
     Apresentação da série. Não entra na numeração das aulas.
@@ -124,6 +132,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 - 🧾 [Questionário #003](questionarios/aula-03.md)
 - 🧾 [Questionário #004](questionarios/aula-04.md)
 - 🧾 [Questionário #005](questionarios/aula-05.md)
+- 🧾 [Questionário #006](questionarios/aula-06.md)
 
 ---
 
