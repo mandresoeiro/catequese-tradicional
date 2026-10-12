@@ -241,3 +241,57 @@ Sinal sagrado instituído pela Igreja; a água benta é citada como exemplo.
 
 **Estado de graça**  
 Condição espiritual apresentada como defesa fundamental na vida cristã.
+
+
+## Novos verbetes — Aula 05
+
+**Criação material**  
+Conjunto das realidades materiais criadas por Deus.
+
+**Fim primário da criação**  
+Dar glória ao Criador segundo a natureza de cada ser.
+
+**Fim secundário da criação**  
+Participação da criatura na felicidade do Criador.
+
+**Paraíso terrestre**  
+Estado/local original apresentado na Aula 05 como morada de Adão e Eva antes da queda.
+
+**Dons naturais**  
+Capacidades próprias da natureza humana.
+
+**Dons preternaturais**  
+Dons que ultrapassam as exigências naturais sem pertencer, em si mesmos, à ordem sobrenatural.
+
+**Dom sobrenatural**  
+Participação na vida divina e na graça.
+
+**Integridade**  
+Harmonia interior entre razão, vontade, sentidos e apetites, no esquema apresentado na Aula 05.
+
+**Pecado original**  
+Pecado dos primeiros pais e condição de desordem transmitida à humanidade, conforme a exposição da aula.
+
+**Apetite sensível**  
+Inclinação ligada aos bens percebidos pelos sentidos.
+
+**Apetite racional**  
+Inclinação da vontade orientada por aquilo que a razão reconhece como bem.
+
+**Paixão**  
+Movimento sensível que pode auxiliar ou desordenar a vontade.
+
+**Concupiscência da carne**  
+Busca desordenada de prazeres sensíveis.
+
+**Concupiscência dos olhos**  
+Cobiça desordenada de riquezas e bens.
+
+**Soberba da vida**  
+Desejo desordenado de honra, prestígio e ostentação.
+
+**Redenção**  
+Restauração prometida por Deus e realizada em Cristo.
+
+**Plenitude dos tempos**  
+Expressão usada na Aula 05 para o momento histórico preparado para a vinda do Redentor.
