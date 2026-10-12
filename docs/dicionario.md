@@ -349,3 +349,48 @@ Almas em purificação.
 
 **Igreja triunfante**  
 Santos na glória.
+
+
+## Novos verbetes — Aula #007
+
+**Prólogo de São João**  
+Início do Evangelho de São João usado na aula como síntese da Encarnação.
+
+**Concepção pelo Espírito Santo**  
+Modo como o Credo atribui a Encarnação à ação do Espírito Santo.
+
+**Virgindade perpétua**  
+Virgindade de Nossa Senhora antes, durante e depois do parto, segundo a exposição da aula.
+
+**Vida privada de Cristo**  
+Período anterior à vida pública de Nosso Senhor.
+
+**Vida pública de Cristo**  
+Período da pregação, milagres e formação dos discípulos.
+
+**Matéria remota**  
+Elemento material usado no sacramento; a água aparece na aula como matéria remota do Batismo.
+
+**Bodas de Caná**  
+Episódio apresentado como início da vida pública e primeiro milagre público de Cristo.
+
+**Calvário**  
+Lugar e acontecimento do sacrifício de Cristo na Cruz.
+
+**Latria**  
+Adoração devida somente a Deus.
+
+**Hiperdulia**  
+Veneração singular reservada a Nossa Senhora.
+
+**Dulia**  
+Veneração prestada aos santos e anjos.
+
+**Protodulia**  
+Expressão mencionada para uma veneração especial a São José, apresentada como opinião de alguns teólogos.
+
+**Deveres de estado**  
+Obrigações próprias da condição de vida de cada pessoa.
+
+**Santa Missa**  
+Na aula, apresentada como renovação sacramental do mesmo sacrifício do Calvário.
