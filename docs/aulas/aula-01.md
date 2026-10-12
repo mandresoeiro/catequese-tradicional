@@ -1,4 +1,4 @@
-# Aula 01 — Origem do Catecismo e fontes da Revelação
+# Aula #001 — Religião Natural e Religião Sobrenatural
 
 **Professor:** Marco Antônio  
 **Referência central:** Catecismo de São Pio X  
@@ -158,7 +158,7 @@ CATECISMO DE SÃO PIO X
 - [ ] Fiz uma revisão após 24 horas.
 - [ ] Fiz outra revisão após sete dias.
 
-➡️ [Abrir questionário objetivo da Aula 01](../questionarios/aula-01.md)
+➡️ [Abrir questionário objetivo da Aula #001](../questionarios/aula-01.md)
 
 ## 8. Pontos para aprofundar
 
