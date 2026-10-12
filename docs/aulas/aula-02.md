@@ -1,4 +1,4 @@
-# Aula 02 — Magistério da Igreja, Sagrada Escritura e o Credo
+# Aula #002 — Fontes da Revelação
 
 **Professor:** Marco Antônio  
 **Referência central:** Catecismo de São Pio X  
@@ -212,7 +212,7 @@ Esta ficha organiza **o que foi apresentado na aula**. Alguns trechos são afirm
 - datas, nomes e números de concílios citados de memória;
 - interpretações históricas sobre Trento, Reforma, Lutero, Henrique VIII, nominalismo e formação do clero.
 
-> **Fonte primária:** transcrição da Aula 02 enviada nesta conversa. O texto foi organizado por temas, não reproduzido palavra por palavra.
+> **Fonte primária:** transcrição da Aula #002 enviada nesta conversa. O texto foi organizado por temas, não reproduzido palavra por palavra.
 
 ## 9. 🎥 Resumo para treino em vídeo
 
@@ -226,4 +226,4 @@ Outro ponto importante é a relação entre **fé e razão**. A Revelação pode
 
 **Palavras-chave:** Tradição · Escritura · Magistério · Credo · Mistério
 
-➡️ [Responder ao questionário objetivo da Aula 02](../questionarios/aula-02.md)
+➡️ [Responder ao questionário objetivo da Aula #002](../questionarios/aula-02.md)
