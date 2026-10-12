@@ -2,62 +2,129 @@
 
 <div class="hero" markdown>
 
-## Um caderno de estudos que cresce aula por aula
+<span class="hero-kicker">✠ Centro Dom Bosco · Caderno de Estudos</span>
 
-Este projeto organiza os estudos de **Catequese Tradicional** em uma estrutura simples para leitura, revisão e consulta. O material parte das aulas do curso e é preparado gradualmente com objetivo editorial de, no futuro, formar um **livro de estudo**.
+## Fé estudada com ordem, clareza e memória
 
+Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, mapas mentais, dicionário, revisão ativa, questionários e treino de explicação oral.
+
+<div class="hero-actions">
+<a class="hero-button primary" href="aulas/">📖 Começar pelas aulas</a>
+<a class="hero-button secondary" href="dicionario/">📚 Abrir dicionário</a>
 </div>
 
-## Como o projeto está organizado
-
-- **Aulas** — resumo essencial, blocos de estudo, mapa mental, pontos para memorizar, dicionário da aula, revisão e treino em vídeo.
-- **Dicionário Geral** — acumula os conceitos de cada aula para formar um glossário único ao final.
-- **Questionários** — exercícios objetivos para testar a retenção do conteúdo.
-- **Treino em vídeo** — pequenos roteiros para praticar explicação oral de 30–60 segundos.
-
-!!! tip "Método de estudo"
-    Leia o resumo, tente explicar com suas próprias palavras, responda o questionário sem consultar a aula e só depois revise os pontos que errou.
+</div>
 
 ## Acesso rápido
 
-<div class="study-card" markdown>
-
-**📝 Notion:** [Abrir caderno de estudos no Notion](https://app.notion.com/p/3da3fd17d4d4804b8f1fd881fe445019)  
-**🌐 Site:** [Abrir Catequese Tradicional](https://mandresoeiro.github.io/catequese-tradicional/)  
-**💻 GitHub:** [Abrir repositório do projeto](https://github.com/mandresoeiro/catequese-tradicional)
-
-</div>
-
-## 🆕 Aulas mais recentes
-
-<div class="study-card" markdown>
-
-- [Aula #003 — Creio em Deus Pai](aulas/aula-03.md)
-- [Aula #004 — Criador do Céu e dos Anjos](aulas/aula-04.md)
-- [Aula #005 — Criador da Terra e dos Homens](aulas/aula-05.md)
-
-**Atualizado em 12/10/2026.**
-
+<div class="quick-grid">
+  <div class="quick-card" markdown>
+    <span class="icon">📝</span>
+    **Notion**
+    
+    Caderno de estudo e organização.
+    
+    [Abrir Notion](https://app.notion.com/p/3da3fd17d4d4804b8f1fd881fe445019)
+  </div>
+  <div class="quick-card" markdown>
+    <span class="icon">🧠</span>
+    **Questionários**
+    
+    Revise sem consultar o conteúdo.
+    
+    [Ir para os testes](questionarios/aula-01.md)
+  </div>
+  <div class="quick-card" markdown>
+    <span class="icon">💻</span>
+    **GitHub**
+    
+    Código-fonte e histórico do projeto.
+    
+    [Abrir repositório](https://github.com/mandresoeiro/catequese-tradicional)
+  </div>
 </div>
 
 !!! note "Numeração oficial"
-    O **Trailer Oficial não entra na contagem**. A sequência das aulas começa em **#001**.
+    O **Trailer Oficial não entra na contagem**. A sequência das aulas começa em **#001**, exatamente como na playlist do Centro Dom Bosco.
 
-## Conteúdo disponível
+## Sequência de estudos
 
-- [Trailer Oficial — não numerado](aulas/trailer.md)
-- [Aula #001 — Religião Natural e Religião Sobrenatural](aulas/aula-01.md)
-- [Aula #002 — Fontes da Revelação](aulas/aula-02.md)
-- [Aula #003 — Creio em Deus Pai](aulas/aula-03.md)
-- [Aula #004 — Criador do Céu e dos Anjos](aulas/aula-04.md)
-- [Aula #005 — Criador da Terra e dos Homens](aulas/aula-05.md)
-- [Dicionário Geral](dicionario.md)
-- [Questionário da Aula #001](questionarios/aula-01.md)
-- [Questionário da Aula #002](questionarios/aula-02.md)
-- [Questionário da Aula #003](questionarios/aula-03.md)
-- [Questionário da Aula #004](questionarios/aula-04.md)
-- [Questionário da Aula #005](questionarios/aula-05.md)
+<p class="section-intro">Aulas já organizadas e publicadas no projeto.</p>
+
+<div class="course-grid">
+  <div class="course-card" markdown>
+    <span class="number">#001</span>
+    ### 🌿 Religião Natural e Religião Sobrenatural
+    Fundamentos da catequese, razão, consciência e Revelação.
+    
+    [Abrir aula →](aulas/aula-01.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#002</span>
+    ### 📜 Fontes da Revelação
+    Escritura, Tradição, Magistério, cânon e introdução ao Credo.
+    
+    [Abrir aula →](aulas/aula-02.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#003</span>
+    ### ✝️ Creio em Deus Pai
+    Atributos de Deus, Providência, justiça e fidelidade.
+    
+    [Abrir aula →](aulas/aula-03.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#004</span>
+    ### 👼 Criador do Céu e dos Anjos
+    Natureza angélica, coros, São Miguel e combate espiritual.
+    
+    [Abrir aula →](aulas/aula-04.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">#005</span>
+    ### 🌍 Criador da Terra e dos Homens
+    Criação, Adão e Eva, pecado original e promessa da Redenção.
+    
+    [Abrir aula →](aulas/aula-05.md)
+  </div>
+
+  <div class="course-card" markdown>
+    <span class="number">EXTRA</span>
+    ### 🎬 Trailer Oficial
+    Apresentação da série. Não entra na numeração das aulas.
+    
+    [Abrir trailer →](aulas/trailer.md)
+  </div>
+</div>
+
+## Método de estudo
+
+<div class="study-card" markdown>
+
+<span class="badge">PASSO A PASSO</span>
+
+1. **Leia o resumo essencial** da aula.
+2. **Explique com suas palavras** antes de reler.
+3. **Responda ao questionário** sem consultar.
+4. **Revise apenas o que errou ou esqueceu.**
+5. Grave o **treino em vídeo de 30–60 segundos**.
+
+</div>
+
+## Ferramentas do projeto
+
+- 📖 [Visão geral das aulas](aulas/)
+- 📚 [Dicionário Geral](dicionario.md)
+- 🧾 [Questionário #001](questionarios/aula-01.md)
+- 🧾 [Questionário #002](questionarios/aula-02.md)
+- 🧾 [Questionário #003](questionarios/aula-03.md)
+- 🧾 [Questionário #004](questionarios/aula-04.md)
+- 🧾 [Questionário #005](questionarios/aula-05.md)
 
 ---
 
-> **Projeto em construção.** Novas aulas e revisões serão publicadas progressivamente.
+> **Projeto em construção.** Novas aulas, revisões e materiais visuais serão acrescentados progressivamente.
