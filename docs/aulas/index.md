@@ -1,4 +1,4 @@
-# 📖 Aulas
+# Percurso de formação
 
 <p class="section-intro">A sequência segue a numeração oficial da playlist. O Trailer Oficial é apresentado à parte e não entra na contagem.</p>
 
@@ -17,49 +17,49 @@ Cada estudo mantém o mesmo padrão para reduzir a carga mental e facilitar a re
 <div class="course-grid">
   <div class="course-card" markdown>
     <span class="number">#001</span>
-    ### 🌿 Religião Natural e Religião Sobrenatural
+    ### Religião Natural e Religião Sobrenatural
     [Abrir aula →](aula-01.md)
   </div>
 
   <div class="course-card" markdown>
     <span class="number">#002</span>
-    ### 📜 Fontes da Revelação
+    ### Fontes da Revelação
     [Abrir aula →](aula-02.md)
   </div>
 
   <div class="course-card" markdown>
     <span class="number">#003</span>
-    ### ✝️ Creio em Deus Pai
+    ### Creio em Deus Pai
     [Abrir aula →](aula-03.md)
   </div>
 
   <div class="course-card" markdown>
     <span class="number">#004</span>
-    ### 👼 Criador do Céu e dos Anjos
+    ### Criador do Céu e dos Anjos
     [Abrir aula →](aula-04.md)
   </div>
 
   <div class="course-card" markdown>
     <span class="number">#005</span>
-    ### 🌍 Criador da Terra e dos Homens
+    ### Criador da Terra e dos Homens
     [Abrir aula →](aula-05.md)
   </div>
 
   <div class="course-card" markdown>
     <span class="number">#006</span>
-    ### ✨ Encarnação do Verbo
+    ### Encarnação do Verbo
     [Abrir aula →](aula-06.md)
   </div>
 
   <div class="course-card" markdown>
     <span class="number">#007</span>
-    ### 🌹 Concebido do Espírito Santo, nasceu de Maria Virgem
+    ### Concebido do Espírito Santo, nasceu de Maria Virgem
     [Abrir aula →](aula-07.md)
   </div>
 
   <div class="course-card" markdown>
     <span class="number">TRAILER</span>
-    ### 🎬 Trailer Oficial
+    ### Trailer Oficial
     Não numerado.
     
     [Abrir trailer →](trailer.md)

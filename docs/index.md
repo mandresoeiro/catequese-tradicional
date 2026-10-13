@@ -1,21 +1,23 @@
-# 📚 Catequese Tradicional
+# Catequese Tradicional
 
 <div class="hero" markdown>
 
-<span class="hero-kicker">✠ Centro Dom Bosco · Caderno de Estudos</span>
+<span class="hero-kicker">CENTRO DOM BOSCO · CADERNO DE ESTUDOS</span>
 
-## Fé estudada com ordem, clareza e memória
+## Conhecer a fé.<br>Guardar a Tradição.
 
 Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, mapas mentais, dicionário, revisão ativa, questionários e treino de explicação oral.
 
 <div class="hero-actions">
-<a class="hero-button primary" href="aulas/">📖 Começar pelas aulas</a>
-<a class="hero-button secondary" href="dicionario/">📚 Abrir dicionário</a>
+<a class="hero-button primary" href="aulas/">Começar a estudar →</a>
+<a class="hero-button secondary" href="dicionario/">Consultar dicionário</a>
 </div>
 
 </div>
 
-## Acesso rápido
+<div class="study-stats"><span><strong>07</strong> aulas de formação</span><span><strong>07</strong> questionários de revisão</span><span><strong>01</strong> dicionário em construção</span></div>
+
+## Seu espaço de formação
 
 <div class="quick-grid">
   <div class="quick-card" markdown>
@@ -54,7 +56,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 <div class="course-grid">
   <div class="course-card" markdown>
     <span class="number">#001</span>
-    ### 🌿 Religião Natural e Religião Sobrenatural
+    ### Religião Natural e Religião Sobrenatural
     Fundamentos da catequese, razão, consciência e Revelação.
     
     [Abrir aula →](aulas/aula-01.md)
@@ -62,7 +64,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 
   <div class="course-card" markdown>
     <span class="number">#002</span>
-    ### 📜 Fontes da Revelação
+    ### Fontes da Revelação
     Escritura, Tradição, Magistério, cânon e introdução ao Credo.
     
     [Abrir aula →](aulas/aula-02.md)
@@ -70,7 +72,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 
   <div class="course-card" markdown>
     <span class="number">#003</span>
-    ### ✝️ Creio em Deus Pai
+    ### Creio em Deus Pai
     Atributos de Deus, Providência, justiça e fidelidade.
     
     [Abrir aula →](aulas/aula-03.md)
@@ -78,7 +80,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 
   <div class="course-card" markdown>
     <span class="number">#004</span>
-    ### 👼 Criador do Céu e dos Anjos
+    ### Criador do Céu e dos Anjos
     Natureza angélica, coros, São Miguel e combate espiritual.
     
     [Abrir aula →](aulas/aula-04.md)
@@ -86,7 +88,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 
   <div class="course-card" markdown>
     <span class="number">#005</span>
-    ### 🌍 Criador da Terra e dos Homens
+    ### Criador da Terra e dos Homens
     Criação, Adão e Eva, pecado original e promessa da Redenção.
     
     [Abrir aula →](aulas/aula-05.md)
@@ -94,7 +96,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 
   <div class="course-card" markdown>
     <span class="number">#006</span>
-    ### ✨ Encarnação do Verbo
+    ### Encarnação do Verbo
     Uma Pessoa divina, duas naturezas, duas vontades e a missão redentora de Cristo.
     
     [Abrir aula →](aulas/aula-06.md)
@@ -102,7 +104,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 
   <div class="course-card" markdown>
     <span class="number">#007</span>
-    ### 🌹 Concebido do Espírito Santo, nasceu de Maria Virgem
+    ### Concebido do Espírito Santo, nasceu de Maria Virgem
     Prólogo de São João, Caná, Paixão, Calvário e distinção entre latria, hiperdulia e dulia.
     
     [Abrir aula →](aulas/aula-07.md)
@@ -110,7 +112,7 @@ Este projeto organiza a **Catequese Tradicional** aula por aula, com resumos, ma
 
   <div class="course-card" markdown>
     <span class="number">EXTRA</span>
-    ### 🎬 Trailer Oficial
+    ### Trailer Oficial
     Apresentação da série. Não entra na numeração das aulas.
     
     [Abrir trailer →](aulas/trailer.md)
