@@ -1,67 +1,17 @@
 # Percurso de formação
 
-<p class="section-intro">A sequência segue a numeração oficial da playlist. O Trailer Oficial é apresentado à parte e não entra na contagem.</p>
-
-<div class="study-card" markdown>
-
-<span class="badge">ESTRUTURA DE CADA AULA</span>
-
-Cada estudo mantém o mesmo padrão para reduzir a carga mental e facilitar a revisão:
-
-**Resumo essencial → blocos de estudo → mapa mental → memorização → dicionário → perguntas e respostas → revisão ativa → aprofundamento → treino em vídeo.**
-
-</div>
-
-## Sequência oficial
+<p class="section-intro">Sete aulas para estudar com calma, revisar com método e construir uma base sólida. A numeração segue a playlist oficial do Centro Dom Bosco.</p>
 
 <div class="course-grid">
-  <div class="course-card" markdown>
-    <span class="number">#001</span>
-    ### Religião Natural e Religião Sobrenatural
-    [Abrir aula →](aula-01.md)
-  </div>
-
-  <div class="course-card" markdown>
-    <span class="number">#002</span>
-    ### Fontes da Revelação
-    [Abrir aula →](aula-02.md)
-  </div>
-
-  <div class="course-card" markdown>
-    <span class="number">#003</span>
-    ### Creio em Deus Pai
-    [Abrir aula →](aula-03.md)
-  </div>
-
-  <div class="course-card" markdown>
-    <span class="number">#004</span>
-    ### Criador do Céu e dos Anjos
-    [Abrir aula →](aula-04.md)
-  </div>
-
-  <div class="course-card" markdown>
-    <span class="number">#005</span>
-    ### Criador da Terra e dos Homens
-    [Abrir aula →](aula-05.md)
-  </div>
-
-  <div class="course-card" markdown>
-    <span class="number">#006</span>
-    ### Encarnação do Verbo
-    [Abrir aula →](aula-06.md)
-  </div>
-
-  <div class="course-card" markdown>
-    <span class="number">#007</span>
-    ### Concebido do Espírito Santo, nasceu de Maria Virgem
-    [Abrir aula →](aula-07.md)
-  </div>
-
-  <div class="course-card" markdown>
-    <span class="number">TRAILER</span>
-    ### Trailer Oficial
-    Não numerado.
-    
-    [Abrir trailer →](trailer.md)
-  </div>
+<div class="course-card"><span class="number">AULA #001</span><h3>Religião Natural e Religião Sobrenatural</h3><p>Razão, consciência e o encontro com a Revelação.</p><a href="aula-01/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #002</span><h3>Fontes da Revelação</h3><p>Escritura, Tradição e Magistério da Igreja.</p><a href="aula-02/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #003</span><h3>Creio em Deus Pai</h3><p>Os atributos divinos e a Providência.</p><a href="aula-03/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #004</span><h3>Criador do Céu e dos Anjos</h3><p>Natureza angélica, hierarquia e vida espiritual.</p><a href="aula-04/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #005</span><h3>Criador da Terra e dos Homens</h3><p>A criação, o pecado original e a promessa da Redenção.</p><a href="aula-05/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #006</span><h3>Encarnação do Verbo</h3><p>Jesus Cristo: uma Pessoa divina, duas naturezas.</p><a href="aula-06/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #007</span><h3>Concebido do Espírito Santo, nasceu de Maria Virgem</h3><p>A Virgem Maria, a vida de Cristo e o sacrifício do Calvário.</p><a href="aula-07/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">APRESENTAÇÃO</span><h3>Trailer Oficial</h3><p>Conheça a série. O trailer não faz parte da numeração oficial.</p><a href="trailer/">Assistir à apresentação →</a></div>
 </div>
+
+!!! tip "Como aproveitar cada aula"
+    Leia o resumo, acompanhe os blocos de estudo, consulte o mapa mental e responda ao questionário. Volte ao dicionário sempre que encontrar um conceito novo.
