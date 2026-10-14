@@ -7,7 +7,7 @@
 <div class="hero-actions"><a class="hero-button primary" href="aulas/">Começar a estudar →</a><a class="hero-button secondary" href="dicionario/">Consultar dicionário</a></div>
 </div>
 
-<div class="study-stats"><span><strong>07</strong> aulas de formação</span><span><strong>07</strong> questionários de revisão</span><span><strong>01</strong> dicionário em construção</span></div>
+<div class="study-stats"><span><strong>09</strong> aulas de formação</span><span><strong>09</strong> questionários de revisão</span><span><strong>01</strong> dicionário em construção</span></div>
 
 ## Seu espaço de formação
 
@@ -19,7 +19,7 @@
 
 ## Percurso de estudos
 
-<p class="section-intro">Da religião natural à Encarnação do Verbo. Siga a sequência oficial das aulas e retome cada tema no seu ritmo.</p>
+<p class="section-intro">Da religião natural à Ascensão e ao Juízo. Siga a sequência oficial das aulas e retome cada tema no seu ritmo.</p>
 
 <div class="course-grid">
 <div class="course-card"><span class="number">AULA #001</span><h3>Religião Natural e Religião Sobrenatural</h3><p>Razão, consciência e o encontro com a Revelação.</p><a href="aulas/aula-01/">Estudar esta aula →</a></div>
@@ -29,6 +29,8 @@
 <div class="course-card"><span class="number">AULA #005</span><h3>Criador da Terra e dos Homens</h3><p>A criação, o pecado original e a promessa da Redenção.</p><a href="aulas/aula-05/">Estudar esta aula →</a></div>
 <div class="course-card"><span class="number">AULA #006</span><h3>Encarnação do Verbo</h3><p>Jesus Cristo: uma Pessoa divina, duas naturezas.</p><a href="aulas/aula-06/">Estudar esta aula →</a></div>
 <div class="course-card"><span class="number">AULA #007</span><h3>Concebido do Espírito Santo, nasceu de Maria Virgem</h3><p>A Virgem Maria, a vida de Cristo e o sacrifício do Calvário.</p><a href="aulas/aula-07/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #008</span><h3>Desceu aos Infernos e Ressurgiu</h3><p>Inferno dos justos, purgatório, Ressurreição e corpo glorioso.</p><a href="aulas/aula-08/">Estudar esta aula →</a></div>
+<div class="course-card"><span class="number">AULA #009</span><h3>Subiu aos Céus e há de vir julgar os vivos e os mortos</h3><p>Ascensão, Reino de Cristo, juízo particular e Juízo Final.</p><a href="aulas/aula-09/">Estudar esta aula →</a></div>
 <div class="course-card"><span class="number">APRESENTAÇÃO</span><h3>Trailer Oficial</h3><p>Conheça a série. O trailer não faz parte da numeração oficial.</p><a href="aulas/trailer/">Assistir à apresentação →</a></div>
 </div>
 
