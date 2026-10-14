@@ -448,3 +448,45 @@ Propriedade do corpo glorioso associada à perfeita submissão à alma.
 
 **Esplendor**  
 Brilho ou claridade do corpo glorioso.
+
+
+## Novos verbetes — Aula #009
+
+**Ascensão**  
+Subida de Cristo aos céus por seu próprio poder, quarenta dias após a Ressurreição.
+
+**Assunção**  
+Elevação de Nossa Senhora ao céu pelos méritos de Cristo.
+
+**Direita do Pai**  
+Expressão simbólica de honra, autoridade e primazia.
+
+**Reino de Cristo**  
+Realidade espiritual ligada ao senhorio de Cristo e, na exposição da aula, à Igreja.
+
+**Juízo particular**  
+Julgamento individual que acontece após a morte.
+
+**Juízo Final**  
+Julgamento universal no fim da história.
+
+**Ressurreição dos corpos**  
+Restauração corporal de todos no fim dos tempos.
+
+**Mediação de Cristo**  
+Ação de Cristo como mediador e advogado junto ao Pai.
+
+**Pentecostes**  
+Vinda do Espírito Santo e início da missão pública da Igreja.
+
+**Anticristo**  
+Figura escatológica mencionada como um dos sinais anteriores ao fim.
+
+**Apostasia**  
+Abandono da fé anteriormente professada.
+
+**Reinado social de Cristo**  
+Expressão usada na aula para a extensão da ordem de Cristo sobre a vida social.
+
+**Sinais do fim dos tempos**  
+Conjunto de acontecimentos mencionados na aula como precedentes do Juízo Final.
