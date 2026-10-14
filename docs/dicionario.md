@@ -394,3 +394,57 @@ Obrigações próprias da condição de vida de cada pessoa.
 
 **Santa Missa**  
 Na aula, apresentada como renovação sacramental do mesmo sacrifício do Calvário.
+
+
+## Novos verbetes — Aula #008
+
+**Descida aos infernos**  
+Artigo do Credo referente à ida de Cristo aos “reinos inferiores” após a morte.
+
+**Inferno dos justos**  
+Expressão usada na aula para o lugar de espera das almas justas antes da abertura do céu.
+
+**Purgatório**  
+Estado de purificação das almas salvas que ainda possuem pena temporal.
+
+**Pena temporal**  
+Consequência temporal do pecado distinta da culpa perdoada.
+
+**Indulgência**  
+Remissão da pena temporal, conforme a exposição da aula.
+
+**Indulgência plenária**  
+Remissão total da pena temporal segundo as condições estabelecidas.
+
+**Indulgência parcial**  
+Remissão parcial da pena temporal.
+
+**Obra indulgenciada**  
+Ação ou oração à qual a Igreja associa uma indulgência.
+
+**Seio de Abraão**  
+Imagem bíblica relacionada ao destino dos justos.
+
+**Revelação pública**  
+Revelação confiada à Igreja na era apostólica.
+
+**Revelação particular**  
+Experiência mística ou aparição posterior que não integra o depósito público da fé.
+
+**Ressurreição**  
+Retorno de Cristo à vida corporal gloriosa.
+
+**Corpo glorioso**  
+Corpo ressuscitado dotado de propriedades próprias do estado de glória.
+
+**Agilidade**  
+Propriedade do corpo glorioso apresentada como liberdade em relação às limitações ordinárias de movimento.
+
+**Impassibilidade**  
+Incapacidade de sofrer.
+
+**Sutileza**  
+Propriedade do corpo glorioso associada à perfeita submissão à alma.
+
+**Esplendor**  
+Brilho ou claridade do corpo glorioso.
