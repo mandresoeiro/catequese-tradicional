@@ -1,13 +1,47 @@
 # Catequese Tradicional
 
-<div class="hero">
-<span class="hero-kicker">CENTRO DOM BOSCO · CADERNO DE ESTUDOS</span>
-<h2>Conhecer a fé.<br>Guardar a Tradição.</h2>
-<p>Um percurso de formação para estudar o Catecismo de São Pio X com ordem, clareza e constância. Leia, compreenda e leve o aprendizado para a vida.</p>
-<div class="hero-actions"><a class="hero-button primary" href="aulas/">Começar a estudar →</a><a class="hero-button secondary" href="dicionario/">Consultar dicionário</a></div>
-</div>
+<style>
 
-<div class="study-stats"><span><strong>09</strong> aulas de formação</span><span><strong>09</strong> questionários de revisão</span><span><strong>01</strong> dicionário em construção</span></div>
+:root { --forest:#123d32; --emerald:#24745c; --sage:#a9c6ae; --petrol:#154f59; --gold:#c5a060; --ivory:#fff8e9; --terracotta:#a85c43; }
+.md-main:has(.landing-banner) .md-sidebar { display:none; }
+.md-main:has(.landing-banner) .md-grid { max-width:76rem; }
+.md-content:has(.landing-banner) .md-content__inner { margin:0; padding:0 1.2rem 2rem; }
+.md-content:has(.landing-banner) .md-content__inner > h1 { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+.landing-banner { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; position:relative; overflow:hidden; min-height:29rem; margin:0 -1.2rem 0; padding:2.5rem clamp(1.4rem,5vw,4rem); gap:1rem; color:var(--ivory); background:radial-gradient(ellipse at 100% 0%,#397c6d 0,transparent 55%),linear-gradient(110deg,#103c32 15%,#155460 100%); }
+.landing-banner::before { content:""; position:absolute; inset:0; opacity:.15; background-image:radial-gradient(#d8c18e 1px,transparent 1px); background-size:24px 24px; mask-image:linear-gradient(90deg,#000,transparent 45%); pointer-events:none; }
+.landing-copy { position:relative; z-index:1; }
+.landing-kicker { color:#e8c887; font-size:.65rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+.md-typeset .landing-banner h2 { margin:.9rem 0; color:#fff8e9; font-size:clamp(2rem,4.3vw,3.6rem); line-height:1.08; font-weight:500; max-width:12em; }
+.landing-banner h2 em { color:#b5ddc5; font-style:normal; }
+.landing-copy p { max-width:32rem; color:#e2eee6; font-size:.9rem; }
+.landing-actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.6rem; }
+.md-typeset .landing-actions a { padding:.75rem 1.3rem; border-radius:2rem; font-size:.76rem; font-weight:700; color:#173d32; background:#f5e6c5; border:1px solid #f5e6c5; }
+.md-typeset .landing-actions a + a { color:#fff8e9; background:transparent; border-color:#b5d5c0; }
+.md-typeset .landing-actions a:hover { background:#fff8e9; color:#173d32; }
+.landing-art { position:relative; width:100%; max-width:28rem; justify-self:center; }
+.landing-art svg { display:block; width:100%; height:auto; filter:drop-shadow(0 20px 30px #082c2844); }
+.landing-caption { text-align:center; color:#c8dfd1; font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; }
+.landing-ribbon { display:grid; grid-template-columns:repeat(3,1fr); margin:0 -1.2rem 2.4rem; background:#ecdfc3; color:#173d32; }
+.landing-ribbon div { padding:1.1rem; text-align:center; border-right:1px solid #cbb997; font-size:.72rem; }
+.landing-ribbon div:last-child { border:0; }
+.landing-ribbon strong { font-size:1.4rem; display:block; font-family:Georgia,serif; }
+.md-content:has(.landing-banner) .quick-card:nth-child(1) { border-top:4px solid #24745c; }
+.md-content:has(.landing-banner) .quick-card:nth-child(2) { border-top:4px solid #c5a060; }
+.md-content:has(.landing-banner) .quick-card:nth-child(3) { border-top:4px solid #154f59; }
+.md-content:has(.landing-banner) .course-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.md-content:has(.landing-banner) .course-card:nth-child(3n+2) .study-icon { color:var(--md-accent-fg-color); }
+.md-content:has(.landing-banner) .course-card:nth-child(3n+3) { border-top:3px solid #a9c6ae; }
+.md-content:has(.landing-banner) .course-card { display:flex; flex-direction:column; border-top:3px solid #c5a060; }
+.md-content:has(.landing-banner) .course-card a { margin-top:auto; }
+.landing-path { display:inline-block; padding:.25rem .7rem; border:1px solid var(--study-line); border-radius:2rem; font-size:.65rem; color:var(--md-accent-fg-color); }
+@media(max-width:850px) { .landing-banner { grid-template-columns:1fr 1fr; } .md-content:has(.landing-banner) .course-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .landing-banner { grid-template-columns:1fr; padding-top:2rem; } .landing-art { max-width:17rem; } .landing-ribbon div { padding:.7rem .35rem; font-size:.62rem; } .landing-ribbon strong { font-size:1.15rem; } .md-content:has(.landing-banner) .course-grid { grid-template-columns:1fr; } }
+@media print { .landing-banner { background:none; color:#173d32; } .landing-banner h2,.landing-copy p,.landing-kicker { color:#173d32!important; } .landing-art { display:none; } }
+
+</style>
+
+<section class="landing-banner" aria-label="Apresentação da Catequese Tradicional"><div class="landing-copy"><span class="landing-kicker">Centro Dom Bosco · Catecismo de São Pio X</span><h2>Uma fé que ilumina.<br><em>Uma tradição que forma.</em></h2><p>Conheça os fundamentos da fé católica em um percurso de estudo com clareza, profundidade e constância.</p><div class="landing-actions"><a href="aulas/">Comece sua formação →</a><a href="aulas/aula-09/">Conheça a aula mais recente</a></div></div><div class="landing-art"><svg viewBox="0 0 480 460" role="img" aria-label="Livro aberto diante de um vitral com uma cruz" width="480" height="460"><defs><linearGradient id="arch" x2="1" y2="1"><stop stop-color="#60aa94"/><stop offset="1" stop-color="#124b49"/></linearGradient><linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fff7df"/><stop offset="1" stop-color="#d5b878"/></linearGradient></defs><path d="M85 370V180a155 155 0 0 1 310 0v190" fill="url(#arch)" stroke="#d4b16e" stroke-width="3"/><path d="M115 360V180a125 125 0 0 1 250 0v180" fill="none" stroke="#b6d3ae" stroke-opacity=".5"/><g stroke="#d4b16e" stroke-width="2" opacity=".55"><path d="M240 25v320M85 180h310M130 75l220 225M350 75 130 300M85 270h310"/></g><circle cx="240" cy="178" r="73" fill="#163f36" stroke="#d4b16e" stroke-width="2"/><path d="M229 121h22v41h39v22h-39v66h-22v-66h-39v-22h39z" fill="#f0d39c"/><ellipse cx="240" cy="413" rx="210" ry="20" fill="#082c28" opacity=".5"/><path d="M38 323q105-30 202 26 97-56 202-26v77q-105-25-202 27-97-52-202-27z" fill="#b28b49" stroke="#ecd3a0" stroke-width="2"/><path d="M48 308q95-23 192 30 97-53 192-30v77q-95-23-192 30-97-53-192-30z" fill="url(#paper)"/><path d="M240 338v77" stroke="#9c783f" stroke-width="3"/><g fill="none" stroke="#9c783f" stroke-width="2" opacity=".6"><path d="M72 333q70-9 140 24M72 348q70-9 140 24M72 363q70-9 140 24M268 357q70-33 140-24M268 372q70-33 140-24M268 387q70-33 140-24"/></g></svg><div class="landing-caption">Conhecer · Compreender · Viver</div></div></section>
+<div class="landing-ribbon"><div><strong>09 aulas</strong>Um percurso de formação</div><div><strong>09 questionários</strong>Aprender e recordar</div><div><strong>Um só propósito</strong>Aprofundar a fé</div></div>
 
 ## Seu espaço de formação
 
