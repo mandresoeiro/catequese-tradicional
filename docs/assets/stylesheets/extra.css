@@ -45,3 +45,11 @@ img.infografico { display: block; width: 100%; max-width: 900px; margin: 1.5rem 
 @media (max-width: 520px) { .course-grid { grid-template-columns: 1fr; } .md-typeset h1 { font-size: 1.9em; } .hero-actions { flex-direction: column; align-items: stretch; text-align: center; } .hero-button { justify-content: center; } }
 @media (prefers-reduced-motion: reduce) { .course-card, .quick-card { transition: none; } .course-card:hover, .quick-card:hover { transform: none; } }
 @media print { .hero { background: none; color: #000; box-shadow: none; border: 1px solid #aaa; } .hero p, .md-typeset .hero h2, .hero-kicker { color: #000; } .hero::after, .hero-actions { display: none; } .course-card { break-inside: avoid; } }
+
+/* Ícones vetoriais leves, consistentes e sem dependências externas. */
+.study-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.4rem; height: 2.4rem; margin-bottom: .8rem; border: 1px solid var(--study-line); border-radius: .6rem; color: var(--md-accent-fg-color); background: var(--md-code-bg-color); }
+.study-icon svg { width: 1.35rem; height: 1.35rem; }
+.course-card > .study-icon { display: flex; }
+.md-typeset .quick-card h3 { margin-top: .7rem; }
+.md-typeset h1 { color: var(--md-default-fg-color); }
+@media print { .study-icon { background: transparent; } }
