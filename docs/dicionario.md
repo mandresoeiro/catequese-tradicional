@@ -483,7 +483,7 @@ Vinda do Espírito Santo e início da missão pública da Igreja.
 Figura escatológica mencionada como um dos sinais anteriores ao fim.
 
 **Apostasia**  
-Abandono da fé anteriormente professada.
+Abandono consciente e voluntário da fé cristã anteriormente professada. Não se confunde com uma dúvida passageira nem com a simples dificuldade de compreender algum ponto da doutrina. **Na Aula #009**, é mencionada entre os sinais associados ao fim dos tempos. Consulte [Aula #009](aulas/aula-09.md).
 
 **Reinado social de Cristo**  
 Expressão usada na aula para a extensão da ordem de Cristo sobre a vida social.
