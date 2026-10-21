@@ -11,6 +11,7 @@ const lessons = getLessonSlugs().map(getLesson);
     <a class="action" href={base+'aulas/'}>Explorar minhas aulas <span aria-hidden="true">↗</span></a>
   </section>
   <p class="muted" id="progress-status" aria-live="polite">Seu progresso neste navegador será mostrado aqui.</p>
+  <div class="resume-study" id="resume-study" hidden><strong>Continue de onde parou</strong><p id="resume-description"></p><a id="resume-link" class="action" href={base+'aulas/'}>Continuar estudo →</a></div>
   <div class="stat-grid" aria-label="Resumo do acervo">
     <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Aulas disponíveis</span></div>
     <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Questionários de revisão</span></div>
@@ -23,6 +24,12 @@ const lessons = getLessonSlugs().map(getLesson);
   <script>
     const key='catequese:v2:concluidas';
     const node=document.querySelector('#progress-status');
-    try {const items=JSON.parse(localStorage.getItem(key)||'[]');if(node)node.textContent='Meu progresso: '+(Array.isArray(items)?items.length:0)+' aulas concluídas neste navegador.';} catch {}
+    try {const items=JSON.parse(localStorage.getItem(key)||'[]');if(node)node.textContent='Meu progresso: '+(Array.isArray(items)?items.length:0)+' aulas concluídas neste navegador.';
+      const slugs=Array.from(document.querySelectorAll<HTMLAnchorElement>('.cards a.card')).map(a=>new URL(a.href).pathname.split('/').filter(Boolean).at(-1)||'');
+      const next=slugs.find(slug=>!items.includes(slug));
+      const box=document.querySelector<HTMLElement>('#resume-study');
+      const link=document.querySelector<HTMLAnchorElement>('#resume-link');
+      const info=document.querySelector<HTMLElement>('#resume-description');
+      if(box&&link&&info){box.hidden=false;info.textContent=next?'Próxima etapa: '+next.replace('aula-','Aula #'):'Todas as aulas estão marcadas como concluídas.';if(next)link.href=link.href+next+'/';}} catch {}
   </script>
 </SiteLayout>

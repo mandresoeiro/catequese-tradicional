@@ -7,8 +7,17 @@ const lessons = getLessonSlugs().map(getLesson);
   <span class="eyebrow">Biblioteca / Formação</span>
   <h1>Todas as aulas</h1>
   <p class="muted">Estude em seu ritmo. Cada aula contém resumo, tópicos fundamentais e um questionário de revisão.</p>
+  <p id="library-progress" class="muted" aria-live="polite"></p>
   <div class="cards" style="margin-top:30px">
     {lessons.map((l,i)=><a class="card" href={base+'aulas/'+l.slug+'/'}><span class="card-index">AULA {String(i+1).padStart(3,'0')}</span><strong>{l.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</strong><span class="card-arrow">Começar estudo ↗</span></a>)}
   </div>
+  <script>
+    try{
+      const completed=JSON.parse(localStorage.getItem('catequese:v2:concluidas')||'[]');
+      const cards=document.querySelectorAll<HTMLAnchorElement>('.cards .card');
+      cards.forEach(card=>{const slug=new URL(card.href).pathname.split('/').filter(Boolean).at(-1);if(completed.includes(slug)){const tag=document.createElement('span');tag.className='card-complete';tag.textContent='✓ Concluída';card.append(tag)}});
+      const status=document.querySelector('#library-progress');if(status)status.textContent=completed.length+' de '+cards.length+' aulas concluídas.';
+    }catch{}
+  </script>
   <p style="margin-top:30px"><a href={base+'aulas/trailer/'}>Conheça também o trailer oficial →</a></p>
 </SiteLayout>

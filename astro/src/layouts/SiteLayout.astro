@@ -130,6 +130,19 @@ const isActive = (href: string) => pathname === href || (href === base+'aulas/' 
     .incorrect-choice{background:#ffe1dc;border-radius:7px}
     @media(max-width:1100px){.reading-layout{display:block}.lesson-toc{position:static;max-height:250px;overflow:auto;margin-bottom:24px}}
     @media print{.sidebar,.topbar,.site-footer,.reading-tools,.lesson-navigation,.lesson-toc,.mobile-nav{display:none!important}.site-shell,.reading-layout{display:block}.page-main{padding:0!important}body{background:white!important}}
+    .study-extras{margin-top:35px;padding:22px;border:1px solid var(--line);border-radius:13px;background:#fffefa}
+    .memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+    .memory-card{border:1px solid #b5c6b6;background:#f6f8f3;border-radius:10px;padding:15px}
+    .memory-card summary{cursor:pointer;font-size:14px;font-weight:650;color:var(--green)}
+    .memory-card p{margin:12px 0 0}
+    .term-list{display:flex;flex-wrap:wrap;gap:8px}
+    .term-list a{padding:6px 10px;border-radius:8px;border:1px solid var(--line);font-size:13px}
+    .study-notes{margin-top:26px}
+    .study-notes textarea{display:block;width:100%;min-height:120px;resize:vertical;border-radius:9px;border:1px solid #a9b8a9;padding:12px;font:inherit;background:#fff}
+    .resume-study{border:1px solid #bfccba;background:#eef3e9;border-radius:12px;padding:20px;margin:20px 0}
+    .resume-study[hidden]{display:none}
+    .card-complete{font-size:12px;color:#245e43;font-weight:750;margin-top:8px}
+    @media print{.study-notes,.memory-grid,.resume-study{display:none!important}}
     .site-footer{border-top:1px solid var(--line);padding:20px clamp(20px,4vw,64px);color:var(--muted);font-size:11px}
     .mobile-nav{display:none}
     :focus-visible{outline:3px solid #c29756;outline-offset:3px}
