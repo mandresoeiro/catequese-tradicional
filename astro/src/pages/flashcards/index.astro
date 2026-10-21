@@ -1,0 +1,23 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLesson, getLessonSlugs } from '../../lib/content';
+const lessons=getLessonSlugs().map(getLesson);
+const flashcards=lessons.map(lesson=>{
+  const matches=[...lesson.source.matchAll(/\*\*Para guardar:\*\*\s*([^\n]+)/g)];
+  const cards=matches.map((m,i)=>({front:'Conceito '+String(i+1).padStart(2,'0'),back:m[1].trim()})).filter(c=>c.back.length>8).slice(0,15);
+  return {...lesson,cards};
+});
+---
+<SiteLayout title="Flashcards de revisão">
+  <span class="eyebrow">Biblioteca / Memorização</span>
+  <h1>Flashcards</h1>
+  <p class="muted">Revise os conceitos essenciais das aulas. Clique em cada cartão para revelar o conteúdo. Os cartões são extraídos dos próprios resumos, sem gabaritos inventados.</p>
+  <div class="flash-grid">
+    {flashcards.map((lesson,i)=><section class="flash-topic" aria-label={'Cartões da aula '+(i+1)}>
+      <span class="card-index">AULA {String(i+1).padStart(3,'0')} · {lesson.cards.length} cartões</span>
+      <h2>{lesson.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</h2>
+      {lesson.cards.length?lesson.cards.map(card=><details class="flash-card"><summary>{card.front} · revelar resposta</summary><p>{card.back}</p></details>):<p class="flash-empty">Nenhum ponto “Para guardar” foi identificado nesta aula.</p>}
+      <a href={base+'aulas/'+lesson.slug+'/'}>Revisar aula completa →</a>
+    </section>)}
+  </div>
+</SiteLayout>

@@ -1,0 +1,68 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLesson, getLessonSlugs } from '../../lib/content';
+export function getStaticPaths() { return getLessonSlugs().map(slug => ({ params: { slug } })); }
+const { slug } = Astro.params;
+const slugs = getLessonSlugs();
+const lesson = getLesson(slug!);
+const index = slugs.indexOf(slug!);
+const previous = index > 0 ? slugs[index-1] : null;
+const next = index < slugs.length-1 ? slugs[index+1] : null;
+const memory = [...lesson.source.matchAll(/\*\*Para guardar:\*\*\s*([^\n]+)/g)].map(m=>m[1].trim()).slice(0,12);
+const terms=['apostasia','filioque','santificação','consubstancial','pentecostes','encarnação'];
+const related=terms.filter(term=>lesson.source.toLocaleLowerCase('pt-BR').includes(term));
+---
+<SiteLayout title={lesson.title}>
+  <div class="reading-tools" aria-label="Controles de leitura"><label>Texto <input type="range" id="font-size" min="14" max="23" value="16" aria-label="Tamanho da letra" /></label><button type="button" id="toggle-contrast">Alto contraste</button><button type="button" id="print-lesson">Imprimir</button><button type="button" id="mark-completed" data-slug={slug}>Marcar concluída</button></div>
+  <div class="reading-head">
+    <a class="backlink" href={base+'aulas/'}>← Biblioteca de Aulas</a>
+    <span class="eyebrow" style="display:block;margin-top:12px">Percurso de formação · Aula {String(index+1).padStart(3,'0')} de {slugs.length}</span>
+    <h1>{lesson.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</h1>
+    <p class="muted">Leia o conteúdo e utilize os links de revisão ao final.</p>
+  </div>
+  <div class="reading-layout"><aside class="lesson-toc" aria-label="Índice desta aula"><strong>Nesta aula</strong><nav>{lesson.headings.filter(h=>h.level===2).map(h=><a href={'#'+h.id}>{h.title}</a>)}</nav></aside><article class="reading">
+    <figure class="lesson-infographic">
+      <a href={base+'infograficos/'+slug+'.svg'} target="_blank" rel="noopener noreferrer" aria-label="Ampliar mapa mental desta aula">
+        <img src={base+'infograficos/'+slug+'.svg'} width="760" height="430" loading="lazy" alt={'Mapa mental de '+lesson.title} />
+      </a>
+      <figcaption>Mapa mental de revisão · <a href={base+'caderno-visual/'}>Ver todos os infográficos</a></figcaption>
+    </figure>
+    <div set:html={lesson.html} />
+    <section class="study-extras" aria-label="Atividades de revisão">
+      <h2>Revisão e memorização</h2>
+      <p class="muted">Abra os cartões para lembrar conceitos apresentados nesta aula.</p>
+      <div class="memory-grid">{memory.map((phrase,i)=><details class="memory-card"><summary>Conceito {String(i+1).padStart(2,'0')} · revelar</summary><p>{phrase}</p></details>)}</div>
+      {related.length>0 && <div class="related-glossary"><h3>Termos para consultar</h3><p>Encontre as definições no dicionário:</p><div class="term-list">{related.map(term=><a href={base+'dicionario/'}>{term} ↗</a>)}</div></div>}
+      <div class="study-notes"><label for="study-notes-input"><strong>Meu caderno de estudo</strong></label><p class="muted">Notas salvas apenas neste navegador, sem conta ou sincronização.</p><textarea id="study-notes-input" data-slug={slug} rows="5" placeholder="O que aprendi? O que preciso revisar?"></textarea><p id="study-notes-status" class="muted" role="status" aria-live="polite"></p></div>
+    </section>
+    <nav class="lesson-navigation" aria-label="Próximos passos da aula">
+      <a class="study-quiz" href={base+'questionarios/'+lesson.slug+'/'}>✓ &nbsp; Responder questionário desta aula →</a>
+      <div class="lesson-pager">
+        {previous ? <a href={base+'aulas/'+previous+'/'}><small>← Aula anterior</small><strong>Aula {String(index).padStart(3,'0')}</strong></a> : <a href={base+'aulas/'}><small>← Voltar</small><strong>Biblioteca</strong></a>}
+        {next ? <a href={base+'aulas/'+next+'/'}><small>Próxima aula →</small><strong>Aula {String(index+2).padStart(3,'0')}</strong></a> : <a href={base+'questionarios/'}><small>Continuar revisão →</small><strong>Questionários</strong></a>}
+      </div>
+    </nav>
+  </article></div>
+  <script>
+    const root=document.documentElement;
+    const slider=document.querySelector<HTMLInputElement>('#font-size');
+    const contrast=document.querySelector<HTMLButtonElement>('#toggle-contrast');
+    const completed=document.querySelector<HTMLButtonElement>('#mark-completed');
+    const key='catequese:v2:concluidas';
+    try { if(slider){slider.value=localStorage.getItem('catequese:v2:font')||'16';root.style.setProperty('--reader-font',slider.value+'px');} }catch{}
+    slider?.addEventListener('input',()=>{root.style.setProperty('--reader-font',slider.value+'px');try{localStorage.setItem('catequese:v2:font',slider.value)}catch{}});
+    contrast?.addEventListener('click',()=>{root.classList.toggle('contrast-mode');contrast.setAttribute('aria-pressed',String(root.classList.contains('contrast-mode')))});
+    document.querySelector('#print-lesson')?.addEventListener('click',()=>window.print());
+    function readProgress(){try{return JSON.parse(localStorage.getItem(key)||'[]') as string[]}catch{return [] as string[]}}
+    function updateCompletion(){if(completed)completed.textContent=readProgress().includes(completed.dataset.slug||'')?'✓ Aula concluída':'Marcar concluída'}
+    completed?.addEventListener('click',()=>{const slug=completed.dataset.slug||'';const ids=readProgress();const next=ids.includes(slug)?ids.filter(v=>v!==slug):[...ids,slug];try{localStorage.setItem(key,JSON.stringify(next))}catch{}updateCompletion()});
+    updateCompletion();
+    const notes=document.querySelector<HTMLTextAreaElement>('#study-notes-input');
+    const notesStatus=document.querySelector<HTMLElement>('#study-notes-status');
+    if(notes){
+      const noteKey='catequese:v2:notas:'+notes.dataset.slug;
+      try{notes.value=localStorage.getItem(noteKey)||''}catch{}
+      notes.addEventListener('input',()=>{try{localStorage.setItem(noteKey,notes.value);if(notesStatus)notesStatus.textContent='Nota salva neste navegador.'}catch{if(notesStatus)notesStatus.textContent='Não foi possível salvar a nota.'}});
+    }
+  </script>
+</SiteLayout>

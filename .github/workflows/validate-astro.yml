@@ -1,0 +1,25 @@
+name: Validar prototipo Astro
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'astro/**'
+      - 'docs/**'
+      - '.github/workflows/validate-astro.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar dependencias
+        working-directory: astro
+        run: npm install --no-audit --no-fund
+      - name: Compilar prototipo
+        working-directory: astro
+        run: npm run build

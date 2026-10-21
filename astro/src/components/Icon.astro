@@ -1,0 +1,16 @@
+---
+interface Props {name:string}
+const {name} = Astro.props;
+const paths: Record<string,string> = {
+  'Visão geral':'M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z',
+  'Todas as aulas':'M4 5.5c4-2 7-1.5 8 0v15c-2-1.5-5-2-8 0z M20 5.5c-4-2-7-1.5-8 0v15c2-1.5 5-2 8 0z',
+  'Flashcards':'M3 5h14v12H3z M7 9h6 M7 12h4 M7 20h14V8h-3',
+  'Buscar':'M11 20a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M18 18l4 4',
+  'Questionários':'M9 3h6l1 2h4v16H4V5h4z M8 12l3 3 5-5',
+  'Dicionário':'M4 20V5a2 2 0 0 1 2-2h14v18H6a2 2 0 0 1 0-4h14 M8 8h8 M8 12h6',
+  'Sobre o projeto':'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M12 11v6 M12 7h.01',
+  'Caderno Visual':'M3 4h18v16H3z M7 15l4-4 3 3 3-4 3 4 M8 8h.01',
+};
+const d=paths[name] || paths['Todas as aulas'];
+---
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={d}/></svg>
