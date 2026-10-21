@@ -29,3 +29,5 @@ Para testar localmente, abra a URL indicada pelo Astro (prefixo `/catequese-trad
 - Questionários com seleção única; correção automática somente na Aula #010, com gabarito editorial explícito. Outros questionários seguem para autoavaliação até validação dos gabaritos.
 - Caderno Visual com dez SVGs e links diretos.
 - `npm run build` executa a compilação e confere a presença de páginas e SVGs; **ainda são necessários testes visuais e de links internos completos**.
+
+> Revisão pendente: conferir renderização Markdown, imagens e resultados dos questionários antes de publicar.
