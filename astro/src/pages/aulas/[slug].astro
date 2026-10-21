@@ -3,6 +3,27 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import { base, getLesson, getLessonSlugs } from '../../lib/content';
 export function getStaticPaths() { return getLessonSlugs().map(slug => ({ params: { slug } })); }
 const { slug } = Astro.params;
+const slugs = getLessonSlugs();
 const lesson = getLesson(slug!);
+const index = slugs.indexOf(slug!);
+const previous = index > 0 ? slugs[index-1] : null;
+const next = index < slugs.length-1 ? slugs[index+1] : null;
 ---
-<SiteLayout title={lesson.title}><p><a href={base+'aulas/'}>← Todas as aulas</a></p><article><div set:html={lesson.html} /><p><a href={base+'questionarios/'+lesson.slug+'/'}>Responder questionário →</a></p></article></SiteLayout>
+<SiteLayout title={lesson.title}>
+  <div class="reading-head">
+    <a class="backlink" href={base+'aulas/'}>← Biblioteca de Aulas</a>
+    <span class="eyebrow" style="display:block;margin-top:12px">Percurso de formação · Aula {String(index+1).padStart(3,'0')} de {slugs.length}</span>
+    <h1>{lesson.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</h1>
+    <p class="muted">Leia o conteúdo e utilize os links de revisão ao final.</p>
+  </div>
+  <article class="reading">
+    <div set:html={lesson.html} />
+    <nav class="lesson-navigation" aria-label="Próximos passos da aula">
+      <a class="study-quiz" href={base+'questionarios/'+lesson.slug+'/'}>✓ &nbsp; Responder questionário desta aula →</a>
+      <div class="lesson-pager">
+        {previous ? <a href={base+'aulas/'+previous+'/'}><small>← Aula anterior</small><strong>Aula {String(index).padStart(3,'0')}</strong></a> : <a href={base+'aulas/'}><small>← Voltar</small><strong>Biblioteca</strong></a>}
+        {next ? <a href={base+'aulas/'+next+'/'}><small>Próxima aula →</small><strong>Aula {String(index+2).padStart(3,'0')}</strong></a> : <a href={base+'questionarios/'}><small>Continuar revisão →</small><strong>Questionários</strong></a>}
+      </div>
+    </nav>
+  </article>
+</SiteLayout>
