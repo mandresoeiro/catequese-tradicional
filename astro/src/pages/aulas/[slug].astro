@@ -17,6 +17,12 @@ const next = index < slugs.length-1 ? slugs[index+1] : null;
     <p class="muted">Leia o conteúdo e utilize os links de revisão ao final.</p>
   </div>
   <article class="reading">
+    <figure class="lesson-infographic">
+      <a href={base+'infograficos/'+slug+'.svg'} target="_blank" rel="noopener noreferrer" aria-label="Ampliar mapa mental desta aula">
+        <img src={base+'infograficos/'+slug+'.svg'} width="760" height="430" loading="lazy" alt={'Mapa mental de '+lesson.title} />
+      </a>
+      <figcaption>Mapa mental de revisão · <a href={base+'caderno-visual/'}>Ver todos os infográficos</a></figcaption>
+    </figure>
     <div set:html={lesson.html} />
     <nav class="lesson-navigation" aria-label="Próximos passos da aula">
       <a class="study-quiz" href={base+'questionarios/'+lesson.slug+'/'}>✓ &nbsp; Responder questionário desta aula →</a>
