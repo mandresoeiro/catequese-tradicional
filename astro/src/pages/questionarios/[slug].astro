@@ -2,6 +2,26 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { base, getLessonSlugs, getQuestionnaire } from '../../lib/content';
 export function getStaticPaths() { return getLessonSlugs().map(slug => ({ params: { slug } })); }
-const quiz = getQuestionnaire(Astro.params.slug!);
+const slug = Astro.params.slug!;
+const quiz = getQuestionnaire(slug);
+const slugs = getLessonSlugs();
+const index = slugs.indexOf(slug);
+const next = slugs[index+1];
 ---
-<SiteLayout title={quiz.title}><p><a href={base+'aulas/'+quiz.slug+'/'}>← Voltar à aula</a></p><article><div set:html={quiz.html} /></article></SiteLayout>
+<SiteLayout title={quiz.title}>
+  <div class="reading-head">
+    <a class="backlink" href={base+'questionarios/'}>← Biblioteca de Questionários</a>
+    <span class="eyebrow" style="display:block;margin-top:12px">Revisão ativa · Aula {String(index+1).padStart(3,'0')}</span>
+    <h1>{quiz.title}</h1>
+    <p class="muted">Use as questões para revisar a matéria. Nesta versão, as respostas ainda não são corrigidas automaticamente.</p>
+  </div>
+  <article class="reading">
+    <div set:html={quiz.html} />
+    <nav class="lesson-navigation" aria-label="Navegação da revisão">
+      <div class="lesson-pager">
+        <a href={base+'aulas/'+slug+'/'}><small>← Retornar ao conteúdo</small><strong>Aula {String(index+1).padStart(3,'0')}</strong></a>
+        {next ? <a href={base+'aulas/'+next+'/'}><small>Continuar estudos →</small><strong>Aula {String(index+2).padStart(3,'0')}</strong></a> : <a href={base+'aulas/'}><small>Revisar novamente →</small><strong>Todas as aulas</strong></a>}
+      </div>
+    </nav>
+  </article>
+</SiteLayout>
