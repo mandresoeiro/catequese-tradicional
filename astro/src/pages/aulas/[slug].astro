@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLesson, getLessonSlugs } from '../../lib/content';
+export function getStaticPaths() { return getLessonSlugs().map(slug => ({ params: { slug } })); }
+const { slug } = Astro.params;
+const lesson = getLesson(slug!);
+---
+<SiteLayout title={lesson.title}><p><a href={base+'aulas/'}>← Todas as aulas</a></p><article><div set:html={lesson.html} /><p><a href={base+'questionarios/'+lesson.slug+'/'}>Responder questionário →</a></p></article></SiteLayout>

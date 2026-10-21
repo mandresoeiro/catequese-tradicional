@@ -1,0 +1,7 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLessonSlugs, getQuestionnaire } from '../../lib/content';
+export function getStaticPaths() { return getLessonSlugs().map(slug => ({ params: { slug } })); }
+const quiz = getQuestionnaire(Astro.params.slug!);
+---
+<SiteLayout title={quiz.title}><p><a href={base+'aulas/'+quiz.slug+'/'}>← Voltar à aula</a></p><article><div set:html={quiz.html} /></article></SiteLayout>

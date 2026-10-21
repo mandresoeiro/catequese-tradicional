@@ -1,0 +1,49 @@
+---
+import { base } from '../lib/content';
+interface Props { title: string; }
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Percurso de estudo da Catequese Tradicional" />
+  <title>{title} | Catequese Tradicional</title>
+  <style is:global>
+    :root { font-family: system-ui, sans-serif; color-scheme: light; --verde:#183f35; --ouro:#b58a46; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:#243b33; background:#faf8f2; line-height:1.7; }
+    header { background:var(--verde); color:white; }
+    .wrap { max-width:1050px; margin:auto; padding:1rem 1.25rem; }
+    nav { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
+    nav a { color:inherit; }
+    .brand { font-weight:800; margin-right:auto; text-decoration:none; }
+    main { min-height:70vh; padding-top:2rem!important; padding-bottom:3rem!important; }
+    h1,h2,h3 { font-family:Georgia,serif; line-height:1.25; }
+    h1 { font-size:clamp(2rem,5vw,3rem); }
+    a { color:#1d6550; text-underline-offset:3px; }
+    .card { display:block; padding:1.25rem; border:1px solid #d8d5c9; background:white; border-radius:12px; text-decoration:none; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; }
+    article { max-width:800px; margin:auto; }
+    article img,article svg { max-width:100%; height:auto; }
+    pre { overflow:auto; padding:1rem; background:#f0eee8; border-radius:8px; }
+    blockquote { border-left:4px solid var(--ouro); padding-left:1rem; }
+    table { border-collapse:collapse; display:block; overflow-x:auto; }
+    th,td { border:1px solid #d8d5c9; padding:.5rem; }
+    .admonition { border-left:4px solid var(--ouro); background:#f0eee3; padding:.7rem 1rem; margin:1rem 0; }
+    .admonition strong { display:block; }
+    footer { border-top:1px solid #ded7c7; }
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap" aria-label="Menu principal">
+  <a class="brand" href={base}>✠ Catequese Tradicional</a>
+  <a href={base+'aulas/'}>Aulas</a>
+  <a href={base+'dicionario/'}>Dicionário</a>
+  <a href={base+'sobre/'}>Sobre</a>
+</nav></header>
+<main class="wrap"><slot /></main>
+<footer><div class="wrap">Projeto experimental Astro · O conteúdo original permanece no MkDocs.</div></footer>
+</body></html>

@@ -1,0 +1,6 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLesson, getLessonSlugs } from '../../lib/content';
+const lessons = getLessonSlugs().map(getLesson);
+---
+<SiteLayout title="Aulas"><h1>Aulas</h1><p>Nove aulas preservadas a partir dos arquivos Markdown originais.</p><div class="cards">{lessons.map(l => <a class="card" href={base+'aulas/'+l.slug+'/'}>{l.title} →</a>)}</div><p><a href={base+'aulas/trailer/'}>Trailer oficial</a></p></SiteLayout>
