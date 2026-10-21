@@ -32,7 +32,7 @@ const next = slugs[index+1];
     // Gabarito editorial revisado apenas para a Aula #010.
     const keys:Record<string,string[]>={'aula-10':['B','C','A','B','B','C','B','B','A','A','B','A','C','B','B']};
     if(root){
-      const questions=[...root.querySelectorAll<HTMLHeadingElement>('h3')].filter(h=>/^\\d{1,2}\\./.test(h.textContent?.trim()||''));
+      const questions=[...root.querySelectorAll<HTMLHeadingElement>('h3')].filter(h=>/^\d{1,2}\./.test(h.textContent?.trim()||''));
       questions.forEach((h,i)=>{
         const options=h.nextElementSibling;
         if(!options||options.tagName!=='UL')return;
