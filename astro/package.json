@@ -1,0 +1,21 @@
+{
+  "name": "catequese-tradicional-astro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && npm run check",
+    "preview": "astro preview",
+    "check": "node scripts/check-build.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/markdown-it": "^14.1.2",
+    "typescript": "^5.0.0"
+  }
+}
