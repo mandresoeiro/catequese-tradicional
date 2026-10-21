@@ -41,9 +41,10 @@ docs/
 ├── dicionario.md
 ├── aulas/
 │   ├── index.md
-│   └── aula-01.md
+│   ├── trailer.md
+│   └── aula-01.md ... aula-09.md
 ├── questionarios/
-│   └── aula-01.md
+│   └── aula-01.md ... aula-09.md
 ├── modelos/
 │   └── aula-template.md
 └── assets/
@@ -76,11 +77,15 @@ Depois acesse `http://127.0.0.1:8000`.
 ## ➕ Adicionar uma nova aula
 
 1. Copie `docs/modelos/aula-template.md`.
-2. Salve como `docs/aulas/aula-02.md`, `aula-03.md` etc.
+2. Salve como `docs/aulas/aula-10.md`, `aula-11.md` etc., usando a próxima numeração disponível.
 3. Preencha o conteúdo da aula.
 4. Acrescente a nova página no `mkdocs.yml`.
 5. Atualize o `docs/dicionario.md`.
 6. Crie o questionário correspondente.
 7. Faça commit e push.
 
-O workflow em `.github/workflows/deploy.yml` faz o build e prepara a publicação automática no GitHub Pages a cada push na branch `main`.
+O workflow em `.github/workflows/validate.yml` verifica o build estrito nos pull requests para `main`, sem publicar. O workflow em `.github/workflows/deploy.yml` faz o build e publica no GitHub Pages a cada push na branch `main`.
+
+## ✅ Diagnóstico do deploy
+
+A execução #98 (16/10/2026) concluiu o build estrito e o deploy com sucesso. Os logs apresentam avisos de descontinuação do Node.js e de APIs internas usadas pelas ações do GitHub Pages; esses avisos não impediram a publicação. Alterações futuras devem manter o build estrito e atualizar as ações oficiais somente após verificar compatibilidade.
