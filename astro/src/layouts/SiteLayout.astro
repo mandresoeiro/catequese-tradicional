@@ -6,6 +6,7 @@ const pathname = Astro.url.pathname;
 const links = [
   { href: base, label: 'Visão geral', symbol: '⌂' },
   { href: base+'aulas/', label: 'Todas as aulas', symbol: '▤' },
+  { href: base+'questionarios/', label: 'Questionários', symbol: '☑' },
   { href: base+'dicionario/', label: 'Dicionário', symbol: 'A' },
   { href: base+'sobre/', label: 'Sobre o projeto', symbol: 'ⓘ' },
 ];
@@ -92,6 +93,15 @@ const isActive = (href: string) => pathname === href || (href === base+'aulas/' 
     article.reading .admonition{border-left:4px solid var(--gold);background:#f0eee5;padding:16px 19px;border-radius:7px;margin:20px 0}
     article.reading .admonition strong{display:block}
     .next-link{display:inline-flex;margin-top:22px;padding:12px 17px;border-radius:9px;text-decoration:none;background:var(--green);color:white;font-weight:700}
+    .lesson-navigation{margin:35px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+    .study-quiz{display:block;background:var(--green);color:#fff;text-decoration:none;border-radius:10px;padding:15px 19px;font-weight:700;text-align:center}
+    .study-quiz:hover{background:#295b48}
+    .lesson-pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:13px}
+    .lesson-pager a{display:grid;gap:4px;min-width:0;border:1px solid var(--line);border-radius:10px;padding:15px;background:#fffefa;text-decoration:none}
+    .lesson-pager a:last-child{text-align:right}
+    .lesson-pager small{font-size:11px;color:var(--muted)}
+    .lesson-pager strong{font-size:14px;color:var(--green)}
+    .lesson-pager a:hover{border-color:#9da995}
     .site-footer{border-top:1px solid var(--line);padding:20px clamp(20px,4vw,64px);color:var(--muted);font-size:11px}
     .mobile-nav{display:none}
     :focus-visible{outline:3px solid #c29756;outline-offset:3px}
