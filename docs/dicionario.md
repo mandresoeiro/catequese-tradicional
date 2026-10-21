@@ -490,3 +490,35 @@ Expressão usada na aula para a extensão da ordem de Cristo sobre a vida social
 
 **Sinais do fim dos tempos**  
 Conjunto de acontecimentos mencionados na aula como precedentes do Juízo Final.
+
+## Novos verbetes — Aula #010
+
+**Consubstancial**  
+Da mesma substância ou natureza divina, segundo a explicação sobre o Pai, o Filho e o Espírito Santo.
+
+**Santificação**  
+Ação da graça que transforma e orienta a alma para Deus.
+
+**Conversão**  
+Mudança interior pela qual a pessoa se afasta do pecado e se volta para Deus.
+
+**Estado de graça**  
+Condição espiritual da pessoa que vive na graça santificante.
+
+**Filioque**  
+Expressão latina que significa “e do Filho”, ligada ao debate sobre a processão do Espírito Santo.
+
+**Processão divina**  
+Termo teológico referente às relações de origem entre as Pessoas da Santíssima Trindade.
+
+**Inspiração bíblica**  
+Ação divina associada à composição das Sagradas Escrituras.
+
+**Sinal sacramental**  
+Sinal sensível ligado ao significado e à ação própria de um sacramento.
+
+**Templo do Espírito Santo**  
+Imagem usada para falar da presença divina na vida do fiel.
+
+**Ritos batismais tradicionais**  
+Orações e cerimônias ligadas às formas históricas do rito do Batismo.
