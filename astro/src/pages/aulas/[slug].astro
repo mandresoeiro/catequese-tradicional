@@ -10,13 +10,14 @@ const previous = index > 0 ? slugs[index-1] : null;
 const next = index < slugs.length-1 ? slugs[index+1] : null;
 ---
 <SiteLayout title={lesson.title}>
+  <div class="reading-tools" aria-label="Controles de leitura"><label>Texto <input type="range" id="font-size" min="14" max="23" value="16" aria-label="Tamanho da letra" /></label><button type="button" id="toggle-contrast">Alto contraste</button><button type="button" id="print-lesson">Imprimir</button><button type="button" id="mark-completed" data-slug={slug}>Marcar concluída</button></div>
   <div class="reading-head">
     <a class="backlink" href={base+'aulas/'}>← Biblioteca de Aulas</a>
     <span class="eyebrow" style="display:block;margin-top:12px">Percurso de formação · Aula {String(index+1).padStart(3,'0')} de {slugs.length}</span>
     <h1>{lesson.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</h1>
     <p class="muted">Leia o conteúdo e utilize os links de revisão ao final.</p>
   </div>
-  <article class="reading">
+  <div class="reading-layout"><aside class="lesson-toc" aria-label="Índice desta aula"><strong>Nesta aula</strong><nav>{lesson.headings.filter(h=>h.level===2).map(h=><a href={'#'+h.id}>{h.title}</a>)}</nav></aside><article class="reading">
     <figure class="lesson-infographic">
       <a href={base+'infograficos/'+slug+'.svg'} target="_blank" rel="noopener noreferrer" aria-label="Ampliar mapa mental desta aula">
         <img src={base+'infograficos/'+slug+'.svg'} width="760" height="430" loading="lazy" alt={'Mapa mental de '+lesson.title} />
@@ -31,5 +32,20 @@ const next = index < slugs.length-1 ? slugs[index+1] : null;
         {next ? <a href={base+'aulas/'+next+'/'}><small>Próxima aula →</small><strong>Aula {String(index+2).padStart(3,'0')}</strong></a> : <a href={base+'questionarios/'}><small>Continuar revisão →</small><strong>Questionários</strong></a>}
       </div>
     </nav>
-  </article>
+  </article></div>
+  <script>
+    const root=document.documentElement;
+    const slider=document.querySelector<HTMLInputElement>('#font-size');
+    const contrast=document.querySelector<HTMLButtonElement>('#toggle-contrast');
+    const completed=document.querySelector<HTMLButtonElement>('#mark-completed');
+    const key='catequese:v2:concluidas';
+    try { if(slider){slider.value=localStorage.getItem('catequese:v2:font')||'16';root.style.setProperty('--reader-font',slider.value+'px');} }catch{}
+    slider?.addEventListener('input',()=>{root.style.setProperty('--reader-font',slider.value+'px');try{localStorage.setItem('catequese:v2:font',slider.value)}catch{}});
+    contrast?.addEventListener('click',()=>{root.classList.toggle('contrast-mode');contrast.setAttribute('aria-pressed',String(root.classList.contains('contrast-mode')))});
+    document.querySelector('#print-lesson')?.addEventListener('click',()=>window.print());
+    function readProgress(){try{return JSON.parse(localStorage.getItem(key)||'[]') as string[]}catch{return [] as string[]}}
+    function updateCompletion(){if(completed)completed.textContent=readProgress().includes(completed.dataset.slug||'')?'✓ Aula concluída':'Marcar concluída'}
+    completed?.addEventListener('click',()=>{const slug=completed.dataset.slug||'';const ids=readProgress();const next=ids.includes(slug)?ids.filter(v=>v!==slug):[...ids,slug];try{localStorage.setItem(key,JSON.stringify(next))}catch{}updateCompletion()});
+    updateCompletion();
+  </script>
 </SiteLayout>

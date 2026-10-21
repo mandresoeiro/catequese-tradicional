@@ -1,0 +1,36 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLessonSlugs, getLesson, getDocument } from '../../lib/content';
+const docs = getLessonSlugs().map(slug=>{const x=getLesson(slug);return {title:x.title,url:base+'aulas/'+slug+'/',body:x.source.replace(/<[^>]+>/g,' ').slice(0,12000)}});
+const glossary=getDocument('dicionario.md');
+docs.push({title:'Dicionário geral',url:base+'dicionario/',body:glossary.source.replace(/<[^>]+>/g,' ').slice(0,45000)});
+---
+<SiteLayout title="Buscar">
+  <span class="eyebrow">Biblioteca / Pesquisa</span>
+  <h1>Buscar no acervo</h1>
+  <p class="muted">Pesquise uma palavra ou expressão nas dez aulas e no dicionário. Índice local, sem servidor.</p>
+  <label for="query">Palavra ou expressão</label>
+  <input id="query" type="search" placeholder="Ex.: apostasia, Pentecostes, Filioque" autocomplete="off" style="display:block;width:100%;max-width:640px;margin:10px 0;padding:14px;border:1px solid #aab9aa;border-radius:9px" />
+  <p id="search-count" role="status"></p>
+  <div id="results" class="cards"></div>
+  <script type="application/json" id="search-data" set:html={JSON.stringify(docs).replace(/</g,'\u003c')} />
+  <script>
+    const data=JSON.parse(document.querySelector('#search-data')?.textContent||'[]') as {title:string;url:string;body:string}[];
+    const input=document.querySelector<HTMLInputElement>('#query');
+    const results=document.querySelector<HTMLElement>('#results');
+    const count=document.querySelector<HTMLElement>('#search-count');
+    const normalize=(s:string)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    input?.addEventListener('input',()=>{
+      const value=normalize(input.value.trim());if(!results)return;results.replaceChildren();
+      if(value.length<2){if(count)count.textContent='Digite pelo menos 2 caracteres.';return}
+      const matches=data.filter(x=>normalize(x.title+' '+x.body).includes(value));
+      if(count)count.textContent=matches.length+' resultado(s).';
+      for(const item of matches){
+        const card=document.createElement('a');card.className='card';card.href=item.url;
+        const title=document.createElement('strong');title.textContent=item.title;
+        const go=document.createElement('span');go.className='card-arrow';go.textContent='Abrir conteúdo →';
+        card.append(title,go);results.append(card);
+      }
+    });
+  </script>
+</SiteLayout>

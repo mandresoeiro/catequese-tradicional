@@ -20,3 +20,12 @@ Para testar localmente, abra a URL indicada pelo Astro (prefixo `/catequese-trad
 **Compatibilidade a revisar:** o interpretador Markdown do protótipo converte algumas caixas `!!!`, mas ainda não replica integralmente todos os recursos de Python-Markdown/Pymdownx do MkDocs, nem torna as questões interativas. Antes de um futuro deploy, compare visualmente cada página, verifique links/imagens e preserve as URLs antigas.
 
 **Publicação:** a branch `main` continua com MkDocs. O workflow `validate-astro.yml` apenas compila, sem publicar.
+
+## Estudo 2.0 (experimental)
+
+- Índice interno de seções nas aulas, leitura com fonte ajustável, contraste e impressão.
+- Marcação de conclusão salva localmente no navegador. Não há login ou sincronização.
+- Busca local por termos nas dez aulas e no dicionário (sem serviços externos).
+- Questionários com seleção única; correção automática somente na Aula #010, com gabarito editorial explícito. Outros questionários seguem para autoavaliação até validação dos gabaritos.
+- Caderno Visual com dez SVGs e links diretos.
+- `npm run build` executa a compilação e confere a presença de páginas e SVGs; **ainda são necessários testes visuais e de links internos completos**.

@@ -13,10 +13,11 @@ const next = slugs[index+1];
     <a class="backlink" href={base+'questionarios/'}>← Biblioteca de Questionários</a>
     <span class="eyebrow" style="display:block;margin-top:12px">Revisão ativa · Aula {String(index+1).padStart(3,'0')}</span>
     <h1>{quiz.title}</h1>
-    <p class="muted">Use as questões para revisar a matéria. Nesta versão, as respostas ainda não são corrigidas automaticamente.</p>
+    <p class="muted">Selecione uma alternativa por questão. A correção automática está disponível para a Aula #010; as demais aguardam revisão editorial do gabarito.</p>
   </div>
   <article class="reading">
-    <div set:html={quiz.html} />
+    <div id="quiz-body" data-slug={slug} set:html={quiz.html} />
+    <div class="quiz-controls"><button type="button" id="check-answers">Conferir respostas</button><p id="quiz-feedback" role="status" aria-live="polite"></p></div>
     <nav class="lesson-navigation" aria-label="Navegação da revisão">
       <div class="lesson-pager">
         <a href={base+'aulas/'+slug+'/'}><small>← Retornar ao conteúdo</small><strong>Aula {String(index+1).padStart(3,'0')}</strong></a>
@@ -24,4 +25,38 @@ const next = slugs[index+1];
       </div>
     </nav>
   </article>
+  <script>
+    const root=document.querySelector<HTMLElement>('#quiz-body');
+    const btn=document.querySelector<HTMLButtonElement>('#check-answers');
+    const result=document.querySelector<HTMLElement>('#quiz-feedback');
+    // Gabarito editorial revisado apenas para a Aula #010.
+    const keys:Record<string,string[]>={'aula-10':['B','C','A','B','B','C','B','B','A','A','B','A','C','B','B']};
+    if(root){
+      const questions=[...root.querySelectorAll<HTMLHeadingElement>('h3')].filter(h=>/^\\d{1,2}\\./.test(h.textContent?.trim()||''));
+      questions.forEach((h,i)=>{
+        const options=h.nextElementSibling;
+        if(!options||options.tagName!=='UL')return;
+        options.querySelectorAll('li').forEach((li,j)=>{
+          const label=document.createElement('label');label.className='choice';
+          const original=li.querySelector('input[type="checkbox"]');
+          original?.remove();
+          const radio=document.createElement('input');radio.type='radio';radio.name='question-'+i;radio.value=String.fromCharCode(65+j);
+          label.append(radio,document.createTextNode(' '+(li.textContent||'').trim()));
+          li.replaceChildren(label);
+        });
+      });
+      btn?.addEventListener('click',()=>{
+        const key=keys[root.dataset.slug||''];
+        const selections=questions.map((_,i)=>root.querySelector<HTMLInputElement>('input[name="question-'+i+'"]:checked')?.value);
+        const done=selections.filter(Boolean).length;
+        if(!key){if(result)result.textContent='Você respondeu '+done+' de '+questions.length+' questões. O gabarito desta aula ainda não foi revisado; consulte o conteúdo para fazer sua autoavaliação.';return}
+        const correct=selections.filter((answer,i)=>answer===key[i]).length;
+        if(result)result.textContent='Resultado: '+correct+' de '+key.length+' respostas corretas ('+done+' respondidas). Revise as questões incorretas na aula.';
+        questions.forEach((h,i)=>{
+          const list=h.nextElementSibling;
+          list?.querySelectorAll('li').forEach((li,j)=>{li.classList.toggle('correct-choice',String.fromCharCode(65+j)===key[i]);li.classList.toggle('incorrect-choice',!!selections[i]&&selections[i]===String.fromCharCode(65+j)&&selections[i]!==key[i])});
+        });
+      });
+    }
+  </script>
 </SiteLayout>

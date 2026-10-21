@@ -4,8 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "astro build && npm run check",
+    "preview": "astro preview",
+    "check": "node scripts/check-build.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0",

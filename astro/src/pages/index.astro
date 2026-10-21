@@ -10,6 +10,7 @@ const lessons = getLessonSlugs().map(getLesson);
     <p>Um espaço de estudo para aprender com profundidade, revisar com método e construir uma base sólida na doutrina católica.</p>
     <a class="action" href={base+'aulas/'}>Explorar minhas aulas <span aria-hidden="true">↗</span></a>
   </section>
+  <p class="muted" id="progress-status" aria-live="polite">Seu progresso neste navegador será mostrado aqui.</p>
   <div class="stat-grid" aria-label="Resumo do acervo">
     <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Aulas disponíveis</span></div>
     <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Questionários de revisão</span></div>
@@ -19,4 +20,9 @@ const lessons = getLessonSlugs().map(getLesson);
   <div class="cards">
     {lessons.map((l,i) => <a class="card" href={base+'aulas/'+l.slug+'/'}><span class="card-index">AULA {String(i+1).padStart(3,'0')}</span><strong>{l.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</strong><span class="card-arrow">Abrir aula ↗</span></a>)}
   </div>
+  <script>
+    const key='catequese:v2:concluidas';
+    const node=document.querySelector('#progress-status');
+    try {const items=JSON.parse(localStorage.getItem(key)||'[]');if(node)node.textContent='Meu progresso: '+(Array.isArray(items)?items.length:0)+' aulas concluídas neste navegador.';} catch {}
+  </script>
 </SiteLayout>
