@@ -25,6 +25,11 @@ O objetivo editorial é transformar o material, ao final do percurso, em uma bas
 - #003 — Creio em Deus Pai
 - #004 — Criador do Céu e dos Anjos
 - #005 — Criador da Terra e dos Homens
+- #006 — Encarnação do Verbo
+- #007 — Concebido do Espírito Santo, nasceu de Maria Virgem
+- #008 — Desceu aos Infernos e Ressurgiu
+- #009 — Subiu aos Céus e há de vir julgar os vivos e os mortos
+- #010 — Creio no Espírito Santo
 
 ## 🌐 Site
 
@@ -42,7 +47,7 @@ docs/
 ├── aulas/
 │   ├── index.md
 │   ├── trailer.md
-│   └── aula-01.md ... aula-09.md
+│   └── aula-01.md ... aula-10.md
 ├── questionarios/
 │   └── aula-01.md ... aula-09.md
 ├── modelos/
@@ -77,7 +82,7 @@ Depois acesse `http://127.0.0.1:8000`.
 ## ➕ Adicionar uma nova aula
 
 1. Copie `docs/modelos/aula-template.md`.
-2. Salve como `docs/aulas/aula-10.md`, `aula-11.md` etc., usando a próxima numeração disponível.
+2. Salve como `docs/aulas/aula-11.md`, `aula-12.md` etc., usando a próxima numeração disponível.
 3. Preencha o conteúdo da aula.
 4. Acrescente a nova página no `mkdocs.yml`.
 5. Atualize o `docs/dicionario.md`.
