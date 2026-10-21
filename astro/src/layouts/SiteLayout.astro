@@ -1,8 +1,7 @@
 ---
-import { base, getLessonSlugs } from '../lib/content';
+import { base } from '../lib/content';
 interface Props { title: string; }
 const { title } = Astro.props;
-const lessons = getLessonSlugs();
 const pathname = Astro.url.pathname;
 const links = [
   { href: base, label: 'Visão geral', symbol: '⌂' },
@@ -41,6 +40,10 @@ const isActive = (href: string) => pathname === href || (href === base+'aulas/' 
     .lesson-links{display:grid;gap:2px}
     .lesson-links a{font-size:12px;padding:8px 13px}
     .lesson-no{font-size:10px;letter-spacing:.06em;color:#d7bf8f;background:#ffffff13;border:1px solid #ffffff13;padding:4px 6px;border-radius:5px}
+    .library-entry{display:grid;gap:6px;margin:6px 5px 12px;padding:14px;border:1px solid #6e866e80;border-radius:10px;background:#2b5546;color:#fff;text-decoration:none}
+    .library-entry strong{font-size:13px}
+    .library-entry span{font-size:11px;color:#d0dfd2;line-height:1.5}
+    .library-entry:hover{background:#396b56}
     .sidebar-footer{margin-top:auto;padding:24px 12px 0;color:#b2cbb9;font-size:11px;line-height:1.6}
     .sidebar-footer span{display:block;color:#ddc391;margin-bottom:4px}
     .workspace{min-width:0}
@@ -123,10 +126,11 @@ const isActive = (href: string) => pathname === href || (href === base+'aulas/' 
     <nav class="side-nav" aria-label="Seções principais">
       {links.map(link => <a href={link.href} class:list={{active:isActive(link.href)}} aria-current={pathname===link.href?'page':undefined}><span class="side-icon" aria-hidden="true">{link.symbol}</span>{link.label}</a>)}
     </nav>
-    <div class="side-label">Percurso de formação</div>
-    <nav class="lesson-links" aria-label="Aulas">
-      {lessons.map((slug,i) => <a href={base+'aulas/'+slug+'/'} class:list={{active:pathname===base+'aulas/'+slug+'/'}} aria-current={pathname===base+'aulas/'+slug+'/'?'page':undefined}><span class="lesson-no">{String(i+1).padStart(3,'0')}</span>Aula {String(i+1).padStart(2,'0')}</a>)}
-    </nav>
+    <div class="side-label">Área de formação</div>
+    <a class="library-entry" href={base+'aulas/'}>
+      <strong>📚 Biblioteca de Aulas</strong>
+      <span>Consulte todas as aulas em uma página exclusiva →</span>
+    </a>
     <div class="sidebar-footer"><span>✦ Estudar, compreender, viver.</span>Acervo original preservado no MkDocs.</div>
   </aside>
   <div class="workspace">
@@ -134,7 +138,7 @@ const isActive = (href: string) => pathname === href || (href === base+'aulas/' 
       <summary>☰ &nbsp; Catequese Tradicional — abrir menu</summary>
       <nav class="mobile-links" aria-label="Menu móvel">
         {links.map(link => <a href={link.href}>{link.label}</a>)}
-        {lessons.map((slug,i) => <a href={base+'aulas/'+slug+'/'}>Aula #{String(i+1).padStart(3,'0')}</a>)}
+
       </nav>
     </details>
     <header class="topbar"><div class="crumb">BIBLIOTECA <span aria-hidden="true">/</span> <b>{title}</b></div><div class="topbar-pill">✦ Formação &amp; conhecimento</div></header>
