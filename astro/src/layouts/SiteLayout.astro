@@ -1,49 +1,146 @@
 ---
-import { base } from '../lib/content';
+import { base, getLessonSlugs } from '../lib/content';
 interface Props { title: string; }
 const { title } = Astro.props;
+const lessons = getLessonSlugs();
+const pathname = Astro.url.pathname;
+const links = [
+  { href: base, label: 'Visão geral', symbol: '⌂' },
+  { href: base+'aulas/', label: 'Todas as aulas', symbol: '▤' },
+  { href: base+'dicionario/', label: 'Dicionário', symbol: 'A' },
+  { href: base+'sobre/', label: 'Sobre o projeto', symbol: 'ⓘ' },
+];
+const isActive = (href: string) => pathname === href || (href === base+'aulas/' && pathname.startsWith(base+'aulas/') && pathname !== href);
 ---
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Percurso de estudo da Catequese Tradicional" />
+  <meta name="theme-color" content="#173b32" />
+  <meta name="description" content="Estudo organizado da Catequese Tradicional — aulas, revisão e dicionário." />
   <title>{title} | Catequese Tradicional</title>
   <style is:global>
-    :root { font-family: system-ui, sans-serif; color-scheme: light; --verde:#183f35; --ouro:#b58a46; }
-    * { box-sizing: border-box; }
-    body { margin:0; color:#243b33; background:#faf8f2; line-height:1.7; }
-    header { background:var(--verde); color:white; }
-    .wrap { max-width:1050px; margin:auto; padding:1rem 1.25rem; }
-    nav { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
-    nav a { color:inherit; }
-    .brand { font-weight:800; margin-right:auto; text-decoration:none; }
-    main { min-height:70vh; padding-top:2rem!important; padding-bottom:3rem!important; }
-    h1,h2,h3 { font-family:Georgia,serif; line-height:1.25; }
-    h1 { font-size:clamp(2rem,5vw,3rem); }
-    a { color:#1d6550; text-underline-offset:3px; }
-    .card { display:block; padding:1.25rem; border:1px solid #d8d5c9; background:white; border-radius:12px; text-decoration:none; }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; }
-    article { max-width:800px; margin:auto; }
-    article img,article svg { max-width:100%; height:auto; }
-    pre { overflow:auto; padding:1rem; background:#f0eee8; border-radius:8px; }
-    blockquote { border-left:4px solid var(--ouro); padding-left:1rem; }
-    table { border-collapse:collapse; display:block; overflow-x:auto; }
-    th,td { border:1px solid #d8d5c9; padding:.5rem; }
-    .admonition { border-left:4px solid var(--ouro); background:#f0eee3; padding:.7rem 1rem; margin:1rem 0; }
-    .admonition strong { display:block; }
-    footer { border-top:1px solid #ded7c7; }
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;}}
+    :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#263c34;background:#f7f6f1;font-synthesis:none;--green:#173b32;--green-soft:#2b6651;--gold:#b38b4c;--line:#e7e5db;--muted:#6c7770}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-width:320px}
+    a{color:#23694f;text-underline-offset:3px}
+    button{font:inherit}
+    .site-shell{display:grid;grid-template-columns:266px minmax(0,1fr);min-height:100vh}
+    .sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;background:#173b32;color:#d7e4db;padding:27px 15px;display:flex;flex-direction:column;border-right:1px solid #325449}
+    .side-brand{display:flex;align-items:center;gap:12px;padding:0 10px 25px;color:#fff;text-decoration:none}
+    .brand-mark{width:43px;height:43px;border:1px solid #a99162;border-radius:13px;display:grid;place-items:center;font:31px Georgia,serif;color:#e9d0a3;background:#21493c}
+    .brand-copy strong{display:block;font:700 17px Georgia,serif;line-height:1.1}
+    .brand-copy small{color:#afc8b8;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    .side-label{font-size:10px;color:#9cb8a7;text-transform:uppercase;letter-spacing:.17em;font-weight:750;padding:12px 13px 7px}
+    .side-nav{display:grid;gap:3px}
+    .side-nav a,.lesson-links a{display:flex;align-items:center;gap:12px;border-radius:9px;padding:10px 13px;text-decoration:none;color:#d4e1d8;font-size:13px;transition:background .15s}
+    .side-nav a:hover,.lesson-links a:hover,.side-nav a.active,.lesson-links a.active{background:#2c5948;color:white}
+    .side-icon{display:grid;place-items:center;width:20px;height:20px;font-size:19px;color:#e2bf80}
+    .lesson-links{display:grid;gap:2px}
+    .lesson-links a{font-size:12px;padding:8px 13px}
+    .lesson-no{font-size:10px;letter-spacing:.06em;color:#d7bf8f;background:#ffffff13;border:1px solid #ffffff13;padding:4px 6px;border-radius:5px}
+    .sidebar-footer{margin-top:auto;padding:24px 12px 0;color:#b2cbb9;font-size:11px;line-height:1.6}
+    .sidebar-footer span{display:block;color:#ddc391;margin-bottom:4px}
+    .workspace{min-width:0}
+    .topbar{height:67px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,64px);background:#fffefa;border-bottom:1px solid var(--line)}
+    .crumb{font-size:12px;letter-spacing:.02em;color:var(--muted)}
+    .crumb b{font-weight:650;color:#244d3d}
+    .topbar-pill{font-size:11px;border:1px solid #dcd8ca;border-radius:99px;padding:5px 12px;color:#56725f;background:#f7f5ed}
+    .page-main{max-width:1210px;margin:auto;padding:clamp(25px,4vw,55px) clamp(20px,4vw,64px) 80px;min-height:calc(100vh - 130px)}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;letter-spacing:-.025em;color:var(--green)}
+    h1{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:500}
+    h2{font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:500}
+    h3{font-weight:600}
+    p{line-height:1.8}
+    .eyebrow{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:750;color:#917043}
+    .muted{color:var(--muted)}
+    .hero-panel{position:relative;overflow:hidden;background:radial-gradient(circle at 100% 0,#3d8067 0,transparent 47%),linear-gradient(115deg,#153a30,#194d45);border-radius:20px;padding:clamp(28px,5vw,63px);color:#ecf2e9;box-shadow:0 20px 38px #143c3120}
+    .hero-panel:after{content:"✠";position:absolute;right:5%;top:-40px;font:300px Georgia,serif;color:#ffffff0b;pointer-events:none}
+    .hero-panel .eyebrow{color:#dcc394}
+    .hero-panel h1{color:#fff9ed;max-width:620px;margin:12px 0;font-size:clamp(2.2rem,5vw,4.2rem)}
+    .hero-panel p{max-width:550px;color:#d5e6da}
+    .action{display:inline-flex;gap:9px;align-items:center;border-radius:8px;padding:12px 19px;background:#e8d3a5;color:#1b4335;font-weight:750;text-decoration:none;font-size:13px;margin-top:14px}
+    .action:hover{background:#f5e6c9}
+    .section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:45px 0 18px}
+    .section-heading h2{margin:0}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+    .card{display:flex;flex-direction:column;min-height:175px;padding:23px;border:1px solid var(--line);background:#fffefa;border-radius:13px;text-decoration:none;box-shadow:0 4px 15px #284b3410;transition:transform .15s,box-shadow .15s}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 25px #284b3420}
+    .card-index{color:#a17d42;font-size:11px;letter-spacing:.1em;font-weight:800}
+    .card strong{display:block;font:600 20px Georgia,serif;color:#234838;line-height:1.3;margin:13px 0}
+    .card-arrow{font-size:12px;color:#287051;font-weight:750;margin-top:auto}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:19px}
+    .stat{padding:20px 23px;background:#fffefa;border:1px solid var(--line);border-radius:12px}
+    .stat b{font:500 34px Georgia,serif;color:var(--green);display:block}
+    .stat span{font-size:12px;color:var(--muted)}
+    .reading-head{padding:25px 30px;margin-bottom:28px;background:#fffefa;border:1px solid var(--line);border-radius:13px}
+    .reading-head h1{margin:10px 0 5px}
+    .backlink{font-size:13px;text-decoration:none;font-weight:700}
+    article.reading{max-width:850px;margin:auto;color:#31423a;font-size:15px;line-height:1.85}
+    article.reading h1{font-size:2.2rem}
+    article.reading h2{margin-top:2.4rem;padding-bottom:8px;border-bottom:1px solid var(--line)}
+    article.reading img,article.reading svg{max-width:100%;height:auto}
+    article.reading pre{overflow:auto;padding:17px;background:#eaece6;border-radius:9px;font-size:12px}
+    article.reading blockquote{border-left:3px solid var(--gold);margin:24px 0;padding:8px 20px;background:#f1eee5}
+    article.reading table{border-collapse:collapse;display:block;overflow-x:auto}
+    article.reading th,article.reading td{padding:10px;border:1px solid var(--line)}
+    article.reading .admonition{border-left:4px solid var(--gold);background:#f0eee5;padding:16px 19px;border-radius:7px;margin:20px 0}
+    article.reading .admonition strong{display:block}
+    .next-link{display:inline-flex;margin-top:22px;padding:12px 17px;border-radius:9px;text-decoration:none;background:var(--green);color:white;font-weight:700}
+    .site-footer{border-top:1px solid var(--line);padding:20px clamp(20px,4vw,64px);color:var(--muted);font-size:11px}
+    .mobile-nav{display:none}
+    :focus-visible{outline:3px solid #c29756;outline-offset:3px}
+    @media(max-width:960px){
+      .site-shell{display:block}
+      .sidebar{display:none}
+      .mobile-nav{display:block;background:var(--green);color:white}
+      .mobile-nav summary{list-style:none;cursor:pointer;padding:15px 20px;font-weight:700}
+      .mobile-nav summary::-webkit-details-marker{display:none}
+      .mobile-nav[open] summary{border-bottom:1px solid #ffffff30}
+      .mobile-links{display:grid;gap:3px;padding:8px 18px 18px;max-height:60vh;overflow:auto}
+      .mobile-links a{color:#f1eee7;text-decoration:none;padding:7px 8px;border-radius:6px;font-size:13px}
+      .mobile-links a:hover{background:#ffffff18}
+      .topbar{height:54px}
+    }
+    @media(max-width:560px){
+      .stat-grid{grid-template-columns:1fr 1fr}
+      .stat:last-child{grid-column:span 2}
+      .hero-panel{border-radius:13px}
+      .reading-head{padding:20px}
+      .card{min-height:150px}
+      .topbar-pill{display:none}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none}}
   </style>
 </head>
 <body>
-<header><nav class="wrap" aria-label="Menu principal">
-  <a class="brand" href={base}>✠ Catequese Tradicional</a>
-  <a href={base+'aulas/'}>Aulas</a>
-  <a href={base+'dicionario/'}>Dicionário</a>
-  <a href={base+'sobre/'}>Sobre</a>
-</nav></header>
-<main class="wrap"><slot /></main>
-<footer><div class="wrap">Projeto experimental Astro · O conteúdo original permanece no MkDocs.</div></footer>
-</body></html>
+<div class="site-shell">
+  <aside class="sidebar" aria-label="Navegação lateral">
+    <a class="side-brand" href={base}><span class="brand-mark" aria-hidden="true">✠</span><span class="brand-copy"><strong>Catequese<br/>Tradicional</strong><small>Biblioteca de estudos</small></span></a>
+    <div class="side-label">Biblioteca</div>
+    <nav class="side-nav" aria-label="Seções principais">
+      {links.map(link => <a href={link.href} class:list={{active:isActive(link.href)}} aria-current={pathname===link.href?'page':undefined}><span class="side-icon" aria-hidden="true">{link.symbol}</span>{link.label}</a>)}
+    </nav>
+    <div class="side-label">Percurso de formação</div>
+    <nav class="lesson-links" aria-label="Aulas">
+      {lessons.map((slug,i) => <a href={base+'aulas/'+slug+'/'} class:list={{active:pathname===base+'aulas/'+slug+'/'}} aria-current={pathname===base+'aulas/'+slug+'/'?'page':undefined}><span class="lesson-no">{String(i+1).padStart(3,'0')}</span>Aula {String(i+1).padStart(2,'0')}</a>)}
+    </nav>
+    <div class="sidebar-footer"><span>✦ Estudar, compreender, viver.</span>Acervo original preservado no MkDocs.</div>
+  </aside>
+  <div class="workspace">
+    <details class="mobile-nav">
+      <summary>☰ &nbsp; Catequese Tradicional — abrir menu</summary>
+      <nav class="mobile-links" aria-label="Menu móvel">
+        {links.map(link => <a href={link.href}>{link.label}</a>)}
+        {lessons.map((slug,i) => <a href={base+'aulas/'+slug+'/'}>Aula #{String(i+1).padStart(3,'0')}</a>)}
+      </nav>
+    </details>
+    <header class="topbar"><div class="crumb">BIBLIOTECA <span aria-hidden="true">/</span> <b>{title}</b></div><div class="topbar-pill">✦ Formação &amp; conhecimento</div></header>
+    <main class="page-main"><slot /></main>
+    <footer class="site-footer">Catequese Tradicional · Versão experimental Astro — conteúdo original preservado.</footer>
+  </div>
+</div>
+</body>
+</html>
