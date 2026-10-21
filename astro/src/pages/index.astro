@@ -17,6 +17,7 @@ const lessons = getLessonSlugs().map(getLesson);
     <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Questionários de revisão</span></div>
     <div class="stat"><b>01</b><span>Dicionário doutrinário</span></div>
   </div>
+  <section class="section-heading" aria-label="Ferramentas de estudo"><div><span class="eyebrow">Memorização</span><h2>Revisar com flashcards</h2><p class="muted">Cartões de memorização para reforçar os pontos essenciais das aulas.</p><a class="action" href={base+'flashcards/'}>Abrir flashcards →</a></div></section>
   <div class="section-heading"><div><span class="eyebrow">Trilha de formação</span><h2>Aulas para continuar aprendendo</h2></div><a href={base+'aulas/'}>Ver todas →</a></div>
   <div class="cards">
     {lessons.map((l,i) => <a class="card" href={base+'aulas/'+l.slug+'/'}><span class="card-index">AULA {String(i+1).padStart(3,'0')}</span><strong>{l.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</strong><span class="card-arrow">Abrir aula ↗</span></a>)}

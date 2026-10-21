@@ -2,7 +2,7 @@ import {readFileSync,existsSync,readdirSync} from 'node:fs';
 import {resolve,dirname,extname} from 'node:path';
 const root=resolve('dist');
 const base=existsSync(resolve(root,'catequese-tradicional/index.html'))?resolve(root,'catequese-tradicional'):root;
-const pages=['index.html','aulas/index.html','questionarios/index.html','caderno-visual/index.html','buscar/index.html','dicionario/index.html'];
+const pages=['index.html','aulas/index.html','questionarios/index.html','caderno-visual/index.html','buscar/index.html','dicionario/index.html','flashcards/index.html'];
 for(let i=1;i<=10;i++){const slug='aula-'+String(i).padStart(2,'0');pages.push('aulas/'+slug+'/index.html','questionarios/'+slug+'/index.html','infograficos/'+slug+'.svg')}
 const missing=pages.filter(p=>!existsSync(resolve(base,p)));
 if(missing.length){console.error('Arquivos ausentes:',missing);process.exit(1)}
