@@ -1,0 +1,13 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLessonSlugs, getLesson } from '../../lib/content';
+const lessons = getLessonSlugs().map(getLesson);
+---
+<SiteLayout title="Biblioteca de Questionários">
+  <span class="eyebrow">Biblioteca / Revisão ativa</span>
+  <h1>Questionários</h1>
+  <p class="muted">Revise cada aula e retorne ao conteúdo sempre que precisar. As questões usam os arquivos originais do curso.</p>
+  <div class="cards" style="margin-top:30px">
+    {lessons.map((lesson,i) => <a class="card" href={base+'questionarios/'+lesson.slug+'/'}><span class="card-index">REVISÃO {String(i+1).padStart(3,'0')}</span><strong>{lesson.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</strong><span class="card-arrow">Abrir questionário ↗</span></a>)}
+  </div>
+</SiteLayout>
