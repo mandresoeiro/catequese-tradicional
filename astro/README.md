@@ -31,3 +31,14 @@ Para testar localmente, abra a URL indicada pelo Astro (prefixo `/catequese-trad
 - `npm run build` executa a compilação e confere a presença de páginas e SVGs; **ainda são necessários testes visuais e de links internos completos**.
 
 > Revisão pendente: conferir renderização Markdown, imagens e resultados dos questionários antes de publicar.
+
+## Atualização no WSL (servidor local)
+
+A branch `feat/astro-prototipo-seguro` também recebe o pacote mais recente para evitar que o servidor antigo oculte Flashcards, Busca e Caderno Visual.
+
+1. Encerre o processo `astro dev` anterior com Ctrl+C.
+2. Execute `git fetch origin && git switch feat/astro-prototipo-seguro && git pull --ff-only` na raiz do repositório.
+3. Entre em `astro` e execute `npm run dev -- --host 0.0.0.0`.
+4. Abra a rota `/catequese-tradicional/flashcards/` sob o IP/porta exibidos no terminal.
+
+Caso a porta seja diferente de 4321, use a porta impressa pelo Astro. Não execute mais de um servidor Astro apontando para o mesmo projeto.
