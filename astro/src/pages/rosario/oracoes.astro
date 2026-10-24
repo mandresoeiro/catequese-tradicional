@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import {base} from '../../lib/content';
+import {prayers} from '../../lib/rosary-data';
+import '../../styles/rosary.css';
+const names:Record<string,string>={cross:'Sinal da cruz',creed:'Credo — Símbolo dos Apóstolos',father:'Pai-Nosso',mary:'Ave-Maria',glory:'Glória',fatima:'Jaculatória de Fátima — opcional',queen:'Salve-Rainha'};
+---
+<SiteLayout title="Orações do terço"><a class="backlink" href={base+'rosario/'}>← Guia do Rosário</a><h1>Orações para acompanhar</h1><p class="muted">Formas devocionais correntes em português. Existem variações de tradução e costume, inclusive na abertura e na conclusão do Rosário.</p><article class="reading">{Object.entries(prayers).map(([id,text])=><section class="prayer-text" id={id}><h2>{names[id]}</h2><p>{text}</p></section>)}<h2>Fonte para conferir</h2><p><a href="https://www.vatican.va/special/rosary/documents/misteri_po.html">Santa Sé: orações e estrutura do Rosário</a>. A jaculatória de Fátima é uma prática devocional opcional; não é necessária para contar uma dezena.</p></article></SiteLayout>

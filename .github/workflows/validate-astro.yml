@@ -1,11 +1,14 @@
-name: Validar prototipo Astro
+name: Validar Astro
 on:
   pull_request:
     branches: [main]
     paths:
       - 'astro/**'
       - 'docs/**'
+      - 'database/**'
+      - 'library/**'
       - '.github/workflows/validate-astro.yml'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,7 +22,10 @@ jobs:
           node-version: '22'
       - name: Instalar dependencias
         working-directory: astro
-        run: npm install --no-audit --no-fund
-      - name: Compilar prototipo
+        run: npm ci --no-audit --no-fund
+      - name: Compilar site
         working-directory: astro
         run: npm run build
+      - name: Verificar links e índice de busca
+        working-directory: astro
+        run: npm run verify

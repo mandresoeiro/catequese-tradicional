@@ -6,7 +6,7 @@ import { infograficos } from '../../lib/infograficos';
 <SiteLayout title="Caderno Visual">
   <span class="eyebrow">Biblioteca / Recursos visuais</span>
   <h1>Caderno Visual</h1>
-  <p class="muted">Dez mapas mentais em SVG, um para cada aula. Diagramas leves, ampliáveis e preparados para impressão. São esquemas de revisão: consulte sempre a aula completa.</p>
+  <p class="muted">{infograficos.length} mapas mentais em SVG, um para cada aula. Diagramas leves, ampliáveis e preparados para impressão. São esquemas de revisão: consulte sempre a aula completa.</p>
   <div class="cards" style="margin-top:30px">
     {infograficos.map(v=><article class="card visual-card">
       <span class="card-index">AULA {v.number} · SVG</span>

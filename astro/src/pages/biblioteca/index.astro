@@ -1,0 +1,25 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import {articles} from '../../lib/library';
+import {base} from '../../lib/content';
+import '../../styles/library.css';
+const categories=[...new Set(articles.map(a=>a.category))];
+---
+<SiteLayout title="Biblioteca de formação">
+  <span class="eyebrow">Aprofundar com calma</span><h1>Biblioteca de formação</h1>
+  <p class="muted">Guias introdutórios, santos, oração e contexto para as aulas. Cada ficha identifica sua natureza e as fontes para aprofundar.</p>
+  <div class="library-shortcuts"><a href={base+'rosario/'}>Guia do Rosário →</a><a href={base+'leituras/'}>Para ler e assistir →</a></div>
+  <div class="library-filters"><label>Encontrar um conteúdo<input type="search" id="library-search" placeholder="Santo, oração ou assunto…" /></label><label>Área de formação<select id="library-category"><option value="">Todas as áreas</option>{categories.map(category=><option>{category}</option>)}</select></label></div>
+  <p class="library-count" role="status">{articles.length} fichas disponíveis</p>
+  <div class="cards library-cards">{articles.map(article=><a class="card" data-library-card data-category={article.category} data-search={article.title+' '+article.category+' '+article.excerpt} href={base+'biblioteca/'+article.slug+'/'}><span class="card-index">{article.category}</span><strong>{article.title}</strong><p>{article.excerpt}</p><span class="library-kind">{article.kind}</span><span class="card-arrow">Abrir ficha →</span></a>)}</div>
+</SiteLayout>
+<script>
+  const search=document.querySelector<HTMLInputElement>('#library-search')!;
+  const category=document.querySelector<HTMLSelectElement>('#library-category')!;
+  const cards=[...document.querySelectorAll<HTMLElement>('[data-library-card]')];
+  const normalize=(text:string)=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const initial=new URLSearchParams(location.search).get('categoria');
+  if(initial&&[...category.options].some(option=>option.value===initial))category.value=initial;
+  function filter(){cards.forEach(card=>{card.hidden=!!((category.value&&card.dataset.category!==category.value)||!normalize(card.dataset.search!).includes(normalize(search.value)));});const count=cards.filter(card=>!card.hidden).length;document.querySelector('.library-count')!.textContent=count?`${count} fichas disponíveis`:'Nenhum conteúdo encontrado. Tente outro assunto.';}
+  search.addEventListener('input',filter);category.addEventListener('change',filter);filter();
+</script>

@@ -48,5 +48,6 @@ export const infograficos = [
     "number": "10",
     "title": "Creio no Espírito Santo",
     "slug": "aula-10"
-  }
+  },
+  { "number": "11", "title": "Creio na Santa Igreja Católica", "slug": "aula-11" }
 ] as const;

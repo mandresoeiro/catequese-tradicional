@@ -1,0 +1,39 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import {base} from '../../lib/content';
+import {rosaryGroups} from '../../lib/rosary-data';
+import '../../styles/rosary.css';
+import '../../styles/quiz.css';
+---
+<SiteLayout title="Rezar o terço">
+  <a class="backlink" href={base+'rosario/'}>← Guia do Rosário</a><h1>Uma oração por vez.</h1><p class="muted">Avance quando estiver pronto. O guia não usa cronômetro nem áudio automático.</p>
+  <div class="rosary-options"><label for="rosary-sequence">Escolha a sequência<select id="rosary-sequence">{rosaryGroups.map(group=><option value={group.id}>Terço — {group.title}{group.id==='luminosos'?' (propostos em 2002)':''}</option>)}<option value="traditional">Rosário tradicional completo — 15 mistérios</option><option value="complete">Rosário com luminosos — 20 mistérios</option></select></label><label class="rosary-extra"><input type="checkbox" id="rosary-fatima"/> Acrescentar a jaculatória de Fátima após cada dezena</label></div>
+  <section class="rosary-reader" aria-label="Oração guiada"><p class="rosary-location"></p><progress id="rosary-progress" aria-label="Etapas da sequência" max="1" value="0"></progress><p class="rosary-counter"></p><div aria-live="polite" aria-atomic="true"><h2 class="rosary-step-title">Sinal da cruz</h2><p class="rosary-reference"></p><p class="rosary-step-text"></p></div><div class="rosary-controls"><button class="quiz-secondary" data-prayer-previous type="button">← Anterior</button><button class="quiz-primary" data-prayer-next type="button">Próxima →</button></div><button class="rosary-restart" type="button">Reiniciar sequência</button></section>
+  <p class="muted" style="font-size:12px">As reflexões são sugestões editoriais. A referência à Assunção e à coroação de Maria distingue a contemplação da descrição literal de um episódio bíblico. <a href={base+'rosario/oracoes/'}>Consultar todas as orações</a>.</p>
+  <noscript><p>O acompanhamento por etapas requer JavaScript. Use a página de orações e o passo a passo para rezar sem o modo interativo.</p></noscript>
+</SiteLayout>
+<script>
+  import {prayers,rosaryGroups} from '../../lib/rosary-data';
+  type Step={title:string;text:string;location:string;reference?:string};
+  const sequence=document.querySelector<HTMLSelectElement>('#rosary-sequence')!;
+  const extra=document.querySelector<HTMLInputElement>('#rosary-fatima')!;
+  const previous=document.querySelector<HTMLButtonElement>('[data-prayer-previous]')!;
+  const next=document.querySelector<HTMLButtonElement>('[data-prayer-next]')!;
+  let steps:Step[]=[],index=0;
+  function build(){
+    const groupIds=sequence.value==='traditional'?['gozosos','dolorosos','gloriosos']:sequence.value==='complete'?['gozosos','luminosos','dolorosos','gloriosos']:[sequence.value];
+    const mysteries=groupIds.flatMap(id=>rosaryGroups.find(group=>group.id===id)!.mysteries);
+    const beginning=(title:string,text:string):Step=>({title,text,location:'Orações iniciais'});
+    steps=[beginning('Sinal da cruz',prayers.cross),beginning('Credo',prayers.creed),beginning('Pai-Nosso',prayers.father),...Array.from({length:3},(_,i)=>beginning(`Ave-Maria ${i+1} de 3`,prayers.mary)),beginning('Glória',prayers.glory)];
+    mysteries.forEach((mystery,i)=>{
+      const location=`Mistério ${i+1} de ${mysteries.length} · ${mystery.title}`;
+      steps.push({title:mystery.title,text:mystery.meditation,reference:mystery.reference,location},{title:'Pai-Nosso',text:prayers.father,location});
+      for(let n=1;n<=10;n++)steps.push({title:`Ave-Maria ${n} de 10`,text:prayers.mary,location});
+      steps.push({title:'Glória',text:prayers.glory,location});
+      if(extra.checked)steps.push({title:'Jaculatória de Fátima',text:prayers.fatima,location});
+    });
+    steps.push({title:'Salve-Rainha',text:prayers.queen,location:'Encerramento'},{title:'Sinal da cruz',text:prayers.cross,location:'Encerramento'});index=0;render();
+  }
+  function render(){const step=steps[index];document.querySelector('.rosary-step-title')!.textContent=step.title;document.querySelector('.rosary-step-text')!.textContent=step.text;document.querySelector('.rosary-location')!.textContent=step.location;document.querySelector('.rosary-reference')!.textContent=step.reference??'';document.querySelector('.rosary-counter')!.textContent=`Etapa ${index+1} de ${steps.length}`;const progress=document.querySelector<HTMLProgressElement>('#rosary-progress')!;progress.max=steps.length-1;progress.value=index;previous.disabled=index===0;next.disabled=index===steps.length-1;}
+  previous.addEventListener('click',()=>{if(index>0){index--;render();}});next.addEventListener('click',()=>{if(index<steps.length-1){index++;render();}});sequence.addEventListener('change',build);extra.addEventListener('change',build);document.querySelector('.rosary-restart')?.addEventListener('click',()=>{index=0;render();});build();
+</script>

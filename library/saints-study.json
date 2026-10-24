@@ -1,0 +1,50 @@
+{
+  "santo-agostinho": {
+    "path": "Busca da verdade → conversão → serviço como bispo",
+    "theme": "A conversão envolve a inteligência, os afetos e as escolhas cotidianas.",
+    "reading": "Confissões, livro VIII: leia o relato da conversão em uma edição identificada. Depois, volte ao livro I para perceber o tom de oração da obra.",
+    "questions": ["Que diferença existe entre reconhecer o bem e decidir praticá-lo?", "Como a memória da própria vida pode tornar-se oração?"],
+    "practice": "Escolha um hábito que atrapalha seus estudos. Defina uma mudança pequena para esta semana e registre o que ajudou ou dificultou.",
+    "connection": "Ao retomar a conversão e a ação da graça nas aulas, distinga o relato pessoal de Agostinho de uma definição doutrinária."
+  },
+  "sao-francisco": {
+    "path": "Vida em Assis → conversão e serviço → fraternidade franciscana",
+    "theme": "A simplicidade pode orientar o uso dos bens e a atenção às pessoas.",
+    "reading": "Comece pela catequese indicada nas fontes. Separe os episódios biográficos da reflexão espiritual que o autor faz a partir deles.",
+    "questions": ["Como a pobreza evangélica se relaciona com a caridade?", "Que diferença há entre admirar a natureza e agradecer ao Criador?"],
+    "practice": "Separe um bem em bom estado que possa ser útil a alguém e planeje uma doação respeitosa, sem exposição da pessoa ajudada.",
+    "connection": "Relacione criação, gratidão e responsabilidade. Ao estudar a Igreja, observe o vínculo entre vocação pessoal e vida comunitária."
+  },
+  "sao-jeronimo": {
+    "path": "Formação e línguas → estudo bíblico → tradução e comentário",
+    "theme": "Estudar a Escritura pede atenção às palavras e disposição para viver o que se compreende.",
+    "reading": "Leia a catequese da fonte e, em seguida, um capítulo inteiro de um Evangelho. Consulte introdução e notas da sua edição antes de comparar traduções.",
+    "questions": ["O que muda quando uma frase é lida dentro do capítulo?", "Como distinguir o texto bíblico da nota escrita pelo editor?"],
+    "practice": "Registre a referência de uma passagem, sua ideia central e uma dúvida. Confira se sua conclusão depende de uma palavra isolada.",
+    "connection": "Retome as aulas sobre fontes da fé e interpretação. A tradução serve ao entendimento; o estudo do contexto ajuda a evitar conclusões apressadas."
+  },
+  "sao-tomas": {
+    "path": "Formação → vocação dominicana → ensino teológico",
+    "theme": "Uma pergunta bem formulada ajuda a estudar com clareza e paciência.",
+    "reading": "Comece pela apresentação biográfica da fonte. Em um artigo da Suma Teológica, identifique a pergunta, as objeções, a resposta central e as respostas às objeções antes de resumir.",
+    "questions": ["A frase lida é uma objeção ou a posição defendida pelo autor?", "Os termos empregados conservam o mesmo sentido ao longo do argumento?"],
+    "practice": "Escolha uma dúvida da aula. Escreva uma pergunta precisa, defina dois termos e explique o que ainda precisa pesquisar.",
+    "connection": "No estudo de fé e razão, indique quais afirmações foram demonstradas e quais dependem da Revelação. Evite confundir uma comparação com uma prova."
+  },
+  "santo-atanasio": {
+    "path": "Alexandria → controvérsia ariana → defesa da fé em Cristo",
+    "theme": "Compreender os termos do Credo ajuda a reconhecer o que está sendo professado.",
+    "reading": "Leia a apresentação indicada nas fontes e depois o trecho do Credo sobre o Filho. Anote as palavras cuja compreensão exige voltar à aula.",
+    "questions": ["Por que chamar o Filho de criatura modifica a confissão cristã?", "Como explicar consubstancial sem imaginar duas partes de Deus?"],
+    "practice": "Faça um pequeno glossário com natureza, pessoa, criação e geração. Compare suas definições com as fontes da aula.",
+    "connection": "Relacione o estudo da Trindade ao de Jesus Cristo. Ao ler uma controvérsia histórica, identifique a questão doutrinária antes de avaliar os personagens."
+  },
+  "sao-pio-x": {
+    "path": "Ministério paroquial → episcopado → pontificado e catequese",
+    "theme": "Uma fórmula breve pode iniciar um estudo que continua na compreensão e na prática.",
+    "reading": "Escolha uma pergunta do Catecismo de São Pio X na edição usada no curso. Leia a resposta, explique-a com suas palavras e confira a diferença entre texto original e comentário editorial.",
+    "questions": ["Consigo explicar a definição sem apenas repeti-la?", "Que consequência prática decorre dessa resposta?"],
+    "practice": "Estude uma definição por dia durante três dias. No último, tente recordá-las sem consultar e escreva as dúvidas que permaneceram.",
+    "connection": "Use esta ficha junto da introdução ao curso e das aulas sobre a Igreja. Identifique o contexto de uma norma disciplinar antes de aplicá-la a outra época."
+  }
+}

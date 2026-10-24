@@ -522,3 +522,20 @@ Imagem usada para falar da presença divina na vida do fiel.
 
 **Ritos batismais tradicionais**  
 Orações e cerimônias ligadas às formas históricas do rito do Batismo.
+
+
+## Novos verbetes — Aula #011
+
+- **Eclesiologia:** estudo teológico da Igreja.
+- **Hierarquia eclesiástica:** organização dos ministérios de ensino, santificação e governo.
+- **Primado de Pedro:** missão de Pedro à frente do colégio apostólico, continuada pelo bispo de Roma.
+- **Sucessão apostólica:** continuidade do ministério dos apóstolos nos bispos.
+- **Catolicidade:** universalidade da Igreja e de sua missão.
+- **Apostolicidade:** ligação da Igreja com a fé, a missão e a sucessão dos apóstolos.
+- **Sociedade perfeita:** expressão tradicional sobre a posse dos meios necessários ao próprio fim.
+- **Direito canônico:** ordenamento jurídico da Igreja.
+- **Ex cathedra:** exercício solene do ensino papal nas condições próprias de uma definição definitiva de fé ou moral para toda a Igreja.
+- **Impecabilidade:** ausência de pecado; não se confunde com infalibilidade.
+
+
+Consulte a [Aula #011](aulas/aula-11.md) para o contexto e as notas de estudo.

@@ -1,4 +1,4 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy Astro to GitHub Pages
 
 on:
   push:
@@ -21,17 +21,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup Python
-        uses: actions/setup-python@v6
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.13'
-          cache: pip
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: astro/package-lock.json
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        working-directory: astro
+        run: npm ci --no-audit --no-fund
 
-      - name: Build MkDocs
-        run: mkdocs build --strict
+      - name: Build Astro
+        working-directory: astro
+        run: npm run build
+
+      - name: Verify generated site
+        working-directory: astro
+        run: npm run verify
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -41,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: site
+          path: astro/dist
 
   deploy:
     environment:

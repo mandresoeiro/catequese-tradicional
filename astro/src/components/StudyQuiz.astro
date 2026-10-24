@@ -1,0 +1,115 @@
+---
+import { base, type QuizQuestion } from '../lib/content';
+import '../styles/quiz.css';
+import '../styles/personal.css';
+interface Props { slug: string; questions: QuizQuestion[]; keyOrigin: string; }
+const { slug, questions, keyOrigin } = Astro.props;
+---
+<section class="study-quiz-app" data-slug={slug} aria-label="Questionário interativo">
+  <p class="quiz-disclaimer">{keyOrigin}</p>
+  <div class="quiz-toolbar"><span>{questions.length} questões · uma alternativa por questão</span><button type="button" class="quiz-secondary" data-show-key>Ver gabarito</button></div>
+  <section class="quiz-result" hidden tabindex="-1" role="status" aria-live="polite"></section>
+  <form class="quiz-form">
+    {questions.map(question => <fieldset class="quiz-question" data-number={question.number} data-answer={question.answer}>
+      <legend><span class="quiz-number">{String(question.number).padStart(2, '0')}</span><span set:html={question.html} /></legend>
+      <div class="quiz-options">{question.options.map(option => <label class="quiz-option" data-label={option.label}>
+        <input type="radio" name={'question-'+question.number} value={option.label} />
+        <span class="quiz-option-letter">{option.label}</span><span set:html={option.html} />
+      </label>)}</div>
+      <label class="quiz-flag"><input type="checkbox" data-review-flag={question.number} /> Marcar dúvida para revisar depois</label>
+      <div class="quiz-feedback" hidden>
+        <strong class="quiz-verdict"></strong>
+        <p><b>Resposta: {question.answer}.</b> {question.options.find(option => option.label === question.answer)?.text}</p>
+        <p>{question.explanation}</p>
+        <a href={base+'aulas/'+slug+'/'}>Rever o conteúdo da aula →</a>
+      </div>
+    </fieldset>)}
+    <div class="quiz-actions"><button type="submit" class="quiz-primary" data-correct>Corrigir respostas</button><button type="button" class="quiz-secondary" data-retry-errors hidden>Refazer só as erradas</button><button type="button" class="quiz-secondary" data-retry-all>Refazer tudo</button></div>
+    <p class="quiz-save-status" role="status"></p>
+  </form>
+  <noscript><p>Ative o JavaScript para corrigir e refazer. Você também pode consultar o gabarito abaixo.</p><ol>{questions.map(question => <li><b>{question.answer}.</b> {question.explanation}</li>)}</ol></noscript>
+</section>
+<script>
+  import { studyRequest, type LessonState } from '../lib/study-client';
+  const quiz = document.querySelector<HTMLElement>('.study-quiz-app')!;
+  const form = quiz.querySelector<HTMLFormElement>('form')!;
+  const fields = [...form.querySelectorAll<HTMLFieldSetElement>('fieldset')];
+  const result = quiz.querySelector<HTMLElement>('.quiz-result')!;
+  const retryErrors = quiz.querySelector<HTMLButtonElement>('[data-retry-errors]')!;
+  const correct = quiz.querySelector<HTMLButtonElement>('[data-correct]')!;
+  const showKey = quiz.querySelector<HTMLButtonElement>('[data-show-key]')!;
+  let failed = new Set<string>();
+  let session = crypto.randomUUID();
+  const saveStatus = quiz.querySelector<HTMLElement>('.quiz-save-status')!;
+  studyRequest<LessonState>('lesson/'+quiz.dataset.slug).then(state => {
+    quiz.querySelectorAll<HTMLInputElement>('[data-review-flag]').forEach(input => {
+      input.checked = state.flags.includes(Number(input.dataset.reviewFlag));
+      input.defaultChecked = input.checked;
+    });
+  }).catch(() => {});
+  quiz.querySelectorAll<HTMLInputElement>('[data-review-flag]').forEach(input => input.addEventListener('change', async () => {
+    input.disabled = true;
+    try { await studyRequest('flags',{slug:quiz.dataset.slug,number:Number(input.dataset.reviewFlag),needs_review:input.checked}); input.defaultChecked=input.checked; saveStatus.textContent='Marcação salva no banco pessoal.'; }
+    catch { input.checked=input.defaultChecked; saveStatus.textContent='Marcação não salva. Abra a versão pessoal no computador e tente novamente.'; }
+    finally {input.disabled=false;}
+  }));
+
+  function summarize(message: string) {
+    result.textContent = message;
+    result.hidden = false;
+    result.focus();
+  }
+  function reveal(onlyKey: boolean) {
+    let correctCount = 0, wrong = 0, blank = 0;
+    failed = new Set();
+    const active = fields.filter(field => !field.hidden);
+    active.forEach(field => {
+      const selected = field.querySelector<HTMLInputElement>('input[type="radio"]:checked')?.value;
+      const isCorrect = selected === field.dataset.answer;
+      const status = onlyKey ? 'review' : !selected ? 'unanswered' : isCorrect ? 'correct' : 'incorrect';
+      field.dataset.status = status;
+      if (!onlyKey && !isCorrect) failed.add(field.dataset.number!);
+      if (!selected) blank++; else if (isCorrect) correctCount++; else wrong++;
+      field.querySelector<HTMLElement>('.quiz-feedback')!.hidden = false;
+      field.querySelector<HTMLElement>('.quiz-verdict')!.textContent = onlyKey ? 'Gabarito de estudo' : !selected ? 'Questão não respondida' : isCorrect ? 'Resposta correta' : 'Resposta incorreta';
+      field.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach(input => { input.disabled = true; });
+      field.querySelectorAll<HTMLElement>('.quiz-option').forEach(option => {
+        option.classList.toggle('is-answer', option.dataset.label === field.dataset.answer);
+      });
+    });
+    correct.disabled = true;
+    showKey.disabled = true;
+    retryErrors.hidden = onlyKey || failed.size === 0;
+    summarize(onlyKey ? 'Gabarito aberto. Leia as explicações e use Refazer tudo para treinar sem as respostas.' : `Você acertou ${correctCount} de ${active.length} questões. Incorretas: ${wrong}. Em branco: ${blank}.`);
+  }
+  function reset(errorsOnly: boolean) {
+    const retryNumbers = new Set(failed);
+    form.reset();
+    fields.forEach(field => {
+      field.hidden = errorsOnly && !retryNumbers.has(field.dataset.number!);
+      delete field.dataset.status;
+      field.querySelector<HTMLElement>('.quiz-feedback')!.hidden = true;
+      field.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach(input => { input.disabled = false; });
+      field.querySelectorAll<HTMLElement>('.quiz-option').forEach(option => option.classList.remove('is-answer'));
+    });
+    failed.clear(); correct.disabled = false; showKey.disabled = false; retryErrors.hidden = true; session=crypto.randomUUID(); saveStatus.textContent='';
+    result.hidden = true;
+    if (errorsOnly) summarize(`Nova revisão: ${retryNumbers.size} questões incorretas ou em branco. O gabarito está oculto.`);
+    else fields[0]?.querySelector<HTMLInputElement>('input')?.focus();
+  }
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const answers = fields.filter(field=>!field.hidden).flatMap(field=> {
+      const selected=field.querySelector<HTMLInputElement>('input[type="radio"]:checked');
+      return selected ? [{number:Number(field.dataset.number),option:selected.value}] : [];
+    });
+    reveal(false);
+    if (!answers.length) {saveStatus.textContent='Nenhuma resposta registrada; questões em branco não geram tentativas.';return;}
+    saveStatus.textContent='Salvando suas respostas…';
+    try {await studyRequest('attempts',{slug:quiz.dataset.slug,mode:'lesson',session_id:session,answers});saveStatus.textContent='Respostas salvas no banco pessoal.';}
+    catch {saveStatus.textContent='Correção concluída. Histórico não salvo: abra a versão pessoal no computador.';}
+  });
+  showKey.addEventListener('click', () => reveal(true));
+  retryErrors.addEventListener('click', () => reset(true));
+  quiz.querySelector('[data-retry-all]')?.addEventListener('click', () => reset(false));
+</script>

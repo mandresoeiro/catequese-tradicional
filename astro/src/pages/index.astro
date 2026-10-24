@@ -1,6 +1,10 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { base, getLesson, getLessonSlugs } from '../lib/content';
+import StudyDashboard from '../components/StudyDashboard.astro';
+import '../styles/personal.css';
+import '../styles/quiz.css';
+import '../styles/library.css';
 const lessons = getLessonSlugs().map(getLesson);
 ---
 <SiteLayout title="Visão geral">
@@ -10,6 +14,8 @@ const lessons = getLessonSlugs().map(getLesson);
     <p>Um espaço de estudo para aprender com profundidade, revisar com método e construir uma base sólida na doutrina católica.</p>
     <a class="action" href={base+'aulas/'}>Explorar minhas aulas <span aria-hidden="true">↗</span></a>
   </section>
+  <StudyDashboard />
+  <nav class="library-shortcuts" aria-label="Complementos de formação"><a href={base+'biblioteca/?categoria=Santos'}>Conhecer os santos →</a><a href={base+'rosario/'}>Aprender e rezar o Rosário →</a><a href={base+'leituras/'}>Escolher uma leitura ou filme →</a></nav>
   <div class="stat-grid" aria-label="Resumo do acervo">
     <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Aulas disponíveis</span></div>
     <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Questionários de revisão</span></div>

@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import StudyQuiz from '../../components/StudyQuiz.astro';
 import { base, getLessonSlugs, getQuestionnaire } from '../../lib/content';
 export function getStaticPaths() { return getLessonSlugs().map(slug => ({ params: { slug } })); }
 const slug = Astro.params.slug!;
@@ -13,10 +14,10 @@ const next = slugs[index+1];
     <a class="backlink" href={base+'questionarios/'}>← Biblioteca de Questionários</a>
     <span class="eyebrow" style="display:block;margin-top:12px">Revisão ativa · Aula {String(index+1).padStart(3,'0')}</span>
     <h1>{quiz.title}</h1>
-    <p class="muted">Use as questões para revisar a matéria. Nesta versão, as respostas ainda não são corrigidas automaticamente.</p>
+    <p class="muted">Responda, confira as explicações e refaça as questões que precisar revisar.</p>
   </div>
   <article class="reading">
-    <div set:html={quiz.html} />
+    <StudyQuiz slug={slug} questions={quiz.questions} keyOrigin={quiz.keyOrigin} />
     <nav class="lesson-navigation" aria-label="Navegação da revisão">
       <div class="lesson-pager">
         <a href={base+'aulas/'+slug+'/'}><small>← Retornar ao conteúdo</small><strong>Aula {String(index+1).padStart(3,'0')}</strong></a>

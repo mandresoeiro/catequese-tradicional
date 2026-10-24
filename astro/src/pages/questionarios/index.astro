@@ -7,6 +7,7 @@ const lessons = getLessonSlugs().map(getLesson);
   <span class="eyebrow">Biblioteca / Revisão ativa</span>
   <h1>Questionários</h1>
   <p class="muted">Revise cada aula e retorne ao conteúdo sempre que precisar. As questões usam os arquivos originais do curso.</p>
+  <p><a href={base+'revisao/'}>Abrir revisão do dia →</a> · <a href={base+'caderno-de-erros/'}>Consultar meu caderno de erros →</a></p>
   <div class="cards" style="margin-top:30px">
     {lessons.map((lesson,i) => <a class="card" href={base+'questionarios/'+lesson.slug+'/'}><span class="card-index">REVISÃO {String(i+1).padStart(3,'0')}</span><strong>{lesson.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</strong><span class="card-arrow">Abrir questionário ↗</span></a>)}
   </div>

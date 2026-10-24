@@ -26,3 +26,6 @@ jobs:
 
       - name: Validar site sem publicar
         run: python -m mkdocs build --strict
+
+      - name: Validar banco e recuperação de backups
+        run: python -m unittest discover -s scripts -p 'test_study_db.py' -v

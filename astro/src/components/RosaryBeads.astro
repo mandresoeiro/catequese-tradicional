@@ -1,0 +1,36 @@
+---
+const beads=Array.from({length:55},(_,i)=>{
+  const angle=(90+(i+1)*360/56)*Math.PI/180;
+  return {x:160+115*Math.cos(angle),y:140+110*Math.sin(angle),large:i%11===0,decade:Math.floor(i/11)+1};
+});
+---
+<section class="bead-guide" aria-labelledby="bead-title">
+  <h2 id="bead-title">Entenda as contas do terço</h2>
+  <div class="bead-layout">
+    <svg viewBox="0 0 320 420" role="img" aria-labelledby="bead-svg-title bead-svg-desc">
+      <title id="bead-svg-title">Esquema de um terço de cinco dezenas</title>
+      <desc id="bead-svg-desc">Da cruz, siga pelo Pai-Nosso e três Ave-Marias até a medalha. No círculo, cada uma das cinco dezenas tem uma conta maior para o Pai-Nosso e dez menores para as Ave-Marias. O Glória é rezado ao final da dezena e não possui conta própria neste esquema.</desc>
+      <ellipse cx="160" cy="140" rx="115" ry="110" fill="none" stroke="var(--line)" stroke-width="2"/>
+      {beads.map(bead=><circle cx={bead.x} cy={bead.y} r={bead.large?7:4.5} fill={bead.large?'var(--accent)':'var(--primary)'}><title>{bead.decade}ª dezena: {bead.large?'Pai-Nosso':'Ave-Maria'}</title></circle>)}
+      <path d="M160 250V370" stroke="var(--line)" stroke-width="2"/>
+      <ellipse cx="160" cy="258" rx="11" ry="14" fill="var(--accent)"/>
+      {[289,307,325].map(y=><circle cx="160" cy={y} r="5" fill="var(--primary)"/>)}
+      <circle cx="160" cy="348" r="8" fill="var(--accent)"/>
+      <path d="M160 373V405M147 385H173" stroke="var(--accent)" stroke-width="7" stroke-linecap="round"/>
+      <text x="184" y="391">1. Cruz</text><text x="184" y="353">2. Pai-Nosso</text><text x="184" y="310">3. Três Ave-Marias</text><text x="184" y="263">4. Medalha</text>
+      <text x="160" y="130" text-anchor="middle">5 dezenas</text><text x="160" y="153" text-anchor="middle">1 Pai-Nosso + 10 Ave-Marias</text>
+    </svg>
+    <ol>
+      <li><strong>Na cruz:</strong> faça o sinal da cruz e reze o Credo, na abertura adotada neste guia.</li>
+      <li><strong>Na conta maior inicial:</strong> reze o Pai-Nosso.</li>
+      <li><strong>Nas três contas pequenas:</strong> reze três Ave-Marias e depois o Glória.</li>
+      <li><strong>Ao chegar à medalha:</strong> anuncie o primeiro mistério e faça uma breve pausa.</li>
+      <li><strong>No círculo:</strong> siga pelas cinco dezenas. A conta maior corresponde ao Pai-Nosso; cada pequena, a uma Ave-Maria. Depois das dez, reze o Glória e, se desejar, a jaculatória de Fátima.</li>
+      <li><strong>Ao terminar:</strong> reze a Salve-Rainha e faça o sinal da cruz, conforme o encerramento deste guia.</li>
+    </ol>
+  </div>
+  <p class="muted">Esquema didático de uma disposição comum de 59 contas. A posição das contas pode variar. O anúncio, a meditação e o Glória não exigem contas adicionais.</p>
+</section>
+<style>
+.bead-guide{margin:32px 0;padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}.bead-layout{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:30px;align-items:center}.bead-layout svg{width:100%;max-width:320px}.bead-layout text{fill:var(--ink);font:10px system-ui}.bead-layout li{margin-bottom:14px;line-height:1.7;font-size:14px}.bead-guide>p{font-size:12px}@media(max-width:650px){.bead-layout{grid-template-columns:1fr;gap:12px}.bead-layout svg{margin:auto}.bead-guide{padding:18px}}
+</style>
