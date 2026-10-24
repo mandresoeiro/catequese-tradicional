@@ -1,0 +1,31 @@
+name: Validar Astro
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'astro/**'
+      - 'docs/**'
+      - 'database/**'
+      - 'library/**'
+      - '.github/workflows/validate-astro.yml'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar dependencias
+        working-directory: astro
+        run: npm ci --no-audit --no-fund
+      - name: Compilar site
+        working-directory: astro
+        run: npm run build
+      - name: Verificar links e índice de busca
+        working-directory: astro
+        run: npm run verify

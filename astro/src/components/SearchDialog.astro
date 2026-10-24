@@ -1,0 +1,65 @@
+---
+import { base } from '../lib/content';
+---
+<button class="search-trigger" type="button" data-open-search aria-label="Buscar no acervo" aria-haspopup="dialog" aria-controls="study-search">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+  <span>Buscar no acervo</span><kbd>Ctrl K</kbd>
+</button>
+<dialog id="study-search" class="search-dialog" aria-labelledby="search-title" data-index-url={base+'busca.json'}>
+  <div class="search-dialog-head"><h2 id="search-title">O que vamos estudar?</h2><button type="button" class="icon-button" data-close-search aria-label="Fechar busca">×</button></div>
+  <label class="search-dialog-label" for="global-search-input">Busque por tema, santo, oração ou número da aula</label>
+  <input id="global-search-input" type="search" placeholder="Experimente: graça, Trindade, Igreja…" autocomplete="off" autofocus aria-controls="global-search-results" />
+  <p class="search-status" role="status" aria-live="polite"></p>
+  <div id="global-search-results" class="search-results"></div>
+  <div class="search-dialog-footer">Aulas e biblioteca de formação <span><kbd>Esc</kbd> para fechar</span></div>
+</dialog>
+<script>
+  type Entry = { title: string; url: string; text: string };
+  const dialog = document.querySelector<HTMLDialogElement>('#study-search')!;
+  const input = dialog.querySelector<HTMLInputElement>('input')!;
+  const results = dialog.querySelector<HTMLElement>('.search-results')!;
+  const status = dialog.querySelector<HTMLElement>('.search-status')!;
+  const normalize = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  let entries: Entry[] | undefined;
+  let loading = false;
+  function render() {
+    if (!entries) return;
+    const query = normalize(input.value.trim());
+    const words = query.split(/\s+/).filter(Boolean);
+    const matches = entries.filter(entry => words.every(word => normalize(entry.title + ' ' + entry.text).includes(word)));
+    status.textContent = matches.length ? `${matches.length} ${matches.length === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}` : 'Nenhum conteúdo encontrado. Tente outra palavra.';
+    results.replaceChildren(...matches.map(entry => {
+      const link = document.createElement('a');
+      link.href = entry.url;
+      const title = document.createElement('strong'); title.textContent = entry.title;
+      const excerpt = document.createElement('span');
+      const found = words.length ? normalize(entry.text).indexOf(words[0]) : 0;
+      const start = Math.max(0, found - 55);
+      excerpt.textContent = (start ? '…' : '') + entry.text.slice(start, start + 165) + '…';
+      link.append(title, excerpt); return link;
+    }));
+  }
+  async function openSearch() {
+    if (!dialog.open) dialog.showModal();
+    input.focus();
+    if (entries) { render(); return; }
+    if (loading) return;
+    loading = true; status.textContent = 'Carregando as aulas…';
+    try {
+      const response = await fetch(dialog.dataset.indexUrl!);
+      if (!response.ok) throw new Error('Falha na busca');
+      entries = await response.json(); render();
+    } catch { status.textContent = 'Não foi possível carregar a busca. Feche e abra novamente para tentar.'; }
+    finally { loading = false; }
+  }
+  document.querySelector('[data-open-search]')?.addEventListener('click', openSearch);
+  dialog.querySelector('[data-close-search]')?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
+  input.addEventListener('input', render);
+  document.addEventListener('keydown', event => {
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); openSearch(); }
+  });
+</script>

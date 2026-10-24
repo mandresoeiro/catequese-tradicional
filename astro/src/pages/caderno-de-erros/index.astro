@@ -1,0 +1,13 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import '../../styles/personal.css';
+import '../../styles/quiz.css';
+---
+<SiteLayout title="Caderno de erros">
+  <span class="eyebrow">Meu estudo / Retomar</span><h1>Caderno de erros</h1>
+  <p class="muted">Aqui entram as questões cuja resposta mais recente está incorreta. Ao acertar novamente, elas saem deste caderno e seguem a revisão programada.</p>
+  <section data-review-mode="errors" class="review-app"><p class="review-message" role="status">Carregando suas questões…</p><div class="review-questions"></div></section>
+</SiteLayout>
+<script>
+  import '../../lib/review-client';
+</script>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+<title id="title">Aula 03: Creio em Deus Pai</title><desc id="desc">Mapa mental esquemático: Um só Deus, Pai, Filho, Espírito Santo. Consulte a explicação integral na aula.</desc>
+<rect width="760" height="430" rx="24" fill="#F7F6F1"/><rect x="22" y="22" width="716" height="386" rx="17" fill="#FFFEFA" stroke="#E1E5DA" stroke-width="2"/>
+<text x="46" y="54" fill="#917044" font-size="14" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="2">CATEQUESE TRADICIONAL · AULA 03</text>
+<rect x="156" y="89" width="448" height="90" rx="17" fill="#173B32"/><text x="380" y="128" font-family="Georgia,serif" fill="#FFF9ED" text-anchor="middle" font-size="25">Creio em Deus Pai</text><text x="380" y="157" font-size="14" fill="#E1CCA1" text-anchor="middle" font-family="Arial,sans-serif">MAPA MENTAL · CONCEITOS-CHAVE</text>
+<g stroke="#7A9B85" stroke-width="3" fill="none"><path d="M380 179V204M190 204H570M190 204V226M570 204V226M190 204H380V320M570 204H380V320"/></g>
+<rect x="42" y="226" width="320" height="70" rx="12" fill="#E6EFE6" stroke="#9CB4A1"/><text x="202" y="267" text-anchor="middle" font-size="18" font-family="Arial,sans-serif" font-weight="bold" fill="#173B32">Um só Deus</text>
+<rect x="398" y="226" width="320" height="70" rx="12" fill="#E6EFE6" stroke="#9CB4A1"/><text x="558" y="267" text-anchor="middle" font-size="18" font-family="Arial,sans-serif" font-weight="bold" fill="#173B32">Pai</text>
+<rect x="42" y="324" width="320" height="70" rx="12" fill="#E6EFE6" stroke="#9CB4A1"/><text x="202" y="365" text-anchor="middle" font-size="18" font-family="Arial,sans-serif" font-weight="bold" fill="#173B32">Filho</text>
+<rect x="398" y="324" width="320" height="70" rx="12" fill="#E6EFE6" stroke="#9CB4A1"/><text x="558" y="365" text-anchor="middle" font-size="18" font-family="Arial,sans-serif" font-weight="bold" fill="#173B32">Espírito Santo</text>
+</svg>

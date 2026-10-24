@@ -1,0 +1,20 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base } from '../../lib/content';
+import { infograficos } from '../../lib/infograficos';
+---
+<SiteLayout title="Caderno Visual">
+  <span class="eyebrow">Biblioteca / Recursos visuais</span>
+  <h1>Caderno Visual</h1>
+  <p class="muted">{infograficos.length} mapas mentais em SVG, um para cada aula. Diagramas leves, ampliáveis e preparados para impressão. São esquemas de revisão: consulte sempre a aula completa.</p>
+  <div class="cards" style="margin-top:30px">
+    {infograficos.map(v=><article class="card visual-card">
+      <span class="card-index">AULA {v.number} · SVG</span>
+      <a href={base+'infograficos/aula-'+v.number+'.svg'} target="_blank" rel="noopener noreferrer" aria-label={'Ampliar infográfico da aula '+v.number}>
+        <img class="visual-thumb" src={base+'infograficos/aula-'+v.number+'.svg'} loading="lazy" width="760" height="430" alt={'Mapa mental: '+v.title}/>
+      </a>
+      <strong>{v.title}</strong>
+      <a href={base+'aulas/'+v.slug+'/'} class="card-arrow">Estudar aula →</a>
+    </article>)}
+  </div>
+</SiteLayout>

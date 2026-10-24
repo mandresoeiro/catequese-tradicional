@@ -1,0 +1,65 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLesson, getLessonSlugs } from '../../lib/content';
+import LessonStudyTools from '../../components/LessonStudyTools.astro';
+import '../../styles/personal.css';
+import '../../styles/quiz.css';
+import {relatedArticles} from '../../lib/library';
+import '../../styles/library.css';
+export function getStaticPaths() { return getLessonSlugs().map(slug => ({ params: { slug } })); }
+const { slug } = Astro.params;
+const slugs = getLessonSlugs();
+const lesson = getLesson(slug!);
+const index = slugs.indexOf(slug!);
+const previous = index > 0 ? slugs[index-1] : null;
+const next = index < slugs.length-1 ? slugs[index+1] : null;
+---
+<SiteLayout title={lesson.title}>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+  <div class="reading-head">
+    <a class="backlink" href={base+'aulas/'}>← Biblioteca de Aulas</a>
+    <span class="eyebrow" style="display:block;margin-top:12px">Percurso de formação · Aula {String(index+1).padStart(3,'0')} de {slugs.length}</span>
+    <h1>{lesson.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</h1>
+    <p class="muted">Leia o conteúdo e utilize os links de revisão ao final.</p>
+    <div class="reading-meta"><span>≈ {lesson.minutes} min de leitura</span><span>Aula {String(index+1).padStart(2,'0')} / {slugs.length}</span><span>Resumo · Mapa mental · Revisão</span></div>
+  </div>
+  {lesson.headings.length > 0 && <details class="lesson-overview" open><summary>Nesta aula</summary><ol>{lesson.headings.map(heading => <li><a href={'#'+heading.id}>{heading.title}</a></li>)}</ol></details>}
+  <LessonStudyTools slug={slug!} />
+  <article class="reading">
+    <figure class="lesson-infographic">
+      <a href={base+'infograficos/'+slug+'.svg'} target="_blank" rel="noopener noreferrer" aria-label="Ampliar mapa mental desta aula">
+        <img src={base+'infograficos/'+slug+'.svg'} width="760" height="430" loading="lazy" alt={'Mapa mental de '+lesson.title} />
+      </a>
+      <figcaption>Mapa mental de revisão · <a href={base+'caderno-visual/'}>Ver todos os infográficos</a></figcaption>
+    </figure>
+    <div class="lesson-content" set:html={lesson.html.replace(/^<h1[^>]*>[\s\S]*?<\/h1>\s*/, '')} />
+    <nav class="lesson-navigation" aria-label="Próximos passos da aula">
+      <a class="study-quiz" href={base+'questionarios/'+lesson.slug+'/'}>✓ &nbsp; Responder questionário desta aula →</a>
+      <div class="lesson-pager">
+        {previous ? <a href={base+'aulas/'+previous+'/'}><small>← Aula anterior</small><strong>Aula {String(index).padStart(3,'0')}</strong></a> : <a href={base+'aulas/'}><small>← Voltar</small><strong>Biblioteca</strong></a>}
+        {next ? <a href={base+'aulas/'+next+'/'}><small>Próxima aula →</small><strong>Aula {String(index+2).padStart(3,'0')}</strong></a> : <a href={base+'questionarios/'}><small>Continuar revisão →</small><strong>Questionários</strong></a>}
+      </div>
+    </nav>
+  </article>
+  <section class="related-resources"><span class="eyebrow">Aprofunde este tema</span><h2>Três caminhos para continuar</h2><div class="cards">{relatedArticles(slug!).map(article=><a class="card" href={base+'biblioteca/'+article.slug+'/'}><span class="card-index">{article.category}</span><strong>{article.title}</strong><span class="card-arrow">Conhecer melhor →</span></a>)}</div></section>
+</SiteLayout>
+<script>
+  const content = document.querySelector<HTMLElement>('.lesson-content');
+  const bar = document.querySelector<HTMLElement>('#reading-progress-bar');
+  let scheduled = false;
+  function updateProgress() {
+    if (content && bar) {
+      const rect = content.getBoundingClientRect();
+      const distance = Math.max(1, rect.height - window.innerHeight + 140);
+      const progress = Math.max(0, Math.min(1, (140 - rect.top) / distance));
+      bar.style.transform = `scaleX(${progress})`;
+    }
+    scheduled = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(updateProgress); }
+  }, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  window.addEventListener('load', updateProgress);
+  updateProgress();
+</script>

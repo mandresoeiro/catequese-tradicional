@@ -1,0 +1,16 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import {articles,getArticle,sourceUrl} from '../../lib/library';
+import {base} from '../../lib/content';
+import '../../styles/library.css';
+export function getStaticPaths(){return articles.map(article=>({params:{slug:article.slug}}));}
+const article=getArticle(Astro.params.slug!);
+---
+<SiteLayout title={article.title}>
+  <a class="backlink" href={base+'biblioteca/'}>← Biblioteca de formação</a>
+  <header class="reading-head" style="margin-top:20px"><span class="eyebrow">{article.category}</span><h1>{article.title}</h1><p class="muted">{article.excerpt}</p><span class="library-kind">{article.kind} · Texto de apoio editorial</span></header>
+  <article class="reading"><div set:html={article.html}/><section class="library-sources"><h2>Fontes e aprofundamento</h2><ul>{article.sources.map(([label,url])=><li><a href={sourceUrl(url)}>{label}</a></li>)}</ul><p class="muted">Ficha introdutória do caderno pessoal. Fontes consultadas em 24/10/2026; os textos integrais permitem conferir o contexto.</p></section>
+  {article.lessons.length>0&&<section><h2>Retomar nas aulas</h2><div class="library-shortcuts">{article.lessons.map(slug=><a href={base+'aulas/'+slug+'/'}>{slug.replace('aula-','Aula ')} →</a>)}</div></section>}
+  {article.category==='Rosário e oração'&&<p><a class="action" href={base+'rosario/rezar/'}>Acompanhar a oração →</a></p>}
+  </article>
+</SiteLayout>

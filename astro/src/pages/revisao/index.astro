@@ -1,0 +1,13 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import '../../styles/personal.css';
+import '../../styles/quiz.css';
+---
+<SiteLayout title="Revisão do dia">
+  <span class="eyebrow">Meu estudo / Prática</span><h1>Revisão do dia</h1>
+  <p class="muted">Uma sessão de até dez questões. Acertos retornam em 1, 7 e 30 dias; erros e dúvidas ficam disponíveis para retomar.</p>
+  <section data-review-mode="review" class="review-app"><p class="review-message" role="status">Preparando sua revisão…</p><div class="review-questions"></div></section>
+</SiteLayout>
+<script>
+  import '../../lib/review-client';
+</script>

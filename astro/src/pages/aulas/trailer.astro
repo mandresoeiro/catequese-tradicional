@@ -1,0 +1,6 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { getDocument } from '../../lib/content';
+const page = getDocument('aulas/trailer.md');
+---
+<SiteLayout title={page.title}><article><div set:html={page.html} /></article></SiteLayout>

@@ -1,0 +1,28 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { base, getLesson, getLessonSlugs } from '../lib/content';
+import StudyDashboard from '../components/StudyDashboard.astro';
+import '../styles/personal.css';
+import '../styles/quiz.css';
+import '../styles/library.css';
+const lessons = getLessonSlugs().map(getLesson);
+---
+<SiteLayout title="Visão geral">
+  <section class="hero-panel" aria-labelledby="hero-title">
+    <div class="eyebrow">Centro Dom Bosco · Catecismo de São Pio X</div>
+    <h1 id="hero-title">Uma fé que ilumina.<br/>Uma tradição que forma.</h1>
+    <p>Um espaço de estudo para aprender com profundidade, revisar com método e construir uma base sólida na doutrina católica.</p>
+    <a class="action" href={base+'aulas/'}>Explorar minhas aulas <span aria-hidden="true">↗</span></a>
+  </section>
+  <StudyDashboard />
+  <nav class="library-shortcuts" aria-label="Complementos de formação"><a href={base+'biblioteca/?categoria=Santos'}>Conhecer os santos →</a><a href={base+'rosario/'}>Aprender e rezar o Rosário →</a><a href={base+'leituras/'}>Escolher uma leitura ou filme →</a></nav>
+  <div class="stat-grid" aria-label="Resumo do acervo">
+    <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Aulas disponíveis</span></div>
+    <div class="stat"><b>{String(lessons.length).padStart(2,'0')}</b><span>Questionários de revisão</span></div>
+    <div class="stat"><b>01</b><span>Dicionário doutrinário</span></div>
+  </div>
+  <div class="section-heading"><div><span class="eyebrow">Trilha de formação</span><h2>Aulas para continuar aprendendo</h2></div><a href={base+'aulas/'}>Ver todas →</a></div>
+  <div class="cards">
+    {lessons.map((l,i) => <a class="card" href={base+'aulas/'+l.slug+'/'}><span class="card-index">AULA {String(i+1).padStart(3,'0')}</span><strong>{l.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</strong><span class="card-arrow">Abrir aula ↗</span></a>)}
+  </div>
+</SiteLayout>

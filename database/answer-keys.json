@@ -1,0 +1,720 @@
+{
+  "origin": "Gabarito de estudo elaborado a partir dos resumos locais das aulas. Não é um gabarito oficial do Centro Dom Bosco.",
+  "lessons": {
+    "aula-01": {
+      "answers": [
+        [
+          "B",
+          "O Catecismo organiza os fundamentos da fé para uma instrução clara e progressiva."
+        ],
+        [
+          "A",
+          "Os catecúmenos recebiam formação na fé enquanto se preparavam para o Batismo."
+        ],
+        [
+          "C",
+          "Na distinção da aula, a religião natural parte das capacidades humanas, como razão e consciência."
+        ],
+        [
+          "B",
+          "A Revelação sobrenatural parte da iniciativa de Deus de se manifestar ao homem."
+        ],
+        [
+          "B",
+          "Abraão recebe destaque como patriarca na formação do povo escolhido."
+        ],
+        [
+          "C",
+          "O estudo associa Moisés à recepção da Lei e dos Dez Mandamentos."
+        ],
+        [
+          "C",
+          "A exposição apresenta Jesus Cristo como a plenitude da Revelação."
+        ],
+        [
+          "B",
+          "A fé recebida é transmitida pela Sagrada Escritura e pela Tradição apostólica."
+        ],
+        [
+          "B",
+          "Depósito da fé designa a Revelação confiada à Igreja para guarda e transmissão."
+        ],
+        [
+          "B",
+          "O baú é a analogia usada para a fé recebida e progressivamente explicitada."
+        ],
+        [
+          "B",
+          "O dicionário define dogma como verdade de fé proposta definitivamente pela autoridade da Igreja."
+        ],
+        [
+          "B",
+          "Lapsi eram cristãos que abandonaram ou negaram a fé em situações de perseguição."
+        ],
+        [
+          "A",
+          "A Didaqué é apresentada como antigo escrito de instrução moral e prática cristã."
+        ],
+        [
+          "C",
+          "O método indicado começa por uma base catequética antes de estudos mais complexos."
+        ],
+        [
+          "B",
+          "A fórmula resume os sentidos de natural e sobrenatural empregados na exposição, sem esgotar o tema."
+        ]
+      ],
+      "source_sha256": "8ad3f863844f8bccaf0dafe6b6d89f613d4bb0d447d2e465a9a75492e826d844"
+    },
+    "aula-02": {
+      "answers": [
+        [
+          "B",
+          "A aula distingue Escritura e Tradição e explica o papel interpretativo do Magistério."
+        ],
+        [
+          "C",
+          "O Magistério é apresentado como responsável por guardar, interpretar e transmitir a Revelação."
+        ],
+        [
+          "B",
+          "A tradução bíblica destacada na exposição é a Vulgata."
+        ],
+        [
+          "B",
+          "São Jerônimo é lembrado por seu trabalho de tradução ligado à Vulgata."
+        ],
+        [
+          "C",
+          "Livre exame é o termo que a aula aplica à interpretação individual sem referência ao Magistério."
+        ],
+        [
+          "B",
+          "O Credo é explicado como símbolo ou profissão daquilo que o cristão crê."
+        ],
+        [
+          "B",
+          "A Santíssima Trindade é o exemplo principal de mistério que ultrapassa a compreensão natural."
+        ],
+        [
+          "C",
+          "Ultrapassar a capacidade da razão não significa contradizer a razão, segundo o esquema da aula."
+        ],
+        [
+          "B",
+          "Mistério designa aqui uma verdade revelada que excede a capacidade natural da razão."
+        ],
+        [
+          "B",
+          "O jogo de tabuleiro ilustra a diferença entre nossa experiência do tempo e o conhecimento divino."
+        ],
+        [
+          "B",
+          "A fé teologal é apresentada como adesão às verdades reveladas, e não mera expectativa pessoal."
+        ],
+        [
+          "B",
+          "A discussão do cânon pergunta quem reconhece quais livros integram a Sagrada Escritura."
+        ],
+        [
+          "B",
+          "O baú volta a representar o depósito da fé confiado à Igreja."
+        ],
+        [
+          "C",
+          "O critério indicado é a correspondência com a fé recebida e transmitida desde os apóstolos."
+        ],
+        [
+          "C",
+          "A aula propõe acolher as verdades reveladas sem opor fé e razão."
+        ]
+      ],
+      "source_sha256": "fe71b0d3359a7d0d61f311075a1457375c69cbb5ff8083bb211ca021a94119f4"
+    },
+    "aula-03": {
+      "answers": [
+        [
+          "B",
+          "O Credo sintetiza as verdades que o cristão professa crer."
+        ],
+        [
+          "C",
+          "A expressão estudada nesta aula é Creio em Deus Pai."
+        ],
+        [
+          "B",
+          "Simplicidade divina significa ausência de composição ou partes em Deus."
+        ],
+        [
+          "C",
+          "Imutabilidade significa que Deus não muda."
+        ],
+        [
+          "B",
+          "A aula distingue Deus eterno, sem começo nem fim, da criatura que teve início e é imortal."
+        ],
+        [
+          "B",
+          "Onisciência designa o conhecimento de todas as coisas."
+        ],
+        [
+          "B",
+          "Liberdade, bondade e justiça pertencem ao grupo que o professor chama de atributos relativos."
+        ],
+        [
+          "B",
+          "A definição de justiça empregada é dar a cada um o que é seu."
+        ],
+        [
+          "C",
+          "A veracidade divina é explicada pela impossibilidade de Deus enganar ou enganar-se."
+        ],
+        [
+          "B",
+          "Fidelidade é o atributo pelo qual Deus cumpre o que promete."
+        ],
+        [
+          "B",
+          "Providência designa o governo e a conservação da obra criada."
+        ],
+        [
+          "B",
+          "Deus é apresentado como causa primeira, origem e fundamento da ordem criada."
+        ],
+        [
+          "B",
+          "A união hipostática é introduzida como união das naturezas divina e humana em Cristo."
+        ],
+        [
+          "B",
+          "Temor de Deus é reverência e submissão ao Criador; não é apenas pânico."
+        ],
+        [
+          "C",
+          "O encontro seguinte é anunciado como estudo de Deus Criador e dos anjos."
+        ]
+      ],
+      "source_sha256": "65b4163061598ea54f9934b9925196d9aea69a5b1b122f94754bcb39473a9b0f"
+    },
+    "aula-04": {
+      "answers": [
+        [
+          "B",
+          "O foco de Criador do céu é a criação espiritual, especialmente os anjos."
+        ],
+        [
+          "B",
+          "A aula descreve os anjos como criaturas espirituais, pessoais, inteligentes e livres."
+        ],
+        [
+          "B",
+          "Puros espíritos significa que os anjos não possuem corpo material por natureza."
+        ],
+        [
+          "B",
+          "A relação entre a prova dos anjos e a Encarnação é apresentada como opinião teológica, não dogma."
+        ],
+        [
+          "B",
+          "A rebelião de Lúcifer é associada ao orgulho."
+        ],
+        [
+          "C",
+          "São Miguel é apresentado como figura central na resistência aos anjos rebeldes."
+        ],
+        [
+          "A",
+          "Os três nomes mencionados no conteúdo são Miguel, Gabriel e Rafael."
+        ],
+        [
+          "B",
+          "O anjo da guarda protege, inspira e auxilia, sem controlar diretamente a vontade humana."
+        ],
+        [
+          "C",
+          "A aula reserva a Deus o conhecimento perfeito do interior da consciência humana."
+        ],
+        [
+          "C",
+          "Os três coros superiores apresentados são Serafins, Querubins e Tronos."
+        ],
+        [
+          "B",
+          "A tentação sugere o mal, mas não elimina a liberdade e a responsabilidade humanas."
+        ],
+        [
+          "B",
+          "Infestação, obsessão e possessão são a sequência terminológica empregada na exposição."
+        ],
+        [
+          "B",
+          "O exorcismo é apresentado como oração e rito da Igreja para casos reconhecidos de possessão."
+        ],
+        [
+          "B",
+          "Confissão e comunhão estão entre os meios ordinários de vida e combate espiritual citados."
+        ],
+        [
+          "C",
+          "A conclusão valoriza a vida cristã ordinária em estado de graça, em vez da curiosidade por fenômenos."
+        ]
+      ],
+      "source_sha256": "7989374f2d2dd246ba0b963004ef3f51f834c73cf4de19b98c1015c32361826c"
+    },
+    "aula-05": {
+      "answers": [
+        [
+          "B",
+          "A expressão Criador da terra é aplicada a toda a ordem material criada."
+        ],
+        [
+          "B",
+          "A aula parte da afirmação de que Deus viu que tudo era bom."
+        ],
+        [
+          "B",
+          "O fim primário apresentado é dar glória ao Criador conforme a natureza de cada ser."
+        ],
+        [
+          "A",
+          "Dons naturais são capacidades próprias da natureza humana."
+        ],
+        [
+          "B",
+          "Dons preternaturais ultrapassam as exigências naturais, distinguindo-se da graça sobrenatural."
+        ],
+        [
+          "A",
+          "A imortalidade corporal é citada entre os dons preternaturais dos primeiros pais."
+        ],
+        [
+          "B",
+          "O dom sobrenatural é a participação na vida divina e na graça."
+        ],
+        [
+          "B",
+          "A prova dos primeiros pais é apresentada como obediência livre à ordem de Deus."
+        ],
+        [
+          "A",
+          "A desobediência é central na explicação da queda, junto de outras desordens mencionadas."
+        ],
+        [
+          "B",
+          "A exposição associa a queda à perda dos dons preternaturais."
+        ],
+        [
+          "A",
+          "Concupiscência da carne designa a busca desordenada de prazeres sensíveis."
+        ],
+        [
+          "B",
+          "Concupiscência dos olhos designa a cobiça desordenada de bens e riquezas."
+        ],
+        [
+          "B",
+          "Soberba da vida refere-se à preocupação desordenada com honra, reputação e ostentação."
+        ],
+        [
+          "B",
+          "Após a queda, a aula destaca a promessa da Redenção."
+        ],
+        [
+          "A",
+          "A união hipostática é introduzida para preparar o estudo de Cristo, verdadeiro Deus e homem."
+        ]
+      ],
+      "source_sha256": "bb190b0174e73d5ed5dfadb78f20103dc2007b48280d1da3b9888dceb98c989e"
+    },
+    "aula-06": {
+      "answers": [
+        [
+          "B",
+          "A Encarnação do Verbo é o tema central do encontro."
+        ],
+        [
+          "B",
+          "A união hipostática une as naturezas divina e humana na única Pessoa divina do Verbo."
+        ],
+        [
+          "A",
+          "Há uma única Pessoa em Cristo: a segunda Pessoa da Santíssima Trindade."
+        ],
+        [
+          "B",
+          "A aula afirma duas naturezas em Cristo, sem confusão ou mistura."
+        ],
+        [
+          "B",
+          "Essas duas naturezas são a divina e a humana."
+        ],
+        [
+          "B",
+          "A exposição apresenta duas vontades, humana e divina, em perfeita harmonia."
+        ],
+        [
+          "A",
+          "Cristo é apresentado nas funções de Sacerdote, Profeta e Rei."
+        ],
+        [
+          "B",
+          "Na Cruz culmina a entrega redentora de Cristo, sem excluir a Ressurreição."
+        ],
+        [
+          "B",
+          "Maria é apresentada como colaboradora da Redenção, sempre subordinada à ação de Cristo."
+        ],
+        [
+          "B",
+          "Nova Eva põe em contraste a obediência de Maria e a desobediência de Eva."
+        ],
+        [
+          "B",
+          "Imaculada Conceição refere-se à preservação de Maria do pecado original; não é a concepção de Jesus."
+        ],
+        [
+          "B",
+          "São José é chamado pai putativo e guarda da Sagrada Família, sem paternidade divina."
+        ],
+        [
+          "B",
+          "Na exposição, a Igreja Católica é identificada como Reino de Cristo na terra."
+        ],
+        [
+          "B",
+          "Cristo é Sacerdote por oferecer o sacrifício e Vítima por oferecer a si mesmo."
+        ],
+        [
+          "B",
+          "A síntese apresentada é uma Pessoa divina, duas naturezas e duas vontades."
+        ]
+      ],
+      "source_sha256": "1d2034398170784489945b43b259cab3cd7143b6f6ed83c460bb9dcdf917613f"
+    },
+    "aula-07": {
+      "answers": [
+        [
+          "B",
+          "A aula estuda a concepção pelo Espírito Santo e o nascimento de Maria Virgem."
+        ],
+        [
+          "B",
+          "A explicação da Encarnação é aberta com o Prólogo do Evangelho de São João."
+        ],
+        [
+          "B",
+          "O Verbo assume verdadeira natureza humana sem deixar de ser Deus."
+        ],
+        [
+          "B",
+          "O Credo atribui a concepção de Cristo ao Espírito Santo."
+        ],
+        [
+          "B",
+          "As obras divinas são inseparáveis, embora a exposição use atribuições a determinadas Pessoas."
+        ],
+        [
+          "B",
+          "São José é apresentado como pai putativo e guardião da Sagrada Família."
+        ],
+        [
+          "B",
+          "As Bodas de Caná recebem destaque como início da vida pública na exposição da aula."
+        ],
+        [
+          "B",
+          "Em Caná, Jesus transforma água em vinho."
+        ],
+        [
+          "B",
+          "A instituição dos sacramentos é atribuída a Jesus Cristo."
+        ],
+        [
+          "B",
+          "A menção a Pôncio Pilatos situa historicamente os acontecimentos da Paixão."
+        ],
+        [
+          "B",
+          "A Paixão é relacionada à gravidade do pecado e ao amor redentor de Cristo."
+        ],
+        [
+          "B",
+          "A Missa torna presente sacramentalmente o mesmo sacrifício do Calvário."
+        ],
+        [
+          "B",
+          "Latria é a adoração devida somente a Deus."
+        ],
+        [
+          "B",
+          "Hiperdulia designa a veneração singular reservada a Nossa Senhora."
+        ],
+        [
+          "A",
+          "Dulia designa a veneração prestada aos santos e aos anjos."
+        ]
+      ],
+      "source_sha256": "e7055d11077ec5e129276875bc444def21cc9ce9cf11de5bfdacc544432ee974"
+    },
+    "aula-08": {
+      "answers": [
+        [
+          "B",
+          "A morte separa alma e corpo de Cristo, permanecendo ambos unidos à sua divindade."
+        ],
+        [
+          "B",
+          "A descida é explicada como ida ao lugar dos justos que aguardavam a Redenção."
+        ],
+        [
+          "A",
+          "Na classificação terminológica apresentada pelo professor, o purgatório aparece entre os reinos inferiores chamados infernos. Não se confunde com a condenação eterna."
+        ],
+        [
+          "B",
+          "O purgatório é apresentado como estado de purificação das almas salvas."
+        ],
+        [
+          "B",
+          "A pena temporal distingue-se da culpa do pecado já perdoada."
+        ],
+        [
+          "B",
+          "Indulgência é remissão da pena temporal; não é perdão antecipado de pecados futuros."
+        ],
+        [
+          "B",
+          "Plenária indica remissão total da pena temporal; parcial indica remissão de parte dela."
+        ],
+        [
+          "B",
+          "Seio de Abraão é a imagem bíblica associada ao destino dos justos."
+        ],
+        [
+          "B",
+          "A contagem inclusiva considera os dias envolvidos, sem exigir exatamente 72 horas."
+        ],
+        [
+          "B",
+          "A Ressurreição recebe destaque como o maior milagre de Cristo na exposição."
+        ],
+        [
+          "A",
+          "Impassibilidade é uma das propriedades do corpo glorioso: incapacidade de sofrer."
+        ],
+        [
+          "B",
+          "A lista estudada é agilidade, impassibilidade, sutileza e esplendor."
+        ],
+        [
+          "B",
+          "As chagas permanecem como sinais da Paixão, da continuidade corporal e da vitória."
+        ],
+        [
+          "B",
+          "A aula situa em quarenta dias o período entre Ressurreição e Ascensão."
+        ],
+        [
+          "A",
+          "Nesse período, Cristo instrui e prepara os apóstolos para a missão da Igreja."
+        ]
+      ],
+      "source_sha256": "e90e6088bce23699315158b222907984642376d0b9bbc808c2c25459aef6928b"
+    },
+    "aula-09": {
+      "answers": [
+        [
+          "B",
+          "A Ascensão é situada quarenta dias após a Ressurreição."
+        ],
+        [
+          "B",
+          "O local mencionado na aula é o Monte das Oliveiras."
+        ],
+        [
+          "B",
+          "À direita do Pai é linguagem de honra, glória e autoridade, não posição material."
+        ],
+        [
+          "B",
+          "A aula distingue Cristo que sobe por seu poder de Maria elevada por Deus."
+        ],
+        [
+          "B",
+          "A Igreja é apresentada como Reino de Cristo na terra."
+        ],
+        [
+          "A",
+          "A partida visível de Cristo prepara, na sequência estudada, a vinda do Espírito Santo em Pentecostes."
+        ],
+        [
+          "B",
+          "O juízo particular é o julgamento da pessoa após a morte."
+        ],
+        [
+          "B",
+          "O Juízo Final é o julgamento universal no fim da história."
+        ],
+        [
+          "B",
+          "A aula associa o Juízo Final à ressurreição dos corpos e à manifestação pública das obras."
+        ],
+        [
+          "B",
+          "A exposição apresenta o Juízo Final como confirmação pública da sentença particular."
+        ],
+        [
+          "B",
+          "A pregação do Evangelho a todos os povos é um dos sinais mencionados."
+        ],
+        [
+          "A",
+          "A figura escatológica citada é o Anticristo."
+        ],
+        [
+          "A",
+          "Apostasia é abandono da fé professada; não se confunde com uma dúvida passageira."
+        ],
+        [
+          "B",
+          "Elias e Enoque são os nomes mencionados pelo professor. A questão pede recordar a exposição, sem transformar essa interpretação escatológica em definição dogmática."
+        ],
+        [
+          "B",
+          "A aula afirma que a data do Juízo Final não foi revelada e não pode ser calculada a partir desses sinais."
+        ]
+      ],
+      "source_sha256": "bdc2a01ec247ad164e0e07a9d3697034498db878ae51af29411036d159bcaf33"
+    },
+    "aula-10": {
+      "answers": [
+        [
+          "B",
+          "Consubstancial significa possuir a mesma natureza divina do Pai e do Filho."
+        ],
+        [
+          "C",
+          "Terceira Pessoa identifica a Pessoa divina, sem inferioridade de poder, dignidade ou eternidade."
+        ],
+        [
+          "A",
+          "A santificação das almas é especialmente atribuída ao Espírito Santo."
+        ],
+        [
+          "B",
+          "Conversão é mudança interior pela graça, afastamento do pecado e retorno a Deus."
+        ],
+        [
+          "B",
+          "Os exemplos de conversão lembrados são São Francisco de Assis e Santo Agostinho."
+        ],
+        [
+          "C",
+          "O vento ilustra uma ação invisível que se reconhece por seus efeitos."
+        ],
+        [
+          "B",
+          "A aula apresenta o Espírito Santo como inspirador dos autores sagrados."
+        ],
+        [
+          "B",
+          "Filioque é a expressão latina e do Filho, ligada à processão do Espírito Santo."
+        ],
+        [
+          "A",
+          "A expressão aparece no debate histórico e teológico entre Oriente e Ocidente cristãos."
+        ],
+        [
+          "A",
+          "A Encarnação de Cristo no seio de Maria é especialmente atribuída ao Espírito Santo."
+        ],
+        [
+          "B",
+          "Pentecostes é relacionado à vinda do Espírito Santo e ao fortalecimento da missão dos apóstolos."
+        ],
+        [
+          "A",
+          "As línguas de fogo são um dos sinais lembrados na manifestação de Pentecostes."
+        ],
+        [
+          "C",
+          "O sacramento destacado na explicação dos ritos tradicionais é o Batismo."
+        ],
+        [
+          "B",
+          "As imagens de presença na alma são templo, amigo íntimo e guardião."
+        ],
+        [
+          "B",
+          "O encerramento trata de penitência, reconhecimento do pecado e misericórdia divina."
+        ]
+      ],
+      "source_sha256": "4dbaccec57a2d53f87bbb09b347e03d0f20130a5eec7bbee7f62a64b37148a19"
+    },
+    "aula-11": {
+      "answers": [
+        [
+          "B",
+          "Jesus Cristo é apresentado como fundador da Igreja."
+        ],
+        [
+          "C",
+          "A finalidade central da Igreja destacada é a salvação das almas."
+        ],
+        [
+          "A",
+          "O ensino da fé e os sacramentos são apresentados como meios para essa missão."
+        ],
+        [
+          "B",
+          "Os bispos são os sucessores dos apóstolos no ministério episcopal."
+        ],
+        [
+          "C",
+          "O Papa, bispo de Roma, é apresentado como sucessor de Pedro."
+        ],
+        [
+          "B",
+          "As quatro notas estudadas são una, santa, católica e apostólica."
+        ],
+        [
+          "A",
+          "Catolicidade expressa a universalidade da Igreja e de sua missão."
+        ],
+        [
+          "C",
+          "A unidade comporta a diversidade de ritos católicos na comunhão eclesial."
+        ],
+        [
+          "D",
+          "A aula distingue a santidade da Igreja dos pecados e da responsabilidade pessoal dos membros."
+        ],
+        [
+          "A",
+          "Sociedade perfeita refere-se à posse dos meios necessários ao próprio fim, não à impecabilidade dos membros."
+        ],
+        [
+          "B",
+          "O ordenamento jurídico da Igreja é o direito canônico."
+        ],
+        [
+          "C",
+          "Infalibilidade e impecabilidade são conceitos distintos; a primeira não implica ausência de pecados."
+        ],
+        [
+          "D",
+          "Uma definição ex cathedra trata de fé ou moral e deve atender às condições próprias desse ato."
+        ],
+        [
+          "A",
+          "Os exemplos dogmáticos lembrados são a Imaculada Conceição e a Assunção de Nossa Senhora."
+        ],
+        [
+          "C",
+          "A nota editorial pede confrontar a interpretação de Quo primum com os critérios doutrinários e os documentos litúrgicos; uma fórmula solene não basta."
+        ]
+      ],
+      "source_sha256": "773d0799a62fcb1faff20b2f3ed70ec26fb7afe7a51fdd569d8d61e926442991"
+    }
+  }
+}

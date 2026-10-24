@@ -1,0 +1,14 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import {getDictionary,base} from '../lib/content';
+import '../styles/library.css';
+const entries=getDictionary();
+const letters=[...new Set(entries.map(entry=>entry.term.normalize('NFD').replace(/[\u0300-\u036f]/g,'')[0].toUpperCase()))];
+---
+<SiteLayout title="Dicionário"><span class="eyebrow">Consultar / Vocabulário</span><h1>Dicionário de estudo</h1><p class="muted">Verbetes reunidos das aulas, sem repetir o mesmo título. As definições mais recentes do caderno são exibidas, com acesso às aulas de origem.</p><div class="library-filters"><label>Encontrar um conceito<input id="dictionary-search" type="search" placeholder="Consubstancial, graça, Ascensão…"/></label></div><p class="dictionary-count" role="status">{entries.length} verbetes</p><nav class="library-shortcuts" aria-label="Índice alfabético">{letters.map(letter=><a href={'#letra-'+letter}>{letter}</a>)}</nav><article class="reading">{letters.map(letter=><section data-dictionary-letter><h2 id={'letra-'+letter}>{letter}</h2>{entries.filter(entry=>entry.term.normalize('NFD').replace(/[\u0300-\u036f]/g,'')[0].toUpperCase()===letter).map(entry=><section id={entry.id} data-dictionary-entry data-search={entry.term+' '+entry.definition}><h3>{entry.term}</h3><div set:html={entry.html}/><div class="library-shortcuts">{entry.lessons.map(slug=><a href={base+'aulas/'+slug+'/'}>{slug.replace('aula-','Aula ')} →</a>)}</div></section>)}</section>)}</article></SiteLayout>
+<script>
+  const input=document.querySelector<HTMLInputElement>('#dictionary-search')!;
+  const entries=[...document.querySelectorAll<HTMLElement>('[data-dictionary-entry]')];
+  const normalize=(text:string)=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  input.addEventListener('input',()=>{entries.forEach(entry=>{entry.hidden=!normalize(entry.dataset.search!).includes(normalize(input.value));});document.querySelectorAll<HTMLElement>('[data-dictionary-letter]').forEach(section=>{section.hidden=![...section.querySelectorAll<HTMLElement>('[data-dictionary-entry]')].some(entry=>!entry.hidden);});document.querySelector('.dictionary-count')!.textContent=entries.filter(entry=>!entry.hidden).length+' verbetes encontrados';});
+</script>

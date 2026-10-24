@@ -1,0 +1,54 @@
+---
+interface Props { slug: string; }
+const { slug } = Astro.props;
+---
+<section class="personal-tools" data-study-lesson={slug} aria-label="Meu estudo desta aula">
+  <div class="personal-tools-row"><span class="personal-lesson-status">Carregando meu estudo…</span><button type="button" class="quiz-secondary" data-complete-lesson disabled>Marcar como concluída</button></div>
+  <details><summary>Minha explicação e anotações</summary>
+    <p class="muted">Como você explicaria o tema com suas palavras? Registre também o que ficou em dúvida.</p>
+    <label for="lesson-note">Anotação pessoal</label><textarea id="lesson-note" rows="5" maxlength="20000" placeholder="Hoje compreendi que…"></textarea>
+    <button type="button" class="quiz-secondary" data-save-note disabled>Salvar anotação</button><p class="note-status" role="status" aria-live="polite"></p>
+  </details>
+</section>
+<script>
+  import { studyRequest, offlineMessage, type LessonState } from '../lib/study-client';
+  const tools = document.querySelector<HTMLElement>('[data-study-lesson]')!;
+  const slug = tools.dataset.studyLesson!;
+  const status = tools.querySelector<HTMLElement>('.personal-lesson-status')!;
+  const complete = tools.querySelector<HTMLButtonElement>('[data-complete-lesson]')!;
+  const save = tools.querySelector<HTMLButtonElement>('[data-save-note]')!;
+  const note = tools.querySelector<HTMLTextAreaElement>('textarea')!;
+  const notice = tools.querySelector<HTMLElement>('.note-status')!;
+  let completed = false, available = false, edited = false;
+  note.addEventListener('input', () => { edited = true; });
+  function update() {
+    status.textContent = completed ? 'Aula concluída' : 'Estudo em andamento';
+    complete.textContent = completed ? 'Reabrir estudo' : 'Marcar como concluída';
+  }
+  studyRequest<LessonState>('lesson/'+slug).then(async state => {
+    available = true; completed = state.progress?.status === 'completed';
+    if (!edited) note.value = state.note;
+    complete.disabled = false; save.disabled = false; update();
+    if (!state.progress) await studyRequest('lesson/'+slug, { status: 'in_progress' });
+  }).catch(() => { status.textContent = offlineMessage; });
+  complete.addEventListener('click', async () => {
+    complete.disabled = true;
+    try { await studyRequest('lesson/'+slug, { status: completed ? 'in_progress' : 'completed' }); completed = !completed; update(); }
+    catch { status.textContent = 'Não foi possível salvar a alteração. Tente novamente.'; }
+    finally { complete.disabled = false; }
+  });
+  save.addEventListener('click', async () => {
+    save.disabled = true;
+    try { await studyRequest('lesson/'+slug, { note: note.value }); notice.textContent = 'Anotação salva no banco pessoal.'; edited = false; }
+    catch { notice.textContent = 'Anotação não salva. Seu texto continua aqui; tente novamente.'; }
+    finally { save.disabled = false; }
+  });
+  let debounce: number | undefined;
+  document.querySelectorAll('.lesson-overview a').forEach(link => link.addEventListener('click', () => {
+    if (!available) return;
+    window.clearTimeout(debounce);
+    debounce = window.setTimeout(() => {
+      studyRequest('lesson/'+slug, { section: (link as HTMLAnchorElement).hash.slice(1) }).catch(() => {});
+    }, 300);
+  }));
+</script>

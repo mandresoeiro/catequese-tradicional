@@ -1,0 +1,14 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { base, getLesson, getLessonSlugs } from '../../lib/content';
+const lessons = getLessonSlugs().map(getLesson);
+---
+<SiteLayout title="Todas as aulas">
+  <span class="eyebrow">Biblioteca / Formação</span>
+  <h1>Todas as aulas</h1>
+  <p class="muted">Estude em seu ritmo. Cada aula contém resumo, tópicos fundamentais e um questionário de revisão.</p>
+  <div class="cards" style="margin-top:30px">
+    {lessons.map((l,i)=><a class="card" href={base+'aulas/'+l.slug+'/'}><span class="card-index">AULA {String(i+1).padStart(3,'0')}</span><strong>{l.title.replace(/^Aula #\d+\s*[—-]\s*/,'')}</strong><span class="card-arrow">Começar estudo ↗</span></a>)}
+  </div>
+  <p style="margin-top:30px"><a href={base+'aulas/trailer/'}>Conheça também o trailer oficial →</a></p>
+</SiteLayout>

@@ -1,0 +1,21 @@
+---
+import { base } from '../lib/content';
+---
+<section class="study-dashboard" aria-label="Meu percurso">
+  <div><span class="eyebrow">Meu estudo</span><h2>Um pouco a cada dia.</h2><p class="dashboard-message">Carregando seu percurso…</p></div>
+  <div class="dashboard-actions"><a class="quiz-primary" data-resume href={base+'aulas/'}>Escolher uma aula →</a><a class="quiz-secondary" href={base+'revisao/'}>Revisão do dia</a><a href={base+'caderno-de-erros/'}>Meu caderno de erros →</a></div>
+</section>
+<script>
+  import { studyRequest, offlineMessage } from '../lib/study-client';
+  interface Dashboard { completed: number; lessons: number; review_count: number; resume: {lesson_slug: string; title: string; last_section: string} | null; }
+  const message = document.querySelector<HTMLElement>('.dashboard-message')!;
+  studyRequest<Dashboard>('dashboard').then(data => {
+    message.textContent = `${data.completed} de ${data.lessons} aulas concluídas · ${data.review_count} questões para revisar.`;
+    if (data.resume) {
+      const link = document.querySelector<HTMLAnchorElement>('[data-resume]')!;
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+      link.href = base+'aulas/'+data.resume.lesson_slug+'/'+(data.resume.last_section ? '#'+data.resume.last_section : '');
+      link.textContent = 'Continuar: '+data.resume.title.replace(/^Aula #\d+\s*[—-]\s*/, '')+' →';
+    }
+  }).catch(() => { message.textContent = offlineMessage; });
+</script>

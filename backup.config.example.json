@@ -1,0 +1,6 @@
+{
+  "database": "data/catequese.sqlite3",
+  "backup_directory": "backups/sqlite",
+  "external_directory": "",
+  "retention_days": 30
+}

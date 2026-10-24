@@ -2,3 +2,13 @@
 site/
 __pycache__/
 .DS_Store
+
+# Artefatos locais do protótipo Astro
+node_modules/
+astro/.astro/
+astro/dist/
+
+# Banco pessoal, configuração local e cópias de segurança
+data/*.sqlite3*
+backups/
+.local/
